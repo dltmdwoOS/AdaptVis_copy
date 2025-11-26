@@ -323,7 +323,7 @@ def get_symmetric_relation(relation):
 class LlavaWrapper:
     def __init__(self, root_dir, device,method):
         
-        if method=='scaling_vis' or method=='adapt_vis' or method=='adaptvis_bidirectional':
+        if method=='scaling_vis' or method=='adapt_vis' or method=='adapt_vis_2' or method=='adaptvis_bidirectional':
             self.model = LlavaForConditionalGenerationScal.from_pretrained(MODEL, revision='a272c74',cache_dir=root_dir,ignore_mismatched_sizes=True).eval().to(device)
 
         else:
@@ -334,6 +334,24 @@ class LlavaWrapper:
         self.processor = AutoProcessor.from_pretrained(MODEL, revision='a272c74',cache_dir=root_dir)
 
         self.device = device
+    
+    def _kl(self, p, q):
+        p = p + 1e-12
+        q = q + 1e-12
+        p = p / p.sum()
+        q = q / q.sum()
+        return torch.sum(p * torch.log(p / q))
+    
+    def get_uncertainty(self, prob, method=None):
+        if method=='kl_divergence':
+            options = ["Left", "Right", "On", "Under"]
+            option_ids = [self.tokenizer.encode(r, add_special_tokens=False)[0] for r in options]
+            prob_options = prob[0, option_ids]
+            uniform_dist = torch.ones_like(prob_options) / len(option_ids)
+            print(prob_options, uniform_dist)
+            return float(self._kl(prob_options, uniform_dist).item())
+        else:
+            return np.round(float(max(torch.nn.functional.softmax(prob, dim=-1)[0])), 2)
     
     @torch.no_grad()
     def get_text_embeddings(self, texts, text_batch_size=64, normalize=False):
@@ -438,7 +456,8 @@ class LlavaWrapper:
             # Iterate over each image option in the batch
             for i_option in batch["image_options"]:
                 im_scores = []
-                
+                uncertainty_prob = None
+                uncertainty_kl = None
                 for _ in i_option:
                     prompt = prompt_list[index_of_total]
                     
@@ -557,15 +576,41 @@ class LlavaWrapper:
                         output = self.model.generate(
                             **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                         )
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-                        print(uncertainty, threshold)
+                        uncertainty_prob = self.get_uncertainty(output['scores'][0])
+                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence')
+                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
 
                         # Adjust attention based on uncertainty
-                        if uncertainty < threshold:
+                        if uncertainty_prob < threshold:
                             output = self.model.generate(
                                 **single_input, keys=keys, weight=weight1, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
+                        else:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight2, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                    
+                    elif method == 'adapt_vis_2':
+                        change_greedy_to_add_weight()
+                       
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        uncertainty_prob = self.get_uncertainty(output['scores'][0])
+                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence')
+                        threshold = 0.0005
+                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
+                        # Adjust attention based on uncertainty
+                        if uncertainty_kl < 0.00045:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight1, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        elif 0.00045 <= uncertainty_kl < 0.0055:
+                            pass # Using the original output
                         else:
                             output = self.model.generate(
                                 **single_input, keys=keys, weight=weight2, 
@@ -588,6 +633,8 @@ class LlavaWrapper:
                         "Prompt": prompt,
                         "Generation": gen,
                         "Golden": answer_list[index_of_total][0],
+                        "uncertainty_prob": uncertainty_prob,
+                        "uncertainty_kl": uncertainty_kl,
                     }
                     results.append(result) if method != "bidirectional_reasoning" else None
                     
@@ -620,7 +667,7 @@ class LlavaWrapper:
 
             # Save results to file
             output_result_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}.json'
-            output_reasoning_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}.json'
+            output_reasoning_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}_reasoning.json'
             with open(output_result_file_path, 'w', encoding='utf-8') as fout:
                 json.dump(results, fout, ensure_ascii=False, indent=4)
             print(acc, index_of_total, acc / index_of_total)

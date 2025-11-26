@@ -5,7 +5,7 @@ python3 main_aro.py \
     --dataset Controlled_Images_A \
     --model-name='llava1.5' \
     --download \
-    --method bidirectional_reasoning_2 \
+    --method adapt_vis_2 \
     --weight1 0.5 \
     --weight2 1.5 \
     --threshold 0.4 \
