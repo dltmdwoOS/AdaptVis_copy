@@ -1,0 +1,65 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "",
+        "Golden": "On",
+        "Confidence_Forward": -0.22524453586643525,
+        "Confidence_Reverse": -0.3836777526885271,
+        "Is_Consistent": false,
+        "Final_Confidence": null
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "Confidence_Forward": -0.2092131683602929,
+        "Confidence_Reverse": -0.35821335576474667,
+        "Is_Consistent": false,
+        "Final_Confidence": -0.2092131683602929
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "Confidence_Forward": -0.21979130152612925,
+        "Confidence_Reverse": -0.4649367621168494,
+        "Is_Consistent": false,
+        "Final_Confidence": -0.21979130152612925
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "",
+        "Golden": "Under",
+        "Confidence_Forward": -0.3873165473341942,
+        "Confidence_Reverse": -0.37193729448615787,
+        "Is_Consistent": false,
+        "Final_Confidence": null
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "Confidence_Forward": -0.19778959080576897,
+        "Confidence_Reverse": -0.29838958382606506,
+        "Is_Consistent": false,
+        "Final_Confidence": -0.19778959080576897
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Left",
+        "Confidence_Forward": -0.46715594828128815,
+        "Confidence_Reverse": -0.4574523773044348,
+        "Is_Consistent": false,
+        "Final_Confidence": -0.4574523773044348
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "Confidence_Forward": -0.24925309885293245,
+        "Confidence_Reverse": -0.46947879530489445,
+        "Is_Consistent": true,
+        "Final_Confidence": -0.24925309885293245
+    }
+]
