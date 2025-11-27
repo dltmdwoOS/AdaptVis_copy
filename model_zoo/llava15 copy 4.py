@@ -1,36 +1,54 @@
+import re
 import torch
 import numpy as np
 from tqdm import tqdm
+import torch.nn as nn
+# from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
 import random
 from transformers import AutoProcessor, LlamaTokenizerFast, CLIPImageProcessor
+import pdb
+# import probe_llava
 from .llava import  LlavaForConditionalGeneration, LlavaForConditionalGenerationScal
 
 import torch
 import torch.nn.functional as F
+from PIL import Image
+import requests
 import json
 import os
+from collections import Counter
+# from model_zoo.utils import normalize_answer,chat_completion_request,run_conversation
 
+from PIL import Image
+import math
+MODEL='llava-hf/llava-1.5-7b-hf'
+
+import copy
+import inspect
 import warnings
-from typing import List, Optional, Union
+from dataclasses import dataclass
+from typing import TYPE_CHECKING, Any, Callable, Dict, List, Optional, Tuple, Union
 
 import torch
+import torch.distributed as dist
+from torch import nn
+
 from transformers.generation.logits_process import (
     LogitsProcessorList,
 )
 from transformers.generation.stopping_criteria import (
+    StoppingCriteria,
     StoppingCriteriaList,
     validate_stopping_criteria,
 )
 import transformers
-from transformers.generation.utils import GenerateEncoderDecoderOutput,GenerateDecoderOnlyOutput,GenerateNonBeamOutput
+from transformers.generation.utils import SampleOutput, SampleDecoderOnlyOutput, SampleEncoderDecoderOutput,GenerateEncoderDecoderOutput,GenerateDecoderOnlyOutput,GenerateNonBeamOutput
 import os
 import json
 import random
 import numpy as np
 import torch
 from tqdm import tqdm
-MODEL='llava-hf/llava-1.5-7b-hf'
-
 def _add_weight_greedy_search(
     self,
     input_ids: torch. LongTensor,
@@ -215,6 +233,93 @@ def _add_weight_greedy_search(
 def change_greedy_to_add_weight():
     transformers.generation.utils.GenerationMixin._greedy_search = _add_weight_greedy_search
 
+def parse_objects(response):
+    """'{obj1} and {obj2}' 형태의 답변에서 obj1, obj2 추출"""
+    response = response.strip().strip("'\"")
+    
+    if " and " in response.lower():
+        parts = re.split(r'\s+and\s+', response, flags=re.IGNORECASE)
+        if len(parts) >= 2:
+            obj1 = parts[0].strip().lower()
+            obj2 = parts[1].strip()
+            if obj2.endswith('.'): 
+                obj2 = obj2[:-1]
+            return obj1, obj2
+    
+    return None, None
+
+def parse_relation_type(response):
+    """Relation type 추출"""
+    response_lower = response.lower().strip().strip("'\"")
+    
+    # 정확한 매칭
+    if response_lower in ['left-right', 'leftright', 'left right']:
+        return 'left-right'
+    elif response_lower in ['front-back', 'frontback', 'front back', 'depth']:
+        return 'front-back'
+    elif response_lower in ['top-bottom', 'topbottom', 'top bottom', 'vertical']:
+        return 'top-bottom'
+    elif response_lower in ['diagonal']:
+        return 'diagonal'
+    
+    # 부분 매칭
+    if 'left' in response_lower and 'right' in response_lower:
+        return 'left-right'
+    elif 'front' in response_lower or 'back' in response_lower or 'behind' in response_lower:
+        return 'front-back'
+    elif 'top' in response_lower or 'bottom' in response_lower:
+        return 'top-bottom'
+    
+    return None
+
+def check_logical_consistency(response_a, response_b):
+    """양방향 답변의 논리적 일관성 검증"""
+    # 기본 symmetric pairs
+    symmetric_pairs = {
+        'in front of': 'behind',
+        'behind': 'in front of',
+        'on': 'under',
+        'under': 'on'
+    }
+    
+    # Left/Right 관련 유연한 매칭을 위한 그룹
+    left_variations = ['left of', 'left']
+    right_variations = ['right of', 'right']
+    
+    resp_a = response_a.strip().strip("'\"").lower()
+    resp_b = response_b.strip().strip("'\"").lower()
+    
+    # Left/Right 그룹 간 대칭성 체크
+    if resp_a in left_variations and resp_b in right_variations:
+        return True
+    if resp_a in right_variations and resp_b in left_variations:
+        return True
+    
+    # 기타 symmetric pairs 체크
+    for key, value in symmetric_pairs.items():
+        if key == resp_a and value == resp_b:
+            return True
+        if value == resp_a and key == resp_b:
+            return True
+    
+    return False
+
+def get_symmetric_relation(relation):
+    """주어진 관계의 대칭 관계 반환"""
+    symmetric_pairs = {
+        'Left': 'Right of or Right',
+        'Left of': 'Right of or Right',
+        'Right': 'Left of or Left',
+        'Right of': 'Left of or Left',
+        'In front of': 'Behind',
+        'Behind': 'In front of',
+        'On': 'Under',
+        'Under': 'On'
+    }
+    
+    relation_normalized = relation.strip().strip("'\"")
+    return symmetric_pairs.get(relation_normalized, "Unknown")
+
 class LlavaWrapper:
     def __init__(self, root_dir, device,method):
         
@@ -369,7 +474,98 @@ class LlavaWrapper:
                     keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
 
                     # Generate predictions based on specified method
-                    if method == 'scaling_vis':
+                    if method == 'bidirectional_reasoning':
+                        # 옵션 리스트 생성
+                        c_option = batch["caption_options"]
+                        if len(list(c_option)) == 4:
+                            option_list = ['In front of', 'Behind', 'Left of', 'Right of']
+                        elif len(list(c_option)) == 2:
+                            option_list = ['Yes', 'No']
+                        else:
+                            option_list = []
+                        
+                        # Bidirectional reasoning 수행
+                        result = self.bidirectional_reasoning_single(_, prompt, option_list)
+                        
+                        gen = result['final_prediction']
+                        uncertainty = result['avg_prob']
+                        
+                        # 결과에 추가 정보 저장
+                        result_detail = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "Uncertainty": uncertainty,
+                            "Is_Consistent": result['is_consistent'],
+                            "Fallback": result.get('fallback', False)
+                        }
+                        results.append(result_detail)
+                        reasoning_chains.append(result['reasoning_chain'])
+                        
+                    elif method == 'bidirectional_reasoning_2':
+                        # 옵션 리스트 생성
+                        c_option = batch["caption_options"]
+                        if len(list(c_option)) == 4:
+                            option_list = ['In front of', 'Behind', 'Left of', 'Right of']
+                        elif len(list(c_option)) == 2:
+                            option_list = ['Yes', 'No']
+                        else:
+                            option_list = []
+                        
+                        # Bidirectional reasoning 수행
+                        result = self.bidirectional_reasoning_2(_, prompt, option_list)
+                        
+                        gen = result['final_prediction']
+                        uncertainty = result['avg_prob']
+                        
+                        # 결과에 추가 정보 저장
+                        result_detail = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "Uncertainty": uncertainty,
+                            "Is_Consistent": result['is_consistent'],
+                            "Fallback": result.get('fallback', False)
+                        }
+                        print(f"\nidx : {index_of_total}")
+                        results.append(result_detail)
+                        reasoning_chains.append(result['reasoning_chain'])
+                        
+                    elif method == 'adaptvis_bidirectional':
+                        # 옵션 리스트 생성
+                        c_option = batch["caption_options"]
+                        if len(list(c_option)) == 4:
+                            option_list = ['In front of', 'Behind', 'Left of', 'Right of']
+                        elif len(list(c_option)) == 2:
+                            option_list = ['Yes', 'No']
+                        else:
+                            option_list = []
+                        
+                        # AdaptVis + Bidirectional 수행 (sample_idx 전달)
+                        result = self.adaptvis_bidirectional_reasoning(
+                            _, prompt, option_list, threshold, weight1, weight2,
+                            sample_idx=index_of_total  # ← 샘플 인덱스 전달
+                        )
+                        
+                        gen = result['final_prediction']
+                        uncertainty = result['confidence']
+                        
+                        # 결과 저장
+                        result_detail = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "Initial_Uncertainty": result['initial_uncertainty'],
+                            "Selected_Weight": result['selected_weight'],
+                            "Confidence_Forward": result['confidence_forward'],
+                            "Confidence_Reverse": result['confidence_reverse'],
+                            "Is_Consistent": result['is_consistent'],
+                            "Selection_Reason": result['selection_reason'],
+                            "Final_Confidence": uncertainty
+                        }
+                        results.append(result_detail)
+                    
+                    elif method == 'scaling_vis':
                         change_greedy_to_add_weight()
                         output = self.model.generate(
                             **single_input, keys=keys, weight=weight,
@@ -546,10 +742,14 @@ class LlavaWrapper:
 
             # Save results to file
             output_result_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}.json'
+            output_reasoning_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}_reasoning.json'
             with open(output_result_file_path, 'w', encoding='utf-8') as fout:
                 json.dump(results, fout, ensure_ascii=False, indent=4)
             print(acc, index_of_total, acc / index_of_total)
-                 
+            
+            with open(output_reasoning_file_path, 'w', encoding='utf-8') as f:
+                json.dump(reasoning_chains, f, ensure_ascii=False, indent=4)
+                            
         # Save accuracy and correct IDs to file
         print(acc / index_of_total)
         output_score_file = output_result_file_path.replace(".json", "scores.json")
@@ -677,6 +877,670 @@ class LlavaWrapper:
             json.dump({"acc": (TN + TP) / (TN + TP + FN + FP), "precision": precision, "recall": recall, "f1": f1_score}, fout, ensure_ascii=False, indent=4)
         return all_scores
     
+    @torch.no_grad()
+    def bidirectional_reasoning_single(self, image, question, option_list):
+        reasoning_chain = []
+
+        default_fewshots = ''
+        # Question 정제 및 객체 추출
+        is_formatted_prompt = '<image>' in question or 'USER:' in question
+        if is_formatted_prompt:
+            question = question.replace('<image>', '').replace('USER:', '').replace('ASSISTANT:', '').strip()
+        
+        obj1, obj2 = self._extract_objects_from_question(question)
+        
+        if obj1 is None or obj2 is None:
+            return self._direct_query_fallback(image, question, option_list, reasoning_chain)
+        
+        reasoning_chain.append({
+            'step': 1,
+            'action': 'extract_objects',
+            'obj1': obj1,
+            'obj2': obj2
+        })
+        
+        # ============================================
+        # Step 2: Direct Bidirectional Queries (no abstraction!)
+        # ============================================
+        
+        # Step 2a: Forward
+        query_step2a = f"Where is the {obj1} in relation to the {obj2}? Answer with left, right, on or under"
+        prompt_step2a = f"<image>\nUSER: {query_step2a}\nASSISTANT:"
+        
+        inputs = self.processor(images=image, text=prompt_step2a, return_tensors="pt").to(self.device, torch.float16)
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=100,
+            do_sample=False,
+            pad_token_id=self.processor.tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True
+        )
+        
+        response_forward = self.processor.decode(
+            output.sequences[0][inputs['input_ids'].shape[1]:], 
+            skip_special_tokens=True
+        ).strip()
+        
+        probs_forward = [torch.log_softmax(s[0], dim=-1).max().item() for s in output.scores]
+        
+        reasoning_chain.append({
+            'step': '2a',
+            'query': query_step2a,
+            'response': response_forward,
+            'avg_prob': float(np.mean(probs_forward))
+        })
+        
+        # Step 2b: Reverse
+        query_step2b = f"Where is the {obj2} in relation to the {obj1}? Answer with left, right, on or under"
+        prompt_step2b = f"<image>\nUSER: {query_step2b}\nASSISTANT:"
+        
+        inputs = self.processor(images=image, text=prompt_step2b, return_tensors="pt").to(self.device, torch.float16)
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=100,
+            do_sample=False,
+            pad_token_id=self.processor.tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True
+        )
+        
+        response_reverse = self.processor.decode(
+            output.sequences[0][inputs['input_ids'].shape[1]:], 
+            skip_special_tokens=True
+        ).strip()
+        
+        probs_reverse = [torch.log_softmax(s[0], dim=-1).max().item() for s in output.scores]
+        
+        reasoning_chain.append({
+            'step': '2b',
+            'query': query_step2b,
+            'response': response_reverse,
+            'avg_prob': float(np.mean(probs_reverse))
+        })
+        
+        # ============================================
+        # Step 3: Consistency Check
+        # ============================================
+        is_consistent = check_logical_consistency(response_forward, response_reverse)
+        
+        if is_consistent:
+            # Consistency가 보장되면 forward response 사용
+            final_prediction = response_forward
+            avg_prob = float(np.mean(probs_forward))
+            
+            reasoning_chain.append({
+                'step': 3,
+                'action': 'consistency_verified',
+                'is_consistent': True,
+                'final_answer': final_prediction
+            })
+            
+            return {
+                'final_prediction': final_prediction,
+                'is_consistent': True,
+                'reasoning_chain': reasoning_chain,
+                'avg_prob': avg_prob
+            }
+        else:
+            # Inconsistent: fallback
+            reasoning_chain.append({
+                'step': 3,
+                'action': 'inconsistency_detected',
+                'is_consistent': False,
+                'forward': response_forward,
+                'reverse': response_reverse
+            })
+            
+            return self._direct_query_fallback(image, question, option_list, reasoning_chain, inconsistent=True)
+
+    def bidirectional_reasoning_2(self, image, question, option_list):
+        reasoning_chain = []
+
+        default_fewshots = ''
+        # Question 정제 및 객체 추출
+        is_formatted_prompt = '<image>' in question or 'USER:' in question
+        if is_formatted_prompt:
+            question = question.replace('<image>', '').replace('USER:', '').replace('ASSISTANT:', '').strip()
+        
+        obj1, obj2 = self._extract_objects_from_question(question)
+        
+        if obj1 is None or obj2 is None:
+            return self._direct_query_fallback(image, question, option_list, reasoning_chain)
+        
+        reasoning_chain.append({
+            'step': 1,
+            'action': 'extract_objects',
+            'obj1': obj1,
+            'obj2': obj2
+        })
+        
+        # ============================================
+        # Step 1
+        # ============================================
+        query_step1 = f"""Looking at the {obj1} and the {obj2} in the image, what type of spatial relationship exists between them?
+        Choose one of the following:
+            - 'left/right relationship' (if they are side by side horizontally)
+            - 'on/under relationship' (if one is above or below the other)
+
+        Answer with just one of these two options."""
+        prompt_step1 = f"<image>\nUSER: {query_step1}\nASSISTANT:"
+        inputs = self.processor(images=image, text=prompt_step1, return_tensors="pt").to(self.device, torch.float16)
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=100,
+            do_sample=False,
+            pad_token_id=self.processor.tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True
+        )
+        response_step1 = self.processor.decode(
+            output.sequences[0][inputs['input_ids'].shape[1]:], 
+            skip_special_tokens=True
+        ).strip()
+        
+        reasoning_chain.append({
+            'step': '1',
+            'query': query_step1,
+            'response': response_step1,
+        })
+        # ============================================
+        # Step 2: Direct Bidirectional Queries (no abstraction!)
+        # ============================================
+        if 'left' in response_step1.lower() or 'right' in response_step1.lower():
+            relation_type = 'left/right'
+        elif 'on' in response_step1.lower() or 'under' in response_step1.lower():
+            relation_type = 'on/under'
+        else:
+            print(reasoning_chain)
+            return self._direct_query_fallback(image, question, option_list, reasoning_chain, inconsistent=True)
+        
+        relation_type = 'left/right' if 'left' in response_step1.lower() or 'right' in response_step1.lower() else 'on/under'
+        options_map = {
+            'left/right': "'left' or 'right'",
+            'on/under': "'on' or 'under'",
+        }
+        options = options_map[relation_type]
+        # Step 2a: Forward
+        query_step2a = f"Where is the {obj1} in relation to the {obj2}? Answer in a word with {options}"
+        prompt_step2a = f"<image>\nUSER: {query_step2a}\nASSISTANT:"
+        
+        inputs = self.processor(images=image, text=prompt_step2a, return_tensors="pt").to(self.device, torch.float16)
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=100,
+            do_sample=False,
+            pad_token_id=self.processor.tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True
+        )
+        
+        response_forward = self.processor.decode(
+            output.sequences[0][inputs['input_ids'].shape[1]:], 
+            skip_special_tokens=True
+        ).strip()
+        
+        probs_forward = [torch.log_softmax(s[0], dim=-1).max().item() for s in output.scores]
+        
+        reasoning_chain.append({
+            'step': '2a',
+            'query': query_step2a,
+            'response': response_forward,
+            'avg_prob': float(np.mean(probs_forward))
+        })
+        
+        # Step 2b: Reverse
+        query_step2b = f"Where is the {obj2} in relation to the {obj1}? Answer in a word with {options}"
+        prompt_step2b = f"<image>\nUSER: {query_step2b}\nASSISTANT:"
+        
+        inputs = self.processor(images=image, text=prompt_step2b, return_tensors="pt").to(self.device, torch.float16)
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=100,
+            do_sample=False,
+            pad_token_id=self.processor.tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True
+        )
+        
+        response_reverse = self.processor.decode(
+            output.sequences[0][inputs['input_ids'].shape[1]:], 
+            skip_special_tokens=True
+        ).strip()
+        
+        probs_reverse = [torch.log_softmax(s[0], dim=-1).max().item() for s in output.scores]
+        
+        reasoning_chain.append({
+            'step': '2b',
+            'query': query_step2b,
+            'response': response_reverse,
+            'avg_prob': float(np.mean(probs_reverse))
+        })
+        
+        # ============================================
+        # Step 3: Consistency Check
+        # ============================================
+        is_consistent = check_logical_consistency(response_forward, response_reverse)
+        
+        if is_consistent:
+            # Consistency가 보장되면 forward response 사용
+            final_prediction = response_forward
+            avg_prob = float(np.mean(probs_forward))
+            
+            reasoning_chain.append({
+                'step': 3,
+                'action': 'consistency_verified',
+                'is_consistent': True,
+                'final_answer': final_prediction
+            })
+            
+            print(reasoning_chain)
+            return {
+                'final_prediction': final_prediction,
+                'is_consistent': True,
+                'reasoning_chain': reasoning_chain,
+                'avg_prob': avg_prob
+            }
+        else:
+            # Inconsistent: fallback
+            reasoning_chain.append({
+                'step': 3,
+                'action': 'inconsistency_detected',
+                'is_consistent': False,
+                'forward': response_forward,
+                'reverse': response_reverse
+            })
+            
+            print(reasoning_chain)
+            return self._direct_query_fallback(image, question, option_list, reasoning_chain, inconsistent=True)
+
+    def _extract_objects_from_question(self, question):
+        """
+        질문에서 객체 이름 추출
+        예: "Where is the beer bottle in relation to the armchair?" 
+        -> ("beer bottle", "armchair")
+        """
+        import re
+        
+        # "Where is the X in relation to the Y?" 패턴
+        pattern1 = r"where is (?:the )?(.+?) in relation to (?:the )?(.+?)\?"
+        match = re.search(pattern1, question.lower())
+        
+        if match:
+            obj1 = match.group(1).strip()  # subject
+            obj2 = match.group(2).strip()  # reference
+            return obj1, obj2
+        
+        # "What is the relationship between X and Y?" 패턴
+        pattern2 = r"where are (?:the )?(.+?) in relation to (?:the )?(.+?)\?"
+        match = re.search(pattern2, question.lower())
+        
+        if match:
+            obj1 = match.group(1).strip()
+            obj2 = match.group(2).strip()
+            return obj1, obj2
+        
+        
+        return None, None
+
+    def _direct_query_fallback(self, image, question, option_list, reasoning_chain, inconsistent=False):
+        """Direct query fallback"""
+        if '<image>' in question or 'USER:' in question:
+            question = question.replace('<image>', '').replace('USER:', '').replace('ASSISTANT:', '').strip()
+        
+        prompt = f"<image>\nUSER: {question}\nASSISTANT:"
+        inputs = self.processor(images=image, text=prompt, return_tensors="pt").to(self.device, torch.float16)
+        
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=20,
+            do_sample=False,
+            pad_token_id=self.processor.tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True
+        )
+        
+        final_prediction = self.processor.decode(
+            output.sequences[0][inputs['input_ids'].shape[1]:], 
+            skip_special_tokens=True
+        ).strip()
+        
+        probs = [torch.softmax(s[0], dim=-1).max().item() for s in output.scores]
+        
+        reasoning_chain.append({
+            'step': 'fallback',
+            'query': question,
+            'response': final_prediction,
+            'avg_prob': float(np.mean(probs)),
+            'reason': 'inconsistent' if inconsistent else 'parsing_failed'
+        })
+        
+        return {
+            'final_prediction': final_prediction,
+            'is_consistent': False,
+            'reasoning_chain': reasoning_chain,
+            'avg_prob': float(np.mean(probs)),
+            'fallback': True
+        }
+
+    def _catch_relation(self, answer):
+        answer = answer.lower()
+        RELATIONS = ["right", "left", "on", "under"]
+        candidates = []
+        for r in RELATIONS:
+            if r in answer:
+                candidates.append(r)
+        return candidates if len(candidates) > 0 else [answer]
+    
+    @torch.no_grad()
+    def adaptvis_bidirectional_reasoning(self, image, question, option_list, threshold, weight1, weight2, sample_idx=None):
+        """
+        AdaptVis + Bidirectional Selection with file-based debugging
+        """
+        reasoning_chain = []
+        
+        question = question.replace('<image>', '').replace('USER:', '').replace('ASSISTANT:', '').strip()
+        
+        # 객체 추출
+        obj1, obj2 = self._extract_objects_from_question(question)
+        
+        if obj1 is None or obj2 is None:
+            result = self._direct_query_fallback(image, question, option_list, reasoning_chain)
+            self._save_debug_log(reasoning_chain, sample_idx)
+            return result
+        
+        
+        reasoning_chain.append({
+            'step': 1,
+            'action': 'extract_objects',
+            'obj1': obj1,
+            'obj2': obj2
+        })
+        
+        # ============================================
+        # Step 2: Uncertainty 측정 (AdaptVis)
+        # ============================================
+        query_uncertainty = f"Where is the {obj1} in relation to the {obj2}? Answer with left, right, on or under"
+        prompt_uncertainty = f"USER: <image>\n{query_uncertainty} ASSISTANT:"
+        
+        single_input = self.processor(
+            text=prompt_uncertainty, 
+            images=image, 
+            padding="max_length", 
+            return_tensors="pt", 
+            max_length=77
+        ).to(self.device)
+        
+        # Keys 생성
+        keys_base = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
+        change_greedy_to_add_weight()
+        output_base = self.model.generate(
+            **single_input,
+            keys=keys_base,
+            weight=1.0,
+            max_new_tokens=100, 
+            output_scores=True, 
+            return_dict_in_generate=True
+        )
+        
+        baseline_response = self.processor.decode(
+            output_base['sequences'][0][len(single_input['input_ids'][-1]):], 
+            skip_special_tokens=True
+        ).strip()
+        baseline_response_rs = self._catch_relation(baseline_response)
+        baseline_response_r = baseline_response_rs[-1]
+
+        # Uncertainty 계산
+        uncertainty = np.round(float(max(torch.nn.functional.softmax(output_base['scores'][0], dim=-1)[0])), 2)
+        
+        # Threshold 기반 weight 선택
+        if uncertainty < threshold:
+            selected_weight = weight1
+            weight_reason = 'low_confidence'
+        else:
+            selected_weight = weight2
+            weight_reason = 'high_confidence'
+        
+        reasoning_chain.append({
+            'step': 2,
+            'action': 'adaptvis_weight_selection',
+            'uncertainty': uncertainty,
+            'threshold': threshold,
+            'selected_weight': selected_weight,
+            'reason': weight_reason,
+            'baseline_response': baseline_response,
+            'baseline_response_r': baseline_response_r,
+            'num_catched_relation': len(baseline_response_rs)
+        })
+
+        # ============================================
+        # Step 3a: Forward Query with Selected Weight
+        # ============================================
+        query_forward = f"Where is the {obj1} in relation to the {obj2}? Answer with left, right, on or under"
+        prompt_forward = f"USER: <image>\n{query_forward} ASSISTANT:"
+        
+        single_input_forward = self.processor(
+            text=prompt_forward, 
+            images=image, 
+            padding="max_length", 
+            return_tensors="pt", 
+            max_length=77
+        ).to(self.device)
+        
+        keys_forward = [torch.where(input_id == 32001, 1, 0) for input_id in single_input_forward['input_ids']]
+        
+        output_forward = self.model.generate(
+            **single_input_forward, 
+            keys=keys_forward, 
+            weight=selected_weight,
+            max_new_tokens=100, 
+            output_scores=True, 
+            return_dict_in_generate=True
+        )
+        
+        response_forward = self.processor.decode(
+            output_forward['sequences'][0][len(single_input_forward['input_ids'][-1]):], 
+            skip_special_tokens=True
+        ).strip()
+        response_forward_rs = self._catch_relation(response_forward)
+        response_forward_r = response_forward_rs[-1]
+
+        # Forward confidence 계산
+        probs_forward = [torch.softmax(s[0], dim=-1).max().item() for s in output_forward['scores']]
+        confidence_forward = float(np.mean(probs_forward))
+        
+        reasoning_chain.append({
+            'step': '3a',
+            'direction': 'forward',
+            'query': query_forward,
+            'response': response_forward,
+            'response_r': response_forward_r,
+            'num_catched_relation': len(response_forward_rs),
+            'weight': selected_weight,
+            'confidence': confidence_forward,
+            'token_probs': [float(p) for p in probs_forward]
+        })
+        
+        # ============================================
+        # Step 3b: Reverse Query with Same Weight
+        # ============================================
+        query_reverse = f"Where is the {obj2} in relation to the {obj1}? Answer with left, right, on or under"
+        prompt_reverse = f"USER: <image>\n{query_reverse} ASSISTANT:"
+        
+        single_input_reverse = self.processor(
+            text=prompt_reverse, 
+            images=image, 
+            padding="max_length", 
+            return_tensors="pt", 
+            max_length=77
+        ).to(self.device)
+        
+        keys_reverse = [torch.where(input_id == 32001, 1, 0) for input_id in single_input_reverse['input_ids']]
+        
+        output_reverse = self.model.generate(
+            **single_input_reverse, 
+            keys=keys_reverse, 
+            weight=selected_weight,
+            max_new_tokens=100, 
+            output_scores=True, 
+            return_dict_in_generate=True
+        )
+        
+        response_reverse = self.processor.decode(
+            output_reverse['sequences'][0][len(single_input_reverse['input_ids'][-1]):], 
+            skip_special_tokens=True
+        ).strip()
+        response_reverse_rs = self._catch_relation(response_reverse)
+        response_reverse_r = response_reverse_rs[-1]
+
+        # Reverse confidence 계산
+        probs_reverse = [torch.softmax(s[0], dim=-1).max().item() for s in output_reverse['scores']]
+        confidence_reverse = float(np.mean(probs_reverse))
+        
+        
+        reasoning_chain.append({
+            'step': '3b',
+            'direction': 'reverse',
+            'query': query_reverse,
+            'response': response_reverse,
+            'response_r': response_reverse_r,
+            'num_catched_relation': len(response_reverse_rs),
+            'weight': selected_weight,
+            'confidence': confidence_reverse,
+            'token_probs': [float(p) for p in probs_reverse]
+        })
+        
+        # ============================================
+        # Step 4: Bidirectional Selection
+        # ============================================
+        
+        # logic 추가
+        if len(response_forward_rs) == len(response_reverse_rs) == 1:
+            # Consistency 검증
+            is_consistent = check_logical_consistency(response_forward_r, response_reverse_r)
+            expected_reverse = get_symmetric_relation(response_forward_r.lower())
+            
+            
+            # Confidence 차이
+            confidence_diff = abs(confidence_forward - confidence_reverse)
+            
+            
+            if is_consistent:
+                # 일관성 있음
+                final_prediction = response_forward_r
+                selected_confidence = confidence_forward
+                selection_reason = 'consistent_forward'
+                selected_direction = 'forward'
+                
+                
+            else:
+                # 일관성 없음
+                
+                if confidence_forward >= confidence_reverse:
+                    final_prediction = response_forward_r
+                    selected_confidence = confidence_forward
+                    selection_reason = 'higher_confidence_forward'
+                    selected_direction = 'forward'
+                    
+                else:
+                    # Reverse가 더 확신함 → 대칭 변환
+                    final_prediction = get_symmetric_relation(response_reverse_r.lower())
+                    selected_confidence = confidence_reverse
+                    selection_reason = 'higher_confidence_reverse_symmetric'
+                    selected_direction = 'reverse'
+                
+        
+            reasoning_chain.append({
+                'step': 4,
+                'action': 'bidirectional_selection',
+                'is_consistent': is_consistent,
+                'confidence_forward': confidence_forward,
+                'confidence_reverse': confidence_reverse,
+                'confidence_diff': confidence_diff,
+                'response_forward': response_forward,
+                'response_reverse': response_reverse,
+                'expected_reverse': expected_reverse,
+                'selected_direction': selected_direction,
+                'final_answer': final_prediction,
+                'selection_reason': selection_reason
+            })
+        
+        else:
+            if confidence_forward >= confidence_reverse:
+                query_final = f"Where is the {obj1} in relation to the {obj2}? Answer in a word left, right, on or under, with reference to the following observation: {response_forward}"
+                prompt_final = f"USER: <image>\n{query_final} ASSISTANT:"
+                
+                single_input = self.processor(
+                    text=prompt_final, 
+                    images=image, 
+                    padding="max_length", 
+                    return_tensors="pt", 
+                    max_length=77
+                ).to(self.device)
+                
+                # Keys 생성
+                keys_final = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
+                change_greedy_to_add_weight()
+                output_final = self.model.generate(
+                    **single_input,
+                    keys=keys_final,
+                    weight=1.0,
+                    max_new_tokens=100, 
+                    output_scores=True, 
+                    return_dict_in_generate=True
+                )
+                
+                final_response = self.processor.decode(
+                    output_final['sequences'][0][len(single_input['input_ids'][-1]):], 
+                    skip_special_tokens=True
+                ).strip()
+                final_response_rs = self._catch_relation(final_response)
+                final_response_r = final_response_rs[-1]
+
+            reasoning_chain.append({
+                'step': 4,
+                'action': 'bidirectional_selection',
+                'is_consistent': None,
+                'confidence_forward': confidence_forward,
+                'confidence_reverse': confidence_reverse,
+                'confidence_diff': confidence_diff,
+                'response_forward': response_forward,
+                'response_reverse': response_reverse,
+                'expected_reverse': None,
+                'selected_direction': None,
+                'final_answer': final_response_r,
+                'selection_reason': None
+            })
+
+        
+        # 디버깅 정보 저장
+        self._save_debug_log(reasoning_chain, sample_idx, {
+            'question': question,
+            'obj1': obj1,
+            'obj2': obj2,
+            'uncertainty': uncertainty,
+            'selected_weight': selected_weight,
+            'response_forward': response_forward,
+            'response_reverse': response_reverse,
+            'confidence_forward': confidence_forward,
+            'confidence_reverse': confidence_reverse,
+            'is_consistent': is_consistent,
+            'final_prediction': final_prediction
+        })
+        
+        return {
+            'final_prediction': final_prediction,
+            'is_consistent': is_consistent,
+            'confidence': selected_confidence,
+            'confidence_forward': confidence_forward,
+            'confidence_reverse': confidence_reverse,
+            'selected_weight': selected_weight,
+            'initial_uncertainty': uncertainty,
+            'selection_reason': selection_reason,
+            'reasoning_chain': reasoning_chain,
+            'avg_prob': selected_confidence
+        }
+
     def _save_debug_log(self, reasoning_chain, sample_idx, summary=None):
         """디버깅 정보를 파일로 저장"""
         import os
