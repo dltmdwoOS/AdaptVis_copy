@@ -1,0 +1,562 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3210330009460449,
+        "uncertainty_kl": 0.0056005362421274185,
+        "uncertainty": 5.6005362421274185
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.6276255249977112,
+        "uncertainty_kl": 0.09458544850349426,
+        "uncertainty": 94.58544850349426
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5658017992973328,
+        "uncertainty_kl": 0.07586197555065155,
+        "uncertainty": 75.86197555065155
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty_prob": 0.401756227016449,
+        "uncertainty_kl": 0.028237247839570045,
+        "uncertainty": 28.237247839570045
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7613427042961121,
+        "uncertainty_kl": 0.15517660975456238,
+        "uncertainty": 155.17660975456238
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.5789944529533386,
+        "uncertainty_kl": 0.0806562528014183,
+        "uncertainty": 80.6562528014183
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5863107442855835,
+        "uncertainty_kl": 0.07315850257873535,
+        "uncertainty": 73.15850257873535
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5883249640464783,
+        "uncertainty_kl": 0.07141728699207306,
+        "uncertainty": 71.41728699207306
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6881883144378662,
+        "uncertainty_kl": 0.12687897682189941,
+        "uncertainty": 126.87897682189941
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5519288182258606,
+        "uncertainty_kl": 0.06468351185321808,
+        "uncertainty": 64.68351185321808
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.4167553186416626,
+        "uncertainty_kl": 0.017740346491336823,
+        "uncertainty": 17.740346491336823
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.4166768193244934,
+        "uncertainty_kl": 0.020564623177051544,
+        "uncertainty": 20.564623177051544
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the shoes in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.8483000993728638,
+        "uncertainty_kl": 0.2062382698059082,
+        "uncertainty": 206.2382698059082
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5206400156021118,
+        "uncertainty_kl": 0.054021477699279785,
+        "uncertainty": 54.021477699279785
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5771519541740417,
+        "uncertainty_kl": 0.07554727792739868,
+        "uncertainty": 75.54727792739868
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.6060140132904053,
+        "uncertainty_kl": 0.0839991420507431,
+        "uncertainty": 83.9991420507431
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glove in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6647372245788574,
+        "uncertainty_kl": 0.11859376728534698,
+        "uncertainty": 118.59376728534698
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.611416757106781,
+        "uncertainty_kl": 0.07638701051473618,
+        "uncertainty": 76.38701051473618
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.6139964461326599,
+        "uncertainty_kl": 0.09034693241119385,
+        "uncertainty": 90.34693241119385
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.33868029713630676,
+        "uncertainty_kl": 0.025061694905161858,
+        "uncertainty": 25.061694905161858
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6670729517936707,
+        "uncertainty_kl": 0.10711240768432617,
+        "uncertainty": 107.11240768432617
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.5455817580223083,
+        "uncertainty_kl": 0.056703925132751465,
+        "uncertainty": 56.703925132751465
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.4585486352443695,
+        "uncertainty_kl": 0.036052949726581573,
+        "uncertainty": 36.05294972658157
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.6004771590232849,
+        "uncertainty_kl": 0.08260010182857513,
+        "uncertainty": 82.60010182857513
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yarn in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3416516184806824,
+        "uncertainty_kl": 0.03372329846024513,
+        "uncertainty": 33.72329846024513
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "On",
+        "uncertainty_prob": 0.28269848227500916,
+        "uncertainty_kl": 0.0024345330893993378,
+        "uncertainty": 2.4345330893993378
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3371095359325409,
+        "uncertainty_kl": 0.010749053210020065,
+        "uncertainty": 10.749053210020065
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rose in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6564601063728333,
+        "uncertainty_kl": 0.10510808229446411,
+        "uncertainty": 105.10808229446411
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.8219496607780457,
+        "uncertainty_kl": 0.18888799846172333,
+        "uncertainty": 188.88799846172333
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Left",
+        "uncertainty_prob": 0.38538292050361633,
+        "uncertainty_kl": 0.03621520847082138,
+        "uncertainty": 36.21520847082138
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6939314007759094,
+        "uncertainty_kl": 0.12165981531143188,
+        "uncertainty": 121.65981531143188
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.363982230424881,
+        "uncertainty_kl": 0.014509432949125767,
+        "uncertainty": 14.509432949125767
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7755501866340637,
+        "uncertainty_kl": 0.15973889827728271,
+        "uncertainty": 159.73889827728271
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty_prob": 0.37309345602989197,
+        "uncertainty_kl": 0.01963566616177559,
+        "uncertainty": 19.63566616177559
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3709174692630768,
+        "uncertainty_kl": 0.027895165607333183,
+        "uncertainty": 27.895165607333183
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3339304029941559,
+        "uncertainty_kl": 0.012566972523927689,
+        "uncertainty": 12.566972523927689
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rose in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3427780568599701,
+        "uncertainty_kl": 0.03343905508518219,
+        "uncertainty": 33.43905508518219
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3849813938140869,
+        "uncertainty_kl": 0.024916714057326317,
+        "uncertainty": 24.916714057326317
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3579487204551697,
+        "uncertainty_kl": 0.017715461552143097,
+        "uncertainty": 17.715461552143097
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.39526844024658203,
+        "uncertainty_kl": 0.0225833673030138,
+        "uncertainty": 22.5833673030138
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7049167156219482,
+        "uncertainty_kl": 0.12160351872444153,
+        "uncertainty": 121.60351872444153
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blanket in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.34660232067108154,
+        "uncertainty_kl": 0.01927386224269867,
+        "uncertainty": 19.27386224269867
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4406730532646179,
+        "uncertainty_kl": 0.03948783501982689,
+        "uncertainty": 39.48783501982689
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3347654342651367,
+        "uncertainty_kl": 0.014661971479654312,
+        "uncertainty": 14.661971479654312
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5733059048652649,
+        "uncertainty_kl": 0.07417804002761841,
+        "uncertainty": 74.17804002761841
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3370313346385956,
+        "uncertainty_kl": 0.03569377213716507,
+        "uncertainty": 35.69377213716507
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.49035993218421936,
+        "uncertainty_kl": 0.048847880214452744,
+        "uncertainty": 48.84788021445274
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.35430946946144104,
+        "uncertainty_kl": 0.026537293568253517,
+        "uncertainty": 26.537293568253517
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the apple in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6683838367462158,
+        "uncertainty_kl": 0.1065123900771141,
+        "uncertainty": 106.5123900771141
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.8175019025802612,
+        "uncertainty_kl": 0.1857282966375351,
+        "uncertainty": 185.7282966375351
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.34126853942871094,
+        "uncertainty_kl": 0.03478100523352623,
+        "uncertainty": 34.78100523352623
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7571848034858704,
+        "uncertainty_kl": 0.15500332415103912,
+        "uncertainty": 155.00332415103912
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.42939701676368713,
+        "uncertainty_kl": 0.030290139839053154,
+        "uncertainty": 30.290139839053154
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3746423125267029,
+        "uncertainty_kl": 0.018457047641277313,
+        "uncertainty": 18.457047641277313
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5136359930038452,
+        "uncertainty_kl": 0.05447687953710556,
+        "uncertainty": 54.47687953710556
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.32035884261131287,
+        "uncertainty_kl": 0.006888008676469326,
+        "uncertainty": 6.888008676469326
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6579282879829407,
+        "uncertainty_kl": 0.10271702706813812,
+        "uncertainty": 102.71702706813812
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7169356942176819,
+        "uncertainty_kl": 0.12943050265312195,
+        "uncertainty": 129.43050265312195
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7822797298431396,
+        "uncertainty_kl": 0.16192734241485596,
+        "uncertainty": 161.92734241485596
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.34104123711586,
+        "uncertainty_kl": 0.007136765867471695,
+        "uncertainty": 7.136765867471695
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the vase in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3353117108345032,
+        "uncertainty_kl": 0.022616742178797722,
+        "uncertainty": 22.616742178797722
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty_prob": 0.35321393609046936,
+        "uncertainty_kl": 0.043443650007247925,
+        "uncertainty": 43.443650007247925
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty_prob": 0.35957175493240356,
+        "uncertainty_kl": 0.01632070541381836,
+        "uncertainty": 16.32070541381836
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.2983989715576172,
+        "uncertainty_kl": 0.009754324331879616,
+        "uncertainty": 9.754324331879616
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5098267197608948,
+        "uncertainty_kl": 0.06889279186725616,
+        "uncertainty": 68.89279186725616
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.34794580936431885,
+        "uncertainty_kl": 0.030061062425374985,
+        "uncertainty": 30.061062425374985
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty_prob": 0.3183014392852783,
+        "uncertainty_kl": 0.016778286546468735,
+        "uncertainty": 16.778286546468735
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microphone in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.3200465440750122,
+        "uncertainty_kl": 0.0159342959523201,
+        "uncertainty": 15.934295952320099
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7561652064323425,
+        "uncertainty_kl": 0.15075154602527618,
+        "uncertainty": 150.75154602527618
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yarn in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty_prob": 0.37409383058547974,
+        "uncertainty_kl": 0.020858585834503174,
+        "uncertainty": 20.858585834503174
+    }
+]

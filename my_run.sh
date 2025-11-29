@@ -2,7 +2,7 @@
 export TEST_MODE=True
 
 python3 main_aro.py \
-    --dataset Controlled_Images_B \
+    --dataset Controlled_Images_A \
     --model-name='llava1.5' \
     --download \
     --method adapt_vis \

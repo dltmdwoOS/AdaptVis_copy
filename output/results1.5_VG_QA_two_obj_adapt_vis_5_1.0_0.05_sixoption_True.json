@@ -1,0 +1,1866 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the cart in relation to the green trees? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Front",
+        "uncertainty_prob": 0.28524190187454224,
+        "uncertainty_kl": 0.029700681567192078,
+        "uncertainty": 0.029700681567192078
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bed in relation to the drawer? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.363224595785141,
+        "uncertainty_kl": 0.025061851367354393,
+        "uncertainty": 0.025061851367354393
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tall tree in relation to the fence? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Behind",
+        "uncertainty_prob": 0.4577217102050781,
+        "uncertainty_kl": 0.040060702711343765,
+        "uncertainty": 0.040060702711343765
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the drawers in relation to the table? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6652408838272095,
+        "uncertainty_kl": 0.09869726002216339,
+        "uncertainty": 0.09869726002216339
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3982083201408386,
+        "uncertainty_kl": 0.0359053760766983,
+        "uncertainty": 0.0359053760766983
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bag in relation to the cat? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3212941288948059,
+        "uncertainty_kl": 0.06933799386024475,
+        "uncertainty": 0.06933799386024475
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the horse in relation to the roof?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Front",
+        "uncertainty_prob": 0.349006712436676,
+        "uncertainty_kl": 0.13444161415100098,
+        "uncertainty": 0.13444161415100098
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the towel in relation to the toilet? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6617509722709656,
+        "uncertainty_kl": 0.08446254581212997,
+        "uncertainty": 0.08446254581212997
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the table in relation to the tree? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Front",
+        "uncertainty_prob": 0.49384480714797974,
+        "uncertainty_kl": 0.057844921946525574,
+        "uncertainty": 0.057844921946525574
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the boy in relation to the girl?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36487358808517456,
+        "uncertainty_kl": 0.052265867590904236,
+        "uncertainty": 0.052265867590904236
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in relation to the cart? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3230510354042053,
+        "uncertainty_kl": 0.04170987755060196,
+        "uncertainty": 0.04170987755060196
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the catcher in relation to the batter? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28265705704689026,
+        "uncertainty_kl": 0.08494759351015091,
+        "uncertainty": 0.08494759351015091
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the round clock in relation to the person? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28566673398017883,
+        "uncertainty_kl": 0.07199726998806,
+        "uncertainty": 0.07199726998806
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the noodles in relation to the fruit? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.35717901587486267,
+        "uncertainty_kl": 0.04171249270439148,
+        "uncertainty": 0.04171249270439148
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fork in relation to the vegetables?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.310968279838562,
+        "uncertainty_kl": 0.07351937890052795,
+        "uncertainty": 0.07351937890052795
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the painting? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.21044577658176422,
+        "uncertainty_kl": 0.0772559642791748,
+        "uncertainty": 0.0772559642791748
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the guitar in relation to the console?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2752300500869751,
+        "uncertainty_kl": 0.08621738851070404,
+        "uncertainty": 0.08621738851070404
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the small screen in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.43561139702796936,
+        "uncertainty_kl": 0.10832051932811737,
+        "uncertainty": 0.10832051932811737
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in relation to the table? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.43114906549453735,
+        "uncertainty_kl": 0.033906713128089905,
+        "uncertainty": 0.033906713128089905
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the black bag in relation to the laptop? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3766923248767853,
+        "uncertainty_kl": 0.05122285336256027,
+        "uncertainty": 0.05122285336256027
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the comb in relation to the bag?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.385181725025177,
+        "uncertainty_kl": 0.13687215745449066,
+        "uncertainty": 0.13687215745449066
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the boy?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.46386054158210754,
+        "uncertainty_kl": 0.09879513084888458,
+        "uncertainty": 0.09879513084888458
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the microwave?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.32695919275283813,
+        "uncertainty_kl": 0.08858747780323029,
+        "uncertainty": 0.08858747780323029
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lady in relation to the soldier?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.31366199254989624,
+        "uncertainty_kl": 0.09216657280921936,
+        "uncertainty": 0.09216657280921936
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the shelf in relation to the toilet?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3481638431549072,
+        "uncertainty_kl": 0.15003228187561035,
+        "uncertainty": 0.15003228187561035
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the catcher in relation to the batter? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.26149982213974,
+        "uncertainty_kl": 0.07285478711128235,
+        "uncertainty": 0.07285478711128235
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the truck in relation to the bus?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3565572202205658,
+        "uncertainty_kl": 0.04034993797540665,
+        "uncertainty": 0.04034993797540665
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4154447913169861,
+        "uncertainty_kl": 0.037695057690143585,
+        "uncertainty": 0.037695057690143585
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the melon in relation to the kettle? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Front",
+        "uncertainty_prob": 0.4863547086715698,
+        "uncertainty_kl": 0.03199123591184616,
+        "uncertainty": 0.03199123591184616
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the man?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3094084560871124,
+        "uncertainty_kl": 0.061080604791641235,
+        "uncertainty": 0.061080604791641235
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the guy in relation to the chair?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36174115538597107,
+        "uncertainty_kl": 0.06703343242406845,
+        "uncertainty": 0.06703343242406845
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the statue in relation to the broom? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.33187127113342285,
+        "uncertainty_kl": 0.07245096564292908,
+        "uncertainty": 0.07245096564292908
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the children in relation to the trees? Answer with left, right, front, behind, top, or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Front",
+        "uncertainty_prob": 0.34745457768440247,
+        "uncertainty_kl": 0.15866640210151672,
+        "uncertainty": 0.15866640210151672
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the heater in relation to the white toilet? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3189086318016052,
+        "uncertainty_kl": 0.1204373836517334,
+        "uncertainty": 0.1204373836517334
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the tree? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": 0.31371888518333435,
+        "uncertainty_kl": 0.030548907816410065,
+        "uncertainty": 0.030548907816410065
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white bowl in relation to the girl? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3904471695423126,
+        "uncertainty_kl": 0.1420549899339676,
+        "uncertainty": 0.1420549899339676
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in relation to the cabinet?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36474889516830444,
+        "uncertainty_kl": 0.11445026099681854,
+        "uncertainty": 0.11445026099681854
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in relation to the toilet?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Above",
+        "uncertainty_prob": 0.3081936240196228,
+        "uncertainty_kl": 0.12112610787153244,
+        "uncertainty": 0.12112610787153244
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pizza in relation to the bowl?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.301474392414093,
+        "uncertainty_kl": 0.11257509142160416,
+        "uncertainty": 0.11257509142160416
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rhino in relation to the giraffe? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Front",
+        "uncertainty_prob": 0.23570050299167633,
+        "uncertainty_kl": 0.04563302919268608,
+        "uncertainty": 0.04563302919268608
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fork in relation to the sandwich? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2843524217605591,
+        "uncertainty_kl": 0.06462457031011581,
+        "uncertainty": 0.06462457031011581
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.5597078800201416,
+        "uncertainty_kl": 0.06674157828092575,
+        "uncertainty": 0.06674157828092575
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the fence? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.32778993248939514,
+        "uncertainty_kl": 0.04232300445437431,
+        "uncertainty": 0.04232300445437431
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the computer in relation to the chair?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.30476391315460205,
+        "uncertainty_kl": 0.07726581394672394,
+        "uncertainty": 0.07726581394672394
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the carrots in relation to the potatoes? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.37965357303619385,
+        "uncertainty_kl": 0.05230442434549332,
+        "uncertainty": 0.05230442434549332
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the pillow? Answer with left, right, front, behind, top, or bottom.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Above",
+        "uncertainty_prob": 0.3945547938346863,
+        "uncertainty_kl": 0.1683548390865326,
+        "uncertainty": 0.1683548390865326
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fence in relation to the trees? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": 0.2764323651790619,
+        "uncertainty_kl": 0.03644955903291702,
+        "uncertainty": 0.03644955903291702
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the animal in relation to the trees?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": 0.31743329763412476,
+        "uncertainty_kl": 0.07629270851612091,
+        "uncertainty": 0.07629270851612091
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the nuts in relation to the purple cabbage? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Above",
+        "uncertainty_prob": 0.32118770480155945,
+        "uncertainty_kl": 0.16575652360916138,
+        "uncertainty": 0.16575652360916138
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bridge in relation to the mountains? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Front",
+        "uncertainty_prob": 0.25529956817626953,
+        "uncertainty_kl": 0.05237455666065216,
+        "uncertainty": 0.05237455666065216
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the bicycle? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.27359896898269653,
+        "uncertainty_kl": 0.03022151254117489,
+        "uncertainty": 0.03022151254117489
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the boy in relation to the chairs? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4500909447669983,
+        "uncertainty_kl": 0.034672193229198456,
+        "uncertainty": 0.034672193229198456
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the blanket?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.36099106073379517,
+        "uncertainty_kl": 0.13063526153564453,
+        "uncertainty": 0.13063526153564453
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the knife? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2527761161327362,
+        "uncertainty_kl": 0.04624749720096588,
+        "uncertainty": 0.04624749720096588
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the woman?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.32439813017845154,
+        "uncertainty_kl": 0.10395006835460663,
+        "uncertainty": 0.10395006835460663
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dishwasher in relation to the drawer? \n\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2404598444700241,
+        "uncertainty_kl": 0.06107168644666672,
+        "uncertainty": 0.06107168644666672
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the wine?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2709049582481384,
+        "uncertainty_kl": 0.08787123113870621,
+        "uncertainty": 0.08787123113870621
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the tray? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.5746850967407227,
+        "uncertainty_kl": 0.046643517911434174,
+        "uncertainty": 0.046643517911434174
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bicycle in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.32483720779418945,
+        "uncertainty_kl": 0.01377114374190569,
+        "uncertainty": 0.01377114374190569
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chocolate cake in relation to the knife? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.39270493388175964,
+        "uncertainty_kl": 0.11895447224378586,
+        "uncertainty": 0.11895447224378586
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28665000200271606,
+        "uncertainty_kl": 0.01429930329322815,
+        "uncertainty": 0.01429930329322815
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the bike?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2697754204273224,
+        "uncertainty_kl": 0.048577845096588135,
+        "uncertainty": 0.048577845096588135
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the catcher in relation to the batter? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3251277506351471,
+        "uncertainty_kl": 0.06934325397014618,
+        "uncertainty": 0.06934325397014618
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white bag in relation to the cup? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.34183740615844727,
+        "uncertainty_kl": 0.04092713072896004,
+        "uncertainty": 0.04092713072896004
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the round bowl in relation to the book? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3590205907821655,
+        "uncertainty_kl": 0.09712737798690796,
+        "uncertainty": 0.09712737798690796
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white curtain in relation to the couch? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.225479856133461,
+        "uncertainty_kl": 0.1144883930683136,
+        "uncertainty": 0.1144883930683136
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bicycle in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28083181381225586,
+        "uncertainty_kl": 0.029208075255155563,
+        "uncertainty": 0.029208075255155563
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white refrigerator in relation to the oven? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.48335134983062744,
+        "uncertainty_kl": 0.043546389788389206,
+        "uncertainty": 0.043546389788389206
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the curtain in relation to the lamp?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2546403110027313,
+        "uncertainty_kl": 0.08605024963617325,
+        "uncertainty": 0.08605024963617325
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cheese? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3081434667110443,
+        "uncertainty_kl": 0.07832778990268707,
+        "uncertainty": 0.07832778990268707
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman?\nAnswer with left, right, front, behind, above or below.\nOption A photo of a man to the right of a woman.\nASSISTANT:",
+        "Generation": "Above",
+        "Golden": "Right",
+        "uncertainty_prob": 0.46898919343948364,
+        "uncertainty_kl": 0.029383862391114235,
+        "uncertainty": 0.029383862391114235
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the green bag in relation to the bike? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.5265491604804993,
+        "uncertainty_kl": 0.07497823238372803,
+        "uncertainty": 0.07497823238372803
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the table in relation to the refrigerator?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.23019586503505707,
+        "uncertainty_kl": 0.062216997146606445,
+        "uncertainty": 0.062216997146606445
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the kite? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2840818166732788,
+        "uncertainty_kl": 0.06721150875091553,
+        "uncertainty": 0.06721150875091553
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6458787322044373,
+        "uncertainty_kl": 0.07566267251968384,
+        "uncertainty": 0.07566267251968384
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in relation to the table?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2807503044605255,
+        "uncertainty_kl": 0.08749520033597946,
+        "uncertainty": 0.08749520033597946
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in relation to the couch? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7069151997566223,
+        "uncertainty_kl": 0.10114150494337082,
+        "uncertainty": 0.10114150494337082
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soup in relation to the spoon?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.34109461307525635,
+        "uncertainty_kl": 0.1303064227104187,
+        "uncertainty": 0.1303064227104187
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the black bag in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.6010547280311584,
+        "uncertainty_kl": 0.07780088484287262,
+        "uncertainty": 0.07780088484287262
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in relation to the coffee table? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2938499450683594,
+        "uncertainty_kl": 0.07287798821926117,
+        "uncertainty": 0.07287798821926117
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the donut in relation to the cup?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.40563032031059265,
+        "uncertainty_kl": 0.13464397192001343,
+        "uncertainty": 0.13464397192001343
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the lamp? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.30489233136177063,
+        "uncertainty_kl": 0.038562335073947906,
+        "uncertainty": 0.038562335073947906
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the suitcase in relation to the backpack? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.24393831193447113,
+        "uncertainty_kl": 0.0352812334895134,
+        "uncertainty": 0.0352812334895134
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lady in relation to the man?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.47278183698654175,
+        "uncertainty_kl": 0.11519522964954376,
+        "uncertainty": 0.11519522964954376
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the metal lamp in relation to the laptop? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.24716630578041077,
+        "uncertainty_kl": 0.05136163905262947,
+        "uncertainty": 0.05136163905262947
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in relation to the table?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3083631992340088,
+        "uncertainty_kl": 0.08081860840320587,
+        "uncertainty": 0.08081860840320587
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the television in relation to the bookcase? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4088650941848755,
+        "uncertainty_kl": 0.05782521516084671,
+        "uncertainty": 0.05782521516084671
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the keyboard in relation to the notebook? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2740500569343567,
+        "uncertainty_kl": 0.04830023646354675,
+        "uncertainty": 0.04830023646354675
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the umbrella? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.27504122257232666,
+        "uncertainty_kl": 0.058507464826107025,
+        "uncertainty": 0.058507464826107025
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fence in relation to the train? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.713211715221405,
+        "uncertainty_kl": 0.08629821240901947,
+        "uncertainty": 0.08629821240901947
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the man?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4448859393596649,
+        "uncertainty_kl": 0.07565305382013321,
+        "uncertainty": 0.07565305382013321
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the black umbrella in relation to the woman? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2903546988964081,
+        "uncertainty_kl": 0.09729396551847458,
+        "uncertainty": 0.09729396551847458
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3327702283859253,
+        "uncertainty_kl": 0.00799380149692297,
+        "uncertainty": 0.00799380149692297
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the lamp? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2843422591686249,
+        "uncertainty_kl": 0.033571161329746246,
+        "uncertainty": 0.033571161329746246
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the stove in relation to the woman?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.27586326003074646,
+        "uncertainty_kl": 0.09879674017429352,
+        "uncertainty": 0.09879674017429352
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the computer? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4500827491283417,
+        "uncertainty_kl": 0.05090847983956337,
+        "uncertainty": 0.05090847983956337
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the carriage?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3729903995990753,
+        "uncertainty_kl": 0.06298504024744034,
+        "uncertainty": 0.06298504024744034
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the bike?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3753765821456909,
+        "uncertainty_kl": 0.09263753145933151,
+        "uncertainty": 0.09263753145933151
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the cupboard? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4165198802947998,
+        "uncertainty_kl": 0.04653041437268257,
+        "uncertainty": 0.04653041437268257
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blond woman in relation to the laptop? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4892410933971405,
+        "uncertainty_kl": 0.07616575062274933,
+        "uncertainty": 0.07616575062274933
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the cake? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2859649658203125,
+        "uncertainty_kl": 0.06753579527139664,
+        "uncertainty": 0.06753579527139664
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the shower curtain in relation to the toilet? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.32407301664352417,
+        "uncertainty_kl": 0.08185543864965439,
+        "uncertainty": 0.08185543864965439
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in relation to the stove?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.32098037004470825,
+        "uncertainty_kl": 0.04759017378091812,
+        "uncertainty": 0.04759017378091812
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kite in relation to the girl?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4374462366104126,
+        "uncertainty_kl": 0.1606808304786682,
+        "uncertainty": 0.1606808304786682
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wood fence in relation to the bushes? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Front",
+        "uncertainty_prob": 0.26183685660362244,
+        "uncertainty_kl": 0.10055898129940033,
+        "uncertainty": 0.10055898129940033
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bed in relation to the lamp?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3329679071903229,
+        "uncertainty_kl": 0.060555350035429,
+        "uncertainty": 0.060555350035429
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the car in relation to the carriage? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.5611244440078735,
+        "uncertainty_kl": 0.06806690990924835,
+        "uncertainty": 0.06806690990924835
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bookshelf in relation to the pillow? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2696102559566498,
+        "uncertainty_kl": 0.04141274839639664,
+        "uncertainty": 0.04141274839639664
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the table in relation to the comforter? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.29070818424224854,
+        "uncertainty_kl": 0.07600675523281097,
+        "uncertainty": 0.07600675523281097
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the sandwich?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2962256371974945,
+        "uncertainty_kl": 0.1110883429646492,
+        "uncertainty": 0.1110883429646492
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the screen? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.40562349557876587,
+        "uncertainty_kl": 0.05241524428129196,
+        "uncertainty": 0.05241524428129196
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the surfboard? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4076062738895416,
+        "uncertainty_kl": 0.08719006180763245,
+        "uncertainty": 0.08719006180763245
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white pillow in relation to the boy? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.286206990480423,
+        "uncertainty_kl": 0.09266094863414764,
+        "uncertainty": 0.09266094863414764
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the flag in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2923194468021393,
+        "uncertainty_kl": 0.08315955102443695,
+        "uncertainty": 0.08315955102443695
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the chair? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.401982843875885,
+        "uncertainty_kl": 0.037342365831136703,
+        "uncertainty": 0.037342365831136703
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.40526747703552246,
+        "uncertainty_kl": 0.058669231832027435,
+        "uncertainty": 0.058669231832027435
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fork in relation to the bread?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.393614262342453,
+        "uncertainty_kl": 0.05918984115123749,
+        "uncertainty": 0.05918984115123749
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the boat in relation to the woman?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2887153923511505,
+        "uncertainty_kl": 0.07795572280883789,
+        "uncertainty": 0.07795572280883789
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cabinet in relation to the toilet? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.7687504291534424,
+        "uncertainty_kl": 0.12135477364063263,
+        "uncertainty": 0.12135477364063263
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white keyboard in relation to the mouse pad? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.48922431468963623,
+        "uncertainty_kl": 0.05480015277862549,
+        "uncertainty": 0.05480015277862549
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4692087471485138,
+        "uncertainty_kl": 0.026448875665664673,
+        "uncertainty": 0.026448875665664673
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pear in relation to the orange? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2717675566673279,
+        "uncertainty_kl": 0.02112097665667534,
+        "uncertainty": 0.02112097665667534
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the tower? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3362903892993927,
+        "uncertainty_kl": 0.1538449376821518,
+        "uncertainty": 0.1538449376821518
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3885185122489929,
+        "uncertainty_kl": 0.02247496135532856,
+        "uncertainty": 0.02247496135532856
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the bike? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2802855670452118,
+        "uncertainty_kl": 0.026405377313494682,
+        "uncertainty": 0.026405377313494682
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the plate? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.48238298296928406,
+        "uncertainty_kl": 0.06431255489587784,
+        "uncertainty": 0.06431255489587784
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28663668036460876,
+        "uncertainty_kl": 0.05808776617050171,
+        "uncertainty": 0.05808776617050171
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pizza in relation to the cup?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.43604451417922974,
+        "uncertainty_kl": 0.14988209307193756,
+        "uncertainty": 0.14988209307193756
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the boy in relation to the bag? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3121051788330078,
+        "uncertainty_kl": 0.008459927514195442,
+        "uncertainty": 0.008459927514195442
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the building in relation to the trees?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": 0.3093487024307251,
+        "uncertainty_kl": 0.07729913294315338,
+        "uncertainty": 0.07729913294315338
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the racket in relation to the boy?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.32570332288742065,
+        "uncertainty_kl": 0.13903577625751495,
+        "uncertainty": 0.13903577625751495
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blue tent in relation to the man? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36383503675460815,
+        "uncertainty_kl": 0.10424384474754333,
+        "uncertainty": 0.10424384474754333
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the keyboard in relation to the person? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.43468254804611206,
+        "uncertainty_kl": 0.08852134644985199,
+        "uncertainty": 0.08852134644985199
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the umpire in relation to the batter? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.34727969765663147,
+        "uncertainty_kl": 0.12298606336116791,
+        "uncertainty": 0.12298606336116791
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in relation to the sofa?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2727371156215668,
+        "uncertainty_kl": 0.08312792330980301,
+        "uncertainty": 0.08312792330980301
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the plate? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3202447295188904,
+        "uncertainty_kl": 0.04338514432311058,
+        "uncertainty": 0.04338514432311058
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pizza in relation to the bowl? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3804135024547577,
+        "uncertainty_kl": 0.05497666075825691,
+        "uncertainty": 0.05497666075825691
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dark curtain in relation to the shelf? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4580707848072052,
+        "uncertainty_kl": 0.0748063325881958,
+        "uncertainty": 0.0748063325881958
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the black cabinet in relation to the chair? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3663652241230011,
+        "uncertainty_kl": 0.06445720046758652,
+        "uncertainty": 0.06445720046758652
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the boy in relation to the shelf?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3184417486190796,
+        "uncertainty_kl": 0.056329723447561264,
+        "uncertainty": 0.056329723447561264
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the open laptop in relation to the keyboard? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3308427035808563,
+        "uncertainty_kl": 0.037373535335063934,
+        "uncertainty": 0.037373535335063934
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the surfboard? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.45421692728996277,
+        "uncertainty_kl": 0.09925780445337296,
+        "uncertainty": 0.09925780445337296
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the white blinds in relation to the mirror? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.36102157831192017,
+        "uncertainty_kl": 0.07118859887123108,
+        "uncertainty": 0.07118859887123108
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the boy in relation to the plate? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.33098646998405457,
+        "uncertainty_kl": 0.05265378952026367,
+        "uncertainty": 0.05265378952026367
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plastic container in relation to the bowl? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.32169848680496216,
+        "uncertainty_kl": 0.07366330921649933,
+        "uncertainty": 0.07366330921649933
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the screen in relation to the person?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4622568190097809,
+        "uncertainty_kl": 0.17351537942886353,
+        "uncertainty": 0.17351537942886353
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yellow bag in relation to the cabinet? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3828144967556,
+        "uncertainty_kl": 0.04125729203224182,
+        "uncertainty": 0.04125729203224182
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the open book in relation to the bowl? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28308358788490295,
+        "uncertainty_kl": 0.10125133395195007,
+        "uncertainty": 0.10125133395195007
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the horse in relation to the fence? Answer with left, right, front, behind, top, or bottom.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": 0.370773047208786,
+        "uncertainty_kl": 0.15127067267894745,
+        "uncertainty": 0.15127067267894745
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wood fence in relation to the horse? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Behind",
+        "uncertainty_prob": 0.37502536177635193,
+        "uncertainty_kl": 0.1437530517578125,
+        "uncertainty": 0.1437530517578125
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the guy in relation to the chair? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3746747374534607,
+        "uncertainty_kl": 0.030042510479688644,
+        "uncertainty": 0.030042510479688644
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the computer monitor in relation to the chair? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.26760679483413696,
+        "uncertainty_kl": 0.0568537637591362,
+        "uncertainty": 0.0568537637591362
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the building in relation to the palm?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Behind",
+        "uncertainty_prob": 0.3513452410697937,
+        "uncertainty_kl": 0.06636045128107071,
+        "uncertainty": 0.06636045128107071
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the black bag in relation to the toilet? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.24192343652248383,
+        "uncertainty_kl": 0.03648167848587036,
+        "uncertainty": 0.03648167848587036
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the black suitcase in relation to the bed? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3614206910133362,
+        "uncertainty_kl": 0.12017260491847992,
+        "uncertainty": 0.12017260491847992
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the keyboard? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.45293205976486206,
+        "uncertainty_kl": 0.03720248490571976,
+        "uncertainty": 0.03720248490571976
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the keyboard in relation to the speaker?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.33484968543052673,
+        "uncertainty_kl": 0.06853228062391281,
+        "uncertainty": 0.06853228062391281
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the egg in relation to the knife?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3396839499473572,
+        "uncertainty_kl": 0.1303427368402481,
+        "uncertainty": 0.1303427368402481
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Behind",
+        "uncertainty_prob": 0.5751064419746399,
+        "uncertainty_kl": 0.05909416824579239,
+        "uncertainty": 0.05909416824579239
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the spoon? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3169018626213074,
+        "uncertainty_kl": 0.05182121694087982,
+        "uncertainty": 0.05182121694087982
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the teddy bear? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.35751575231552124,
+        "uncertainty_kl": 0.0762515664100647,
+        "uncertainty": 0.0762515664100647
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the blinds in relation to the television?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2838694453239441,
+        "uncertainty_kl": 0.07725346088409424,
+        "uncertainty": 0.07725346088409424
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the television? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.43831369280815125,
+        "uncertainty_kl": 0.05986464023590088,
+        "uncertainty": 0.05986464023590088
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the stove in relation to the man?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.34767264127731323,
+        "uncertainty_kl": 0.12238079309463501,
+        "uncertainty": 0.12238079309463501
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the chair?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3210974335670471,
+        "uncertainty_kl": 0.07935492694377899,
+        "uncertainty": 0.07935492694377899
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the child in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.5531477332115173,
+        "uncertainty_kl": 0.08580639213323593,
+        "uncertainty": 0.08580639213323593
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the silver table in relation to the oven? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.24308495223522186,
+        "uncertainty_kl": 0.05638696253299713,
+        "uncertainty": 0.05638696253299713
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the skateboard in relation to the boy?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4891478717327118,
+        "uncertainty_kl": 0.21932584047317505,
+        "uncertainty": 0.21932584047317505
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the metal knife in relation to the plate? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.29393482208251953,
+        "uncertainty_kl": 0.06264182925224304,
+        "uncertainty": 0.06264182925224304
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the screen in relation to the phone?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.25357791781425476,
+        "uncertainty_kl": 0.08370639383792877,
+        "uncertainty": 0.08370639383792877
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the large mirror in relation to the television? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.25057148933410645,
+        "uncertainty_kl": 0.06271559745073318,
+        "uncertainty": 0.06271559745073318
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the snowboard? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.376407265663147,
+        "uncertainty_kl": 0.03443862125277519,
+        "uncertainty": 0.03443862125277519
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the racket in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.38150981068611145,
+        "uncertainty_kl": 0.07207280397415161,
+        "uncertainty": 0.07207280397415161
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cat in relation to the remote? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.30364611744880676,
+        "uncertainty_kl": 0.06601844727993011,
+        "uncertainty": 0.06601844727993011
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mirror in relation to the towel? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4630075693130493,
+        "uncertainty_kl": 0.06422983109951019,
+        "uncertainty": 0.06422983109951019
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the woman?\nAnswer with left, right, front, behind, above or below.\nOption A photo of a man to the right of a woman.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.46292993426322937,
+        "uncertainty_kl": 0.053103066980838776,
+        "uncertainty": 0.053103066980838776
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the horse in relation to the fence? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3409050703048706,
+        "uncertainty_kl": 0.053530238568782806,
+        "uncertainty": 0.053530238568782806
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the gray elephant in relation to the fence? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Front",
+        "uncertainty_prob": 0.25203850865364075,
+        "uncertainty_kl": 0.031544819474220276,
+        "uncertainty": 0.031544819474220276
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bed in relation to the lamp?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.30684977769851685,
+        "uncertainty_kl": 0.08562573045492172,
+        "uncertainty": 0.08562573045492172
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the umpire in relation to the catcher? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2917020618915558,
+        "uncertainty_kl": 0.10571907460689545,
+        "uncertainty": 0.10571907460689545
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the brown dog in relation to the fence? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3156042695045471,
+        "uncertainty_kl": 0.1411830186843872,
+        "uncertainty": 0.1411830186843872
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the shower curtain in relation to the toilet? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2842402458190918,
+        "uncertainty_kl": 0.10244843363761902,
+        "uncertainty": 0.10244843363761902
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the blanket? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.31190815567970276,
+        "uncertainty_kl": 0.047717783600091934,
+        "uncertainty": 0.047717783600091934
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the small cabinet in relation to the chair? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36907511949539185,
+        "uncertainty_kl": 0.13161614537239075,
+        "uncertainty": 0.13161614537239075
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the red motorcycle in relation to the bike? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.38998469710350037,
+        "uncertainty_kl": 0.052264489233493805,
+        "uncertainty": 0.052264489233493805
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the woman? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4667189121246338,
+        "uncertainty_kl": 0.057355836033821106,
+        "uncertainty": 0.057355836033821106
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the skateboard in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.484027624130249,
+        "uncertainty_kl": 0.09536061435937881,
+        "uncertainty": 0.09536061435937881
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the brown dog in relation to the boy? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4015623927116394,
+        "uncertainty_kl": 0.17752444744110107,
+        "uncertainty": 0.17752444744110107
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cake in relation to the man?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.377853661775589,
+        "uncertainty_kl": 0.164169043302536,
+        "uncertainty": 0.164169043302536
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the racket? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.32119691371917725,
+        "uncertainty_kl": 0.05911173298954964,
+        "uncertainty": 0.05911173298954964
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in relation to the pillow?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.297603040933609,
+        "uncertainty_kl": 0.042085643857717514,
+        "uncertainty": 0.042085643857717514
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the dog? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.24995623528957367,
+        "uncertainty_kl": 0.043383482843637466,
+        "uncertainty": 0.043383482843637466
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the stove in relation to the refrigerator? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.27843254804611206,
+        "uncertainty_kl": 0.04474002122879028,
+        "uncertainty": 0.04474002122879028
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blanket in relation to the pillow? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.30775195360183716,
+        "uncertainty_kl": 0.02548118308186531,
+        "uncertainty": 0.02548118308186531
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the shelf in relation to the boy? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.44370824098587036,
+        "uncertainty_kl": 0.052784405648708344,
+        "uncertainty": 0.052784405648708344
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the boy? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3272308111190796,
+        "uncertainty_kl": 0.027193661779165268,
+        "uncertainty": 0.027193661779165268
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bag in relation to the cat?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3057369887828827,
+        "uncertainty_kl": 0.11706270277500153,
+        "uncertainty": 0.11706270277500153
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the plate? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3520064055919647,
+        "uncertainty_kl": 0.0549587681889534,
+        "uncertainty": 0.0549587681889534
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bike in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.4672713279724121,
+        "uncertainty_kl": 0.06559626758098602,
+        "uncertainty": 0.06559626758098602
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the boy?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3186570107936859,
+        "uncertainty_kl": 0.06886431574821472,
+        "uncertainty": 0.06886431574821472
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the man? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.28458672761917114,
+        "uncertainty_kl": 0.021638138219714165,
+        "uncertainty": 0.021638138219714165
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in relation to the side table? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4814772605895996,
+        "uncertainty_kl": 0.02246818318963051,
+        "uncertainty": 0.02246818318963051
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the batter in relation to the catcher?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.475563645362854,
+        "uncertainty_kl": 0.09420376271009445,
+        "uncertainty": 0.09420376271009445
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in relation to the man?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.31340551376342773,
+        "uncertainty_kl": 0.027408860623836517,
+        "uncertainty": 0.027408860623836517
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the horse? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.32376351952552795,
+        "uncertainty_kl": 0.03954925760626793,
+        "uncertainty": 0.03954925760626793
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yellow flag in relation to the man? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.29150110483169556,
+        "uncertainty_kl": 0.10746638476848602,
+        "uncertainty": 0.10746638476848602
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blond woman in relation to the bicycle? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.30638012290000916,
+        "uncertainty_kl": 0.017874063923954964,
+        "uncertainty": 0.017874063923954964
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the woman in relation to the computer?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.43667328357696533,
+        "uncertainty_kl": 0.07596946507692337,
+        "uncertainty": 0.07596946507692337
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the white refrigerator in relation to the oven? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4572352468967438,
+        "uncertainty_kl": 0.024226976558566093,
+        "uncertainty": 0.024226976558566093
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the open laptop in relation to the girl? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3063899576663971,
+        "uncertainty_kl": 0.09169626981019974,
+        "uncertainty": 0.09169626981019974
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the house? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.21163399517536163,
+        "uncertainty_kl": 0.048236183822155,
+        "uncertainty": 0.048236183822155
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the shelf in relation to the screen? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2811107933521271,
+        "uncertainty_kl": 0.04534095525741577,
+        "uncertainty": 0.04534095525741577
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the sandwich in relation to the bowl?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36269113421440125,
+        "uncertainty_kl": 0.11114759743213654,
+        "uncertainty": 0.11114759743213654
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the train in relation to the fence? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3020230829715729,
+        "uncertainty_kl": 0.028418833389878273,
+        "uncertainty": 0.028418833389878273
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in relation to the cabinet?\nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.30353981256484985,
+        "uncertainty_kl": 0.06728827208280563,
+        "uncertainty": 0.06728827208280563
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the desk in relation to the bookshelf? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.4978541135787964,
+        "uncertainty_kl": 0.02855822443962097,
+        "uncertainty": 0.02855822443962097
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the silver knife in relation to the fork? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36202070116996765,
+        "uncertainty_kl": 0.028156066313385963,
+        "uncertainty": 0.028156066313385963
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in relation to the armchair? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.39849957823753357,
+        "uncertainty_kl": 0.04441956430673599,
+        "uncertainty": 0.04441956430673599
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the shelf in relation to the curtain?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Above",
+        "Golden": "Right",
+        "uncertainty_prob": 0.23529517650604248,
+        "uncertainty_kl": 0.10392497479915619,
+        "uncertainty": 0.10392497479915619
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the saucer? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3550686538219452,
+        "uncertainty_kl": 0.03862719237804413,
+        "uncertainty": 0.03862719237804413
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cat in relation to the book? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2792735695838928,
+        "uncertainty_kl": 0.05681225284934044,
+        "uncertainty": 0.05681225284934044
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the car in relation to the van?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.27656254172325134,
+        "uncertainty_kl": 0.05428755283355713,
+        "uncertainty": 0.05428755283355713
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the girl in relation to the man?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.3450346887111664,
+        "uncertainty_kl": 0.10945619642734528,
+        "uncertainty": 0.10945619642734528
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the open drawer in relation to the woman? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.36784660816192627,
+        "uncertainty_kl": 0.13938795030117035,
+        "uncertainty": 0.13938795030117035
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the batter in relation to the catcher? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2843516170978546,
+        "uncertainty_kl": 0.0459805428981781,
+        "uncertainty": 0.0459805428981781
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the car in relation to the elephant? Answer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2978987395763397,
+        "uncertainty_kl": 0.04394719749689102,
+        "uncertainty": 0.04394719749689102
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the surfboard? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.43698906898498535,
+        "uncertainty_kl": 0.15587280690670013,
+        "uncertainty": 0.15587280690670013
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in relation to the shelf? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": 0.38090068101882935,
+        "uncertainty_kl": 0.03504904359579086,
+        "uncertainty": 0.03504904359579086
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the silk blanket in relation to the book? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2549552619457245,
+        "uncertainty_kl": 0.037560075521469116,
+        "uncertainty": 0.037560075521469116
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the tablecloth? \nAnswer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Left",
+        "uncertainty_prob": 0.40128955245018005,
+        "uncertainty_kl": 0.07795876264572144,
+        "uncertainty": 0.07795876264572144
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rug in relation to the cabinet? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": 0.2673397958278656,
+        "uncertainty_kl": 0.060611944645643234,
+        "uncertainty": 0.060611944645643234
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the man in relation to the bike?\nAnswer with left, right, front, behind, above or below.\n\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": 0.3521212935447693,
+        "uncertainty_kl": 0.07547931373119354,
+        "uncertainty": 0.07547931373119354
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the screen in relation to the blinds? Answer with left, right, front, behind, above or below.\nASSISTANT:",
+        "Generation": "Below",
+        "Golden": "Left",
+        "uncertainty_prob": 0.2757800817489624,
+        "uncertainty_kl": 0.07795247435569763,
+        "uncertainty": 0.07795247435569763
+    }
+]

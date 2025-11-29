@@ -234,8 +234,34 @@ class LlavaWrapper:
         p = p + 1e-12
         q = q + 1e-12
         p = p / p.sum()
+        print(f"\nNormalized_probabilities: {p}")
         q = q / q.sum()
         return torch.sum(p * torch.log(p / q))
+
+    def _jsd(self, p, q):
+        """
+        Jensen-Shannon Divergence 계산
+        JSD(P||Q) = 0.5 * KL(P||M) + 0.5 * KL(Q||M)
+        where M = 0.5 * (P + Q)
+        """
+        # 1. 수치 안정성 및 정규화 (기존 로직 유지)
+        # 부분집합(subset)의 확률 합이 1이 되도록 다시 맞춰줍니다.
+        p = p + 1e-12
+        q = q + 1e-12
+        p = p / p.sum()
+        q = q / q.sum()
+        
+        # 2. 평균 분포(Mean Distribution) M 계산
+        m = 0.5 * (p + q)
+        
+        # 3. 각 KL 항 계산
+        # P와 M 사이의 KL
+        kl_pm = torch.sum(p * torch.log(p / m))
+        # Q와 M 사이의 KL
+        kl_qm = torch.sum(q * torch.log(q / m))
+        
+        # 4. JSD 반환 (결과는 0 ~ ln(2) 사이)
+        return 0.5 * (kl_pm + kl_qm)
     
     def get_uncertainty(self, prob, method=None, dataset="Controlled_Images_A"):
         if method=='kl_divergence':
@@ -243,11 +269,14 @@ class LlavaWrapper:
                 options = ["Left", "Right", "On", "Under"]
             elif dataset == "Controlled_Images_B":
                 options = ["Left", "Right", "Front", "Behind"]
+            elif dataset == "VG_QA_two_obj":
+                options = ["left", "right", "front", "behind", "above", "below"]
             option_ids = [self.tokenizer.encode(r, add_special_tokens=False)[0] for r in options]
             prob_options = prob[0, option_ids]
+            prob_options = F.softmax(prob_options, dim=-1)
+            print(f"\nProbabilities of options: {prob_options}")
             uniform_dist = torch.ones_like(prob_options) / len(option_ids)
-            print(prob_options, uniform_dist)
-            return float(self._kl(prob_options, uniform_dist).item())
+            return float(self._jsd(prob_options, uniform_dist).item())
         else:
             return float(max(torch.nn.functional.softmax(prob, dim=-1)[0]))
     
@@ -339,8 +368,12 @@ class LlavaWrapper:
             answer_list = [answer_list[i] for i in sampled_indices]
 
         # Create directory for saving attention maps
-        save_attn_dir = f"./output/{dataset}_weight{weight:.2f}"
-        os.makedirs(save_attn_dir, exist_ok=True)
+        save_attn_dir_weight = f"./output/{dataset}_weight{weight:.2f}"
+        save_attn_dir_weight1 = f"./output/{dataset}_weight{weight1:.2f}"
+        save_attn_dir_weight2 = f"./output/{dataset}_weight{weight2:.2f}"
+        os.makedirs(save_attn_dir_weight, exist_ok=True)
+        os.makedirs(save_attn_dir_weight1, exist_ok=True)
+        os.makedirs(save_attn_dir_weight2, exist_ok=True)
 
         results = []  # Store results for each generated sequence
         reasoning_chains = []
@@ -348,7 +381,7 @@ class LlavaWrapper:
             batch_scores = []
             
             # Set environment variable for attention map save path
-            os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir}/{index_of_total}/'
+            os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir_weight}/{index_of_total}/'
             os.makedirs(os.environ['SAVE_ATTN_PATH'], exist_ok=True)
 
             # Iterate over each image option in the batch
@@ -380,7 +413,7 @@ class LlavaWrapper:
                     
                     elif method == 'adapt_vis':
                         change_greedy_to_add_weight()
-                       
+
                         output = self.model.generate(
                             **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                         )
@@ -390,11 +423,15 @@ class LlavaWrapper:
 
                         # Adjust attention based on uncertainty
                         if uncertainty_prob < threshold:
+                            os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir_weight1}/{index_of_total}/'
+                            os.makedirs(os.environ['SAVE_ATTN_PATH'], exist_ok=True)
                             output = self.model.generate(
                                 **single_input, keys=keys, weight=weight1, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
                         else:
+                            os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir_weight2}/{index_of_total}/'
+                            os.makedirs(os.environ['SAVE_ATTN_PATH'], exist_ok=True)
                             output = self.model.generate(
                                 **single_input, keys=keys, weight=weight2, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
@@ -481,7 +518,7 @@ class LlavaWrapper:
                         )
                         uncertainty_prob = self.get_uncertainty(output['scores'][0], dataset=dataset)
                         uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence', dataset=dataset)
-                        uncertainty = uncertainty_prob + (uncertainty_kl - 0.0004)*250
+                        uncertainty = uncertainty_kl
                         print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl:06}  |  Uncertainty: {uncertainty}  |  Threshold: {threshold}")
                         # Adjust attention based on uncertainty
                         if uncertainty < threshold:
@@ -545,7 +582,7 @@ class LlavaWrapper:
             scores.append(batch_scores)
 
             # Save results to file
-            output_result_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{option}option_{TEST}.json'
+            output_result_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{threshold}_{option}option_{TEST}.json'
             with open(output_result_file_path, 'w', encoding='utf-8') as fout:
                 json.dump(results, fout, ensure_ascii=False, indent=4)
             print(acc, index_of_total, acc / index_of_total)
