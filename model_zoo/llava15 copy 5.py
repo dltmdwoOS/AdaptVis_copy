@@ -414,9 +414,14 @@ class LlavaWrapper:
 
         # Create directory for saving attention maps
         save_attn_dir_weight = f"./output/{dataset}_method{method}_weight{weight:.2f}"
+        save_attn_dir_weight1 = f"./output/{dataset}_method{method}_weight{weight1:.2f}"
+        save_attn_dir_weight2 = f"./output/{dataset}_method{method}_weight{weight2:.2f}"
         os.makedirs(save_attn_dir_weight, exist_ok=True)
+        os.makedirs(save_attn_dir_weight1, exist_ok=True)
+        os.makedirs(save_attn_dir_weight2, exist_ok=True)
 
         results = []  # Store results for each generated sequence
+        reasoning_chains = []
         for batch in tqdm(joint_loader):
             batch_scores = []
             
@@ -427,6 +432,9 @@ class LlavaWrapper:
             # Iterate over each image option in the batch
             for i_option in batch["image_options"]:
                 im_scores = []
+                uncertainty_prob = None
+                uncertainty_kl = None
+                uncertainty = None
                 for _ in i_option:
                     result = None
                     prompt = prompt_list[index_of_total]
@@ -472,18 +480,113 @@ class LlavaWrapper:
                             )
                         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
                     
+                    elif method == 'adapt_vis_2':
+                        change_greedy_to_add_weight()
+                       
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        uncertainty_prob = self.get_uncertainty(output['scores'][0])
+                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence')
+                        threshold = 0.0004
+                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
+                        # Adjust attention based on uncertainty
+                        if uncertainty_kl < threshold:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight1, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        else:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight2, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                    
+                    elif method == 'adapt_vis_3':
+                        change_greedy_to_add_weight()
+                       
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        uncertainty_prob = self.get_uncertainty(output['scores'][0])
+                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence')
+                        threshold = 0.0004
+                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
+                        # Adjust attention based on uncertainty
+                        if uncertainty_prob <= 0.4 and uncertainty_kl <= threshold:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight1, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        elif (uncertainty_prob <= 0.4 and uncertainty_kl > threshold) or (uncertainty_prob > 0.4 and uncertainty_kl <= threshold):
+                            pass # Use the original output 
+                        else:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight2, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                    
+                    elif method == 'adapt_vis_4':
+                        change_greedy_to_add_weight()
+                       
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        uncertainty_prob = self.get_uncertainty(output['scores'][0])
+                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence')
+                        uncertainty = (uncertainty_prob + uncertainty_kl*1000) / 2
+                        threshold = 0.4
+                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl:06}  |  Uncertainty: {uncertainty}  |  Threshold: {threshold}")
+                        # Adjust attention based on uncertainty
+                        if uncertainty < threshold:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight1, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        else:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight2, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                    
+                    elif method == 'adapt_vis_5':
+                        change_greedy_to_add_weight()
+                       
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        uncertainty_prob = self.get_uncertainty(output['scores'][0], dataset=dataset)
+                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='kl_divergence', dataset=dataset)
+                        uncertainty = uncertainty_kl
+                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl:06}  |  Uncertainty: {uncertainty}  |  Threshold: {threshold}")
+                        # Adjust attention based on uncertainty
+                        if uncertainty < threshold:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight1, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        else:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight2, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                    
                     elif method == 'adapt_vis_research':
                         change_greedy_to_add_weight()
 
                         # 1. 첫 번째 생성 (Standard Weight) - 여기서 Uncertainty 계산
                         output = self.model.generate(
                             **single_input,
-                            weight=1.0,
+                            weight=weight,
                             max_new_tokens=100,
                             output_scores=True,
                             return_dict_in_generate=True
                         )
-                        gen1 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
 
                         # === [수정됨] 다양한 Uncertainty 지표 수집 ===
                         # 기존: uncertainty_prob(max_prob), uncertainty_kl(jsd) 두 가지만 수집
@@ -494,7 +597,7 @@ class LlavaWrapper:
                         # 'kl_divergence'는 기존 코드의 jsd에 해당한다고 가정
                         uncertainty_methods = {
                             "prob": None,           # 기존: Max Probability (Confidence)
-                            "jsd": 'jsd',           # 기존: KL/JSD Divergence
+                            "jsd": 'jsd', # 기존: KL/JSD Divergence
                             "entropy": 'entropy',   # 신규: Normalized Entropy
                             "margin": 'margin'      # 신규: Top-1 vs Top-2 Margin
                         }
@@ -515,67 +618,33 @@ class LlavaWrapper:
                         uncertainty_kl = uncertainty_results["uncertainty_jsd"]
                         # =============================================
 
-                        # 2. 두 번째 생성 (weight=0.5)
+                        # 2. 두 번째 생성 (Weight 1)
                         output = self.model.generate(
                             **single_input,
-                            weight=0.5,
+                            weight=weight1,
+                            max_new_tokens=100,
+                            output_scores=True,
+                            return_dict_in_generate=True
+                        )
+                        gen1 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+
+                        # 3. 세 번째 생성 (Weight 2)
+                        output = self.model.generate(
+                            **single_input,
+                            weight=weight2,
                             max_new_tokens=100,
                             output_scores=True,
                             return_dict_in_generate=True
                         )
                         gen2 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 3. 세 번째 생성 (weight=0.8)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.8,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen3 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 4. 네 번째 생성 (weight=1.2)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.2,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen4 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
 
-                        # 5. 다섯 번째 생성 (weight=1.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen5 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 6. 여섯 번째 생성 (weight=2.0)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=2.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen6 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
                         # 결과 취합
                         gen_map = {
-                            1.0: gen1,
-                            0.5: gen2,
-                            0.8: gen3,
-                            1.2: gen4,
-                            1.5: gen5,
-                            2.0: gen6
+                            weight: gen,
+                            weight1: gen1,
+                            weight2: gen2
                         }
                         
-                        gen = gen1  # 기본 출력은 첫 번째 생성 결과로 설정
                         result = {
                             "Prompt": prompt,
                             "Generation": gen_map,
@@ -584,6 +653,10 @@ class LlavaWrapper:
                             # 확장된 Uncertainty 정보 모두 포함
                             # unpacking을 사용하여 uncertainty_prob, uncertainty_entropy 등이 자동으로 들어감
                             **uncertainty_results,
+                            
+                            # 기존 키 이름 유지 (하위 호환성)
+                            "uncertainty_prob": uncertainty_prob,
+                            "uncertainty_kl": uncertainty_kl,
                         }
 
                     elif method == 'adapt_vis_entropy':
@@ -597,12 +670,12 @@ class LlavaWrapper:
                         # Adjust attention based on uncertainty
                         if uncertainty < threshold:
                             output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
+                                **single_input, keys=keys, weight=weight2, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
                         else:
                             output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
+                                **single_input, keys=keys, weight=weight1, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
                         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
@@ -622,9 +695,11 @@ class LlavaWrapper:
                         "Prompt": prompt,
                         "Generation": gen,
                         "Golden": answer_list[index_of_total][0],
+                        "uncertainty_prob": uncertainty_prob,
+                        "uncertainty_kl": uncertainty_kl,
                         "uncertainty": uncertainty
                     } if result is None else result
-                    results.append(result)
+                    results.append(result) if method != "bidirectional_reasoning" else None
                     
                     # Check if the generation matches the expected answer
                     c_option = batch["caption_options"]

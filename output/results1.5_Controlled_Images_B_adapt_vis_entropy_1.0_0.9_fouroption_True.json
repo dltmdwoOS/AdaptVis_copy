@@ -1,0 +1,2618 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9457837343215942
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9833285212516785
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9916296601295471
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9808000326156616
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8436845541000366
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8775148987770081
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8680118918418884
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9551634192466736
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9876580834388733
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.84275221824646
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8160600662231445
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9363824129104614
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8948639631271362
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.972774863243103
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6319782137870789
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9810248613357544
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.757588803768158
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6353669166564941
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9769842624664307
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9987910985946655
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7522780895233154
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.920819103717804
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9392221570014954
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.834134578704834
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9828648567199707
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9637535214424133
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.956660807132721
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7976818084716797
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7742369771003723
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7432628870010376
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the plate? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6415913105010986
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9140188097953796
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8935762643814087
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9916995167732239
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8792126774787903
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8669971823692322
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8834736347198486
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9693800210952759
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7683494091033936
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9067351818084717
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.972934901714325
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7707490921020508
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9868596792221069
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8361249566078186
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9168773293495178
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9660382270812988
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.839886486530304
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8811751008033752
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.946100115776062
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9837559461593628
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9971979856491089
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9778720140457153
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8418004512786865
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8827480673789978
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.957515299320221
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9687889814376831
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8523648977279663
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.842984139919281
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9306191205978394
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9676065444946289
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8913078308105469
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.88527911901474
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9597506523132324
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the plate? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The mug is in front of the plate.",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9217338562011719
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7694634199142456
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9953641891479492
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8107097148895264
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6667758822441101
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.893116295337677
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7765958905220032
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6709275245666504
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8845688700675964
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7261984348297119
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8097359538078308
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9443168044090271
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9899429678916931
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8990665674209595
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9408858418464661
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7745976448059082
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9255134463310242
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.5409879088401794
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9976756572723389
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9650154709815979
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9885289072990417
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9677308797836304
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7598146796226501
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9608946442604065
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.966460108757019
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9705923199653625
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9907887578010559
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9162088632583618
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9933676719665527
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8547954559326172
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9998999238014221
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.933742880821228
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.852489709854126
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.816919207572937
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9695468544960022
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9844700694084167
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9532083868980408
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.948693037033081
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9737573266029358
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.915271520614624
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7027606964111328
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9461145401000977
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8729314804077148
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9837560653686523
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8138720989227295
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9729490280151367
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9345091581344604
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9983209371566772
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7678919434547424
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9335971474647522
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9780730605125427
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6936664581298828
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8493838906288147
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.5735035538673401
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8720526099205017
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8229814171791077
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7138151526451111
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8208011388778687
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9335106611251831
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9392772912979126
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6455807089805603
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9785625338554382
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9593059420585632
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9887316823005676
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9771851897239685
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7955132126808167
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8351749181747437
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8544036746025085
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.999616801738739
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9407601952552795
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8773117661476135
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9924314022064209
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.790397584438324
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9550394415855408
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8541746735572815
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9932243227958679
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8239883184432983
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9806757569313049
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9018536806106567
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9313819408416748
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.95017009973526
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9985653162002563
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9806298613548279
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9036577343940735
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8144382834434509
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8586459755897522
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9296504855155945
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9531317353248596
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9064992070198059
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9399058222770691
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9432538151741028
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7643937468528748
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8816166520118713
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8297020792961121
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9586166739463806
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8604353070259094
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9794764518737793
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9948418140411377
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9603785276412964
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9734354019165039
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7956559658050537
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8988942503929138
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9775934815406799
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9565056562423706
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9721387028694153
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The bowl is in front of the book.",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9406675100326538
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.959758460521698
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9779011607170105
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9675413370132446
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.96844083070755
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8493505716323853
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9472269415855408
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.963840126991272
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9453033804893494
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9349425435066223
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9148350358009338
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.91232830286026
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8471406102180481
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the plate? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7637917399406433
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9678608775138855
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.846986711025238
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9950955510139465
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9746127724647522
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9420499205589294
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9505367279052734
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9904709458351135
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8084120154380798
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8874390721321106
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8526070713996887
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9810117483139038
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9158361554145813
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9568271636962891
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9640829563140869
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9642502069473267
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7427254915237427
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.912648618221283
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8590870499610901
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9905960559844971
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6035394072532654
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9497189521789551
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9872533082962036
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9507721066474915
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8667210936546326
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9518585205078125
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8130519390106201
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9273356199264526
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9865967035293579
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.862261176109314
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.969200074672699
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.888074517250061
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8892409205436707
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8956224918365479
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9763885736465454
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.780114471912384
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9554778337478638
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8797376751899719
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9261152148246765
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9816011190414429
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9442245364189148
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.813984751701355
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9835027456283569
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9682580232620239
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7295385003089905
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7780604958534241
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9069668650627136
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9877954125404358
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9571595191955566
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9860029220581055
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.6324431300163269
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8839268088340759
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9535455107688904
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.893637478351593
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9635169506072998
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9800625443458557
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9928908944129944
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9257554411888123
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9623521566390991
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.762992262840271
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.970038115978241
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Front",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9451203346252441
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9585131406784058
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9798020124435425
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9605779647827148
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.984462320804596
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9401900172233582
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8912377953529358
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8955885767936707
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The bowl is in front of the flower.",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9168028831481934
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8776459693908691
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.873312771320343
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9878748655319214
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9923467040061951
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8665435314178467
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9953454732894897
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9767627120018005
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8678455948829651
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8695743680000305
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9782342314720154
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9918754696846008
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8242856860160828
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9402193427085876
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9531483054161072
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9130143523216248
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9823868274688721
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8471727967262268
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9862688183784485
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8112478256225586
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7877587080001831
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.875759482383728
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9396791458129883
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9260053038597107
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9574098587036133
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9057290554046631
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9311997294425964
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9935532212257385
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7903790473937988
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8204591274261475
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9785229563713074
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9747734665870667
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8189234137535095
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8045620918273926
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.928155779838562
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9247838854789734
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8031402230262756
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9352344870567322
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9054324626922607
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7538686394691467
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7756813168525696
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9089105725288391
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The plate is in front of the book.",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9554905295372009
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7991158962249756
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.896373987197876
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9898751378059387
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.5223520398139954
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7715198397636414
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8156896829605103
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9650566577911377
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9813008308410645
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9194823503494263
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8758761286735535
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9818295836448669
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9116629958152771
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.850355327129364
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8525962233543396
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9734228253364563
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.5811112523078918
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9895496368408203
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9969490766525269
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9921766519546509
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9328821301460266
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7914113402366638
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9895109534263611
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8440009951591492
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9966974854469299
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9628052115440369
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9157405495643616
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.568227231502533
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9802783727645874
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Front",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9555140733718872
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8000857830047607
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8493478894233704
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.7617382407188416
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Behind",
+        "Golden": "Behind",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.9932603240013123
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 0.8911831378936768
+    }
+]

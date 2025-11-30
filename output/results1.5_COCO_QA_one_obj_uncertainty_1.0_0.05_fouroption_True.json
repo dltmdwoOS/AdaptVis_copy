@@ -1,0 +1,914 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.01
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.85
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.19
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the TV in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the TV in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.16
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.82
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bird in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bird in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the giraffe in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.49
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the giraffe in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.49
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.02
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the stop sign in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cat in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.48
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.9
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the umbrella in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.04
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.01
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.48
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the horse in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.92
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.23
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.23
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.97
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cake in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.72
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bed in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.75
+    },
+    {
+        "Prompt": "<image>\nUSER:  Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.95
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pizza in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.07
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.01
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.9
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.94
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.14
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mouse in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.89
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the sink in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.96
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the vase in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.44
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.17
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.28
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.92
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.68
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microwave in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microwave in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the car in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.09
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.0
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bed in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.82
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.08
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bus in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.0
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the handbag in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.27
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fire hydrant in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.91
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the umbrella in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.12
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tie in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.56
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the refrigerator in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the train in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the train in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mouse in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.15
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mouse in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.15
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the keyboard in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the keyboard in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the fork in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.26
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the apple in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.95
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the TV in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.16
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.08
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.08
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.27
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.27
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.17
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 21.94
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pizza in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the couch in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the chair in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.27
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.02
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Bottom",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dining table in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the backpack in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.47
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the keyboard in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Left",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the sink in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 23.12
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the carrot in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the sandwich in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Bottom",
+        "Golden": "Right",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.97
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the person in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.98
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the airplane in the photo? Answer with left, right, top or bottom.\nASSISTANT:",
+        "Generation": "Top",
+        "Golden": "Top",
+        "uncertainty_prob": null,
+        "uncertainty_kl": null,
+        "uncertainty": 22.37
+    }
+]
