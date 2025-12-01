@@ -20,6 +20,7 @@ def config():
     parser.add_argument("--dataset", default="Controlled_Images_A", type=str, \
             choices=[ "Controlled_Images_A", "Controlled_Images_B", \
             "COCO_QA_one_obj", "COCO_QA_two_obj", "VG_QA_one_obj", "VG_QA_two_obj", "VSR"])
+    parser.add_argument("--onunder", default='false', type=str, choices=['true','false'])
     parser.add_argument("--seed", default=1, type=int)
     parser.add_argument("--method",  type=str)
     parser.add_argument("--dola-decoding",   action="store_true")
@@ -42,6 +43,7 @@ def main(args):
     dataset = get_dataset(args.dataset, image_preprocess=image_preprocess, download=args.download)
     SAMPLE=True
     TEST=os.getenv('TEST_MODE', 'False') == 'True'
+    print(f"Test mode: {TEST}")
     sampled_indices=None
     collate_fn = _default_collate if image_preprocess is None else None
 
@@ -75,12 +77,16 @@ def main(args):
    
 
     elif args.dataset in ['Controlled_Images_B','Controlled_Images_A']:    
-        scores, correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)
-        print("Got the following shape of scores",scores.shape)
-        # change from (82, 4, 1) to (82, 1, 4)
-        scores = scores.transpose(0,2,1)
-        dataset.evaluate_scores(scores,args.output_dir,args.dataset, args.model_name,args.method,args.weight,sampled_indices,args.option)
-        # dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.weight,args.model_name,args.option)
+        if args.onunder=='true':
+            scores, correct_id = model.get_out_scores_wh_batched_onunder(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)
+
+        else:
+            scores, correct_id = model.get_out_scores_wh_batched(args.dataset,joint_loader,args.method,args.weight,args.option,args.threshold,args.weight1,args.weight2)
+            print("Got the following shape of scores",scores.shape)
+            # change from (82, 4, 1) to (82, 1, 4)
+            scores = scores.transpose(0,2,1)
+            dataset.evaluate_scores(scores,args.output_dir,args.dataset, args.model_name,args.method,args.weight,sampled_indices,args.option)
+            # dataset.save_scores(scores,correct_id,args.output_dir,args.dataset,args.method,args.weight,args.model_name,args.option)
 
     else:
         

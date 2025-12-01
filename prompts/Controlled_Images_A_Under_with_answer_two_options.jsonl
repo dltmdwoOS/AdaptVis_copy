@@ -1,0 +1,412 @@
+{"id": 0, "question": "<image>\nUSER: Is the beer bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 1, "question": "<image>\nUSER: Is the wineglass under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 2, "question": "<image>\nUSER: Is the scarf under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 3, "question": "<image>\nUSER: Is the orange under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 4, "question": "<image>\nUSER: Is the glass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 5, "question": "<image>\nUSER: Is the scarf under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 6, "question": "<image>\nUSER: Are the sunglasses under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 7, "question": "<image>\nUSER: Is the toilet roll under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 8, "question": "<image>\nUSER: Is the bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 9, "question": "<image>\nUSER: Is the cup under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 10, "question": "<image>\nUSER: Is the bowl under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 11, "question": "<image>\nUSER: Is the mug under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 12, "question": "<image>\nUSER: Is the mug under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 13, "question": "<image>\nUSER: Is the hat under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 14, "question": "<image>\nUSER: Is the bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 15, "question": "<image>\nUSER: Is the cap under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 16, "question": "<image>\nUSER: Is the mug under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 17, "question": "<image>\nUSER: Is the plant under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 18, "question": "<image>\nUSER: Is the cup under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 19, "question": "<image>\nUSER: Are the shoes under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 20, "question": "<image>\nUSER: Is the orange under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 21, "question": "<image>\nUSER: Is the helmet under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 22, "question": "<image>\nUSER: Is the water filter under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 23, "question": "<image>\nUSER: Is the glove under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 24, "question": "<image>\nUSER: Is the dragonfruit under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 25, "question": "<image>\nUSER: Is the scarf under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 26, "question": "<image>\nUSER: Is the water filter under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 27, "question": "<image>\nUSER: Is the dragonfruit under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 28, "question": "<image>\nUSER: Is the phone under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 29, "question": "<image>\nUSER: Is the pan under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 30, "question": "<image>\nUSER: Is the cap under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 31, "question": "<image>\nUSER: Is the yarn under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 32, "question": "<image>\nUSER: Is the orange under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 33, "question": "<image>\nUSER: Is the banana under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 34, "question": "<image>\nUSER: Is the orange under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 35, "question": "<image>\nUSER: Is the rose under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 36, "question": "<image>\nUSER: Is the water bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 37, "question": "<image>\nUSER: Is the lemon under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 38, "question": "<image>\nUSER: Is the bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 39, "question": "<image>\nUSER: Is the plate under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 40, "question": "<image>\nUSER: Is the soda can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 41, "question": "<image>\nUSER: Is the painting under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 42, "question": "<image>\nUSER: Is the bottle of orange juice under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 43, "question": "<image>\nUSER: Is the wineglass under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 44, "question": "<image>\nUSER: Is the rose under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 45, "question": "<image>\nUSER: Is the spatula under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 46, "question": "<image>\nUSER: Is the banana under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 47, "question": "<image>\nUSER: Is the mug under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 48, "question": "<image>\nUSER: Is the cap under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 49, "question": "<image>\nUSER: Is the plant under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 50, "question": "<image>\nUSER: Is the blanket under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 51, "question": "<image>\nUSER: Is the oven mitt under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 52, "question": "<image>\nUSER: Is the book under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 53, "question": "<image>\nUSER: Is the plate under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 54, "question": "<image>\nUSER: Is the dragonfruit under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 55, "question": "<image>\nUSER: Is the bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 56, "question": "<image>\nUSER: Is the orange under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 57, "question": "<image>\nUSER: Is the plate under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 58, "question": "<image>\nUSER: Is the cup under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 59, "question": "<image>\nUSER: Is the apple under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 60, "question": "<image>\nUSER: Are the scissors under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 61, "question": "<image>\nUSER: Is the banana under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 62, "question": "<image>\nUSER: Is the kettle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 63, "question": "<image>\nUSER: Is the can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 64, "question": "<image>\nUSER: Is the toilet roll under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 65, "question": "<image>\nUSER: Is the painting under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 66, "question": "<image>\nUSER: Is the painting under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 67, "question": "<image>\nUSER: Is the ball of yarn under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 68, "question": "<image>\nUSER: Is the orange under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 69, "question": "<image>\nUSER: Is the knife under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 70, "question": "<image>\nUSER: Is the laptop under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 71, "question": "<image>\nUSER: Is the kettle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 72, "question": "<image>\nUSER: Is the water bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 73, "question": "<image>\nUSER: Is the cup under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 74, "question": "<image>\nUSER: Is the vase under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 75, "question": "<image>\nUSER: Is the water filter under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 76, "question": "<image>\nUSER: Is the hat under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 77, "question": "<image>\nUSER: Is the lamp under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 78, "question": "<image>\nUSER: Are the glasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 79, "question": "<image>\nUSER: Are the scissors under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 80, "question": "<image>\nUSER: Is the spatula under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 81, "question": "<image>\nUSER: Is the microphone under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 82, "question": "<image>\nUSER: Is the mug under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 83, "question": "<image>\nUSER: Is the yarn under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 84, "question": "<image>\nUSER: Are the headphones under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 85, "question": "<image>\nUSER: Is the painting under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 86, "question": "<image>\nUSER: Is the scarf under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 87, "question": "<image>\nUSER: Is the lemon under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 88, "question": "<image>\nUSER: Is the photograph under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 89, "question": "<image>\nUSER: Are the headphones under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 90, "question": "<image>\nUSER: Is the can under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 91, "question": "<image>\nUSER: Is the pot under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 92, "question": "<image>\nUSER: Are the sunglasses under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 93, "question": "<image>\nUSER: Is the wineglass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 94, "question": "<image>\nUSER: Is the bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 95, "question": "<image>\nUSER: Is the can under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 96, "question": "<image>\nUSER: Is the cap under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 97, "question": "<image>\nUSER: Is the scarf under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 98, "question": "<image>\nUSER: Are the scissors under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 99, "question": "<image>\nUSER: Is the lamp under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 100, "question": "<image>\nUSER: Is the ball of yarn under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 101, "question": "<image>\nUSER: Is the toilet roll under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 102, "question": "<image>\nUSER: Are the scissors under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 103, "question": "<image>\nUSER: Is the dragonfruit under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 104, "question": "<image>\nUSER: Is the pot under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 105, "question": "<image>\nUSER: Is the scarf under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 106, "question": "<image>\nUSER: Is the knife under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 107, "question": "<image>\nUSER: Is the plate under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 108, "question": "<image>\nUSER: Is the wineglass under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 109, "question": "<image>\nUSER: Is the lemon under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 110, "question": "<image>\nUSER: Is the water bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 111, "question": "<image>\nUSER: Is the hat under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 112, "question": "<image>\nUSER: Is the notepad under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 113, "question": "<image>\nUSER: Is the tape under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 114, "question": "<image>\nUSER: Is the blanket under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 115, "question": "<image>\nUSER: Are the glasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 116, "question": "<image>\nUSER: Is the toy cactus under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 117, "question": "<image>\nUSER: Is the book under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 118, "question": "<image>\nUSER: Is the plate under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 119, "question": "<image>\nUSER: Is the painting under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 120, "question": "<image>\nUSER: Is the banana under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 121, "question": "<image>\nUSER: Is the wineglass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 122, "question": "<image>\nUSER: Is the yarn under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 123, "question": "<image>\nUSER: Is the book under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 124, "question": "<image>\nUSER: Is the plant under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 125, "question": "<image>\nUSER: Is the wineglass under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 126, "question": "<image>\nUSER: Is the toy cactus under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 127, "question": "<image>\nUSER: Is the plate under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 128, "question": "<image>\nUSER: Is the knife under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 129, "question": "<image>\nUSER: Is the knife under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 130, "question": "<image>\nUSER: Is the bottle of mustard under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 131, "question": "<image>\nUSER: Is the glove under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 132, "question": "<image>\nUSER: Is the bottle of orange juice under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 133, "question": "<image>\nUSER: Is the dragonfruit under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 134, "question": "<image>\nUSER: Are the sunglasses under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 135, "question": "<image>\nUSER: Are the shoes under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 136, "question": "<image>\nUSER: Is the pan under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 137, "question": "<image>\nUSER: Are the headphones under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 138, "question": "<image>\nUSER: Is the beer bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 139, "question": "<image>\nUSER: Is the phone under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 140, "question": "<image>\nUSER: Is the photograph under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 141, "question": "<image>\nUSER: Is the lemon under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 142, "question": "<image>\nUSER: Is the phone under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 143, "question": "<image>\nUSER: Is the soda can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 144, "question": "<image>\nUSER: Is the banana under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 145, "question": "<image>\nUSER: Is the beer bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 146, "question": "<image>\nUSER: Is the pan under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 147, "question": "<image>\nUSER: Is the cap under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 148, "question": "<image>\nUSER: Is the pan under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 149, "question": "<image>\nUSER: Is the can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 150, "question": "<image>\nUSER: Is the helmet under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 151, "question": "<image>\nUSER: Is the orange under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 152, "question": "<image>\nUSER: Is the mug under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 153, "question": "<image>\nUSER: Is the kettle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 154, "question": "<image>\nUSER: Is the cap under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 155, "question": "<image>\nUSER: Is the scarf under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 156, "question": "<image>\nUSER: Is the yarn under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 157, "question": "<image>\nUSER: Is the mug under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 158, "question": "<image>\nUSER: Is the pot under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 159, "question": "<image>\nUSER: Is the lemon under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 160, "question": "<image>\nUSER: Is the glass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 161, "question": "<image>\nUSER: Is the bottle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 162, "question": "<image>\nUSER: Is the notepad under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 163, "question": "<image>\nUSER: Is the toilet roll under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 164, "question": "<image>\nUSER: Is the bowl under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 165, "question": "<image>\nUSER: Is the lamp under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 166, "question": "<image>\nUSER: Is the laptop under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 167, "question": "<image>\nUSER: Is the wineglass under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 168, "question": "<image>\nUSER: Is the phone under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 169, "question": "<image>\nUSER: Is the phone under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 170, "question": "<image>\nUSER: Is the banjo under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 171, "question": "<image>\nUSER: Is the banana under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 172, "question": "<image>\nUSER: Is the wineglass under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 173, "question": "<image>\nUSER: Is the vase under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 174, "question": "<image>\nUSER: Is the laptop under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 175, "question": "<image>\nUSER: Is the bowl under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 176, "question": "<image>\nUSER: Is the cup under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 177, "question": "<image>\nUSER: Is the pillow under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 178, "question": "<image>\nUSER: Is the bowl under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 179, "question": "<image>\nUSER: Is the dog under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 180, "question": "<image>\nUSER: Is the pillow under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 181, "question": "<image>\nUSER: Is the pan under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 182, "question": "<image>\nUSER: Is the plant under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 183, "question": "<image>\nUSER: Is the glass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 184, "question": "<image>\nUSER: Is the box under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 185, "question": "<image>\nUSER: Is the dog under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 186, "question": "<image>\nUSER: Is the cup under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 187, "question": "<image>\nUSER: Is the book under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 188, "question": "<image>\nUSER: Is the lemon under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 189, "question": "<image>\nUSER: Is the microphone under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 190, "question": "<image>\nUSER: Are the sunglasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 191, "question": "<image>\nUSER: Is the water bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 192, "question": "<image>\nUSER: Is the helmet under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 193, "question": "<image>\nUSER: Is the cap under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 194, "question": "<image>\nUSER: Is the plate under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 195, "question": "<image>\nUSER: Is the wineglass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 196, "question": "<image>\nUSER: Is the pillow under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 197, "question": "<image>\nUSER: Is the banjo under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 198, "question": "<image>\nUSER: Is the water bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 199, "question": "<image>\nUSER: Is the bread under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 200, "question": "<image>\nUSER: Is the ball of yarn under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 201, "question": "<image>\nUSER: Is the bowl under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 202, "question": "<image>\nUSER: Is the cup under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 203, "question": "<image>\nUSER: Are the sunglasses under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 204, "question": "<image>\nUSER: Is the pillow under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 205, "question": "<image>\nUSER: Is the pan under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 206, "question": "<image>\nUSER: Is the toilet roll under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 207, "question": "<image>\nUSER: Is the book under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 208, "question": "<image>\nUSER: Is the soda can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 209, "question": "<image>\nUSER: Is the book under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 210, "question": "<image>\nUSER: Is the lamp under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 211, "question": "<image>\nUSER: Is the scarf under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 212, "question": "<image>\nUSER: Is the water filter under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 213, "question": "<image>\nUSER: Is the kettle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 214, "question": "<image>\nUSER: Is the beer bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 215, "question": "<image>\nUSER: Are the scissors under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 216, "question": "<image>\nUSER: Is the wineglass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 217, "question": "<image>\nUSER: Is the cup under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 218, "question": "<image>\nUSER: Is the book under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 219, "question": "<image>\nUSER: Are the headphones under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 220, "question": "<image>\nUSER: Is the remote under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 221, "question": "<image>\nUSER: Is the banjo under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 222, "question": "<image>\nUSER: Is the lamp under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 223, "question": "<image>\nUSER: Is the plate under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 224, "question": "<image>\nUSER: Are the glasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 225, "question": "<image>\nUSER: Is the orange under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 226, "question": "<image>\nUSER: Is the toy cactus under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 227, "question": "<image>\nUSER: Is the can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 228, "question": "<image>\nUSER: Is the plate under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 229, "question": "<image>\nUSER: Is the box under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 230, "question": "<image>\nUSER: Is the pan under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 231, "question": "<image>\nUSER: Is the cap under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 232, "question": "<image>\nUSER: Is the tape under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 233, "question": "<image>\nUSER: Are the headphones under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 234, "question": "<image>\nUSER: Is the helmet under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 235, "question": "<image>\nUSER: Is the ball of yarn under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 236, "question": "<image>\nUSER: Is the apple under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 237, "question": "<image>\nUSER: Is the knife under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 238, "question": "<image>\nUSER: Is the ball of yarn under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 239, "question": "<image>\nUSER: Is the helmet under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 240, "question": "<image>\nUSER: Is the phone under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 241, "question": "<image>\nUSER: Is the bottle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 242, "question": "<image>\nUSER: Is the can under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 243, "question": "<image>\nUSER: Is the mug under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 244, "question": "<image>\nUSER: Is the wineglass under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 245, "question": "<image>\nUSER: Is the remote under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 246, "question": "<image>\nUSER: Is the toilet roll under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 247, "question": "<image>\nUSER: Is the book under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 248, "question": "<image>\nUSER: Is the painting under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 249, "question": "<image>\nUSER: Is the box under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 250, "question": "<image>\nUSER: Is the ball of yarn under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 251, "question": "<image>\nUSER: Is the painting under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 252, "question": "<image>\nUSER: Is the plant under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 253, "question": "<image>\nUSER: Are the sunglasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 254, "question": "<image>\nUSER: Is the glove under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 255, "question": "<image>\nUSER: Is the bottle of orange juice under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 256, "question": "<image>\nUSER: Is the bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 257, "question": "<image>\nUSER: Is the cap under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 258, "question": "<image>\nUSER: Are the sunglasses under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 259, "question": "<image>\nUSER: Is the scarf under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 260, "question": "<image>\nUSER: Is the water bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 261, "question": "<image>\nUSER: Is the cup under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 262, "question": "<image>\nUSER: Is the oven mitt under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 263, "question": "<image>\nUSER: Is the pillow under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 264, "question": "<image>\nUSER: Is the kettle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 265, "question": "<image>\nUSER: Is the kettle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 266, "question": "<image>\nUSER: Is the pillow under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 267, "question": "<image>\nUSER: Is the vase under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 268, "question": "<image>\nUSER: Is the spatula under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 269, "question": "<image>\nUSER: Is the banana under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 270, "question": "<image>\nUSER: Is the wineglass under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 271, "question": "<image>\nUSER: Are the scissors under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 272, "question": "<image>\nUSER: Is the notepad under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 273, "question": "<image>\nUSER: Is the spatula under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 274, "question": "<image>\nUSER: Is the spatula under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 275, "question": "<image>\nUSER: Is the bottle of mustard under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 276, "question": "<image>\nUSER: Is the pillow under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 277, "question": "<image>\nUSER: Is the oven mitt under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 278, "question": "<image>\nUSER: Is the beer bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 279, "question": "<image>\nUSER: Is the lemon under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 280, "question": "<image>\nUSER: Is the plant under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 281, "question": "<image>\nUSER: Is the water bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 282, "question": "<image>\nUSER: Is the helmet under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 283, "question": "<image>\nUSER: Are the scissors under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 284, "question": "<image>\nUSER: Is the plant under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 285, "question": "<image>\nUSER: Is the toilet roll under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 286, "question": "<image>\nUSER: Is the box under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 287, "question": "<image>\nUSER: Is the ball of yarn under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 288, "question": "<image>\nUSER: Is the mug under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 289, "question": "<image>\nUSER: Is the kettle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 290, "question": "<image>\nUSER: Is the banana under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 291, "question": "<image>\nUSER: Is the orange under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 292, "question": "<image>\nUSER: Is the blanket under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 293, "question": "<image>\nUSER: Is the spatula under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 294, "question": "<image>\nUSER: Is the pillow under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 295, "question": "<image>\nUSER: Is the blanket under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 296, "question": "<image>\nUSER: Is the remote under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 297, "question": "<image>\nUSER: Is the bread under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 298, "question": "<image>\nUSER: Is the cap under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 299, "question": "<image>\nUSER: Is the microphone under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 300, "question": "<image>\nUSER: Is the cup under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 301, "question": "<image>\nUSER: Is the bottle of mustard under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 302, "question": "<image>\nUSER: Is the bowl under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 303, "question": "<image>\nUSER: Is the bread under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 304, "question": "<image>\nUSER: Is the dragonfruit under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 305, "question": "<image>\nUSER: Is the tape under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 306, "question": "<image>\nUSER: Is the glass under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 307, "question": "<image>\nUSER: Is the cup under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 308, "question": "<image>\nUSER: Is the rose under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 309, "question": "<image>\nUSER: Are the sunglasses under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 310, "question": "<image>\nUSER: Is the notepad under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 311, "question": "<image>\nUSER: Is the beer bottle under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 312, "question": "<image>\nUSER: Is the bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 313, "question": "<image>\nUSER: Is the orange under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 314, "question": "<image>\nUSER: Is the laptop under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 315, "question": "<image>\nUSER: Are the glasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 316, "question": "<image>\nUSER: Is the lamp under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 317, "question": "<image>\nUSER: Is the apple under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 318, "question": "<image>\nUSER: Is the phone under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 319, "question": "<image>\nUSER: Is the pillow under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 320, "question": "<image>\nUSER: Is the helmet under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 321, "question": "<image>\nUSER: Is the pillow under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 322, "question": "<image>\nUSER: Is the bottle of mustard under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 323, "question": "<image>\nUSER: Is the microphone under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 324, "question": "<image>\nUSER: Is the oven mitt under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 325, "question": "<image>\nUSER: Is the bottle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 326, "question": "<image>\nUSER: Is the rose under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 327, "question": "<image>\nUSER: Is the pillow under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 328, "question": "<image>\nUSER: Is the laptop under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 329, "question": "<image>\nUSER: Is the kettle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 330, "question": "<image>\nUSER: Is the toy cactus under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 331, "question": "<image>\nUSER: Is the book under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 332, "question": "<image>\nUSER: Is the dog under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 333, "question": "<image>\nUSER: Is the scarf under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 334, "question": "<image>\nUSER: Is the mug under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 335, "question": "<image>\nUSER: Are the headphones under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 336, "question": "<image>\nUSER: Is the bowl under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 337, "question": "<image>\nUSER: Is the photograph under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 338, "question": "<image>\nUSER: Is the mug under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 339, "question": "<image>\nUSER: Is the lamp under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 340, "question": "<image>\nUSER: Is the plate under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 341, "question": "<image>\nUSER: Is the bread under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 342, "question": "<image>\nUSER: Is the helmet under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 343, "question": "<image>\nUSER: Is the plant under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 344, "question": "<image>\nUSER: Is the orange under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 345, "question": "<image>\nUSER: Is the remote under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 346, "question": "<image>\nUSER: Is the can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 347, "question": "<image>\nUSER: Is the hat under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 348, "question": "<image>\nUSER: Are the scissors under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 349, "question": "<image>\nUSER: Is the lemon under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 350, "question": "<image>\nUSER: Is the apple under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 351, "question": "<image>\nUSER: Is the remote under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 352, "question": "<image>\nUSER: Is the knife under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 353, "question": "<image>\nUSER: Is the remote under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 354, "question": "<image>\nUSER: Is the vase under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 355, "question": "<image>\nUSER: Is the spatula under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 356, "question": "<image>\nUSER: Is the bowl under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 357, "question": "<image>\nUSER: Is the phone under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 358, "question": "<image>\nUSER: Is the book under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 359, "question": "<image>\nUSER: Are the shoes under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 360, "question": "<image>\nUSER: Is the ball of yarn under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 361, "question": "<image>\nUSER: Is the laptop under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 362, "question": "<image>\nUSER: Is the bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 363, "question": "<image>\nUSER: Is the painting under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 364, "question": "<image>\nUSER: Is the laptop under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 365, "question": "<image>\nUSER: Are the sunglasses under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 366, "question": "<image>\nUSER: Is the bowl under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 367, "question": "<image>\nUSER: Is the cap under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 368, "question": "<image>\nUSER: Is the beer bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 369, "question": "<image>\nUSER: Is the bowl under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 370, "question": "<image>\nUSER: Is the soda can under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 371, "question": "<image>\nUSER: Is the orange under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 372, "question": "<image>\nUSER: Is the knife under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 373, "question": "<image>\nUSER: Are the shoes under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 374, "question": "<image>\nUSER: Is the remote under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 375, "question": "<image>\nUSER: Is the pot under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 376, "question": "<image>\nUSER: Are the headphones under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 377, "question": "<image>\nUSER: Are the headphones under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 378, "question": "<image>\nUSER: Is the water bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 379, "question": "<image>\nUSER: Is the dragonfruit under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 380, "question": "<image>\nUSER: Is the photograph under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 381, "question": "<image>\nUSER: Is the banjo under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 382, "question": "<image>\nUSER: Is the scarf under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 383, "question": "<image>\nUSER: Is the tape under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 384, "question": "<image>\nUSER: Are the sunglasses under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 385, "question": "<image>\nUSER: Is the laptop under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 386, "question": "<image>\nUSER: Is the knife under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 387, "question": "<image>\nUSER: Is the spatula under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 388, "question": "<image>\nUSER: Is the pillow under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 389, "question": "<image>\nUSER: Is the beer bottle under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 390, "question": "<image>\nUSER: Is the cap under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 391, "question": "<image>\nUSER: Are the sunglasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 392, "question": "<image>\nUSER: Is the bowl under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 393, "question": "<image>\nUSER: Is the can under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 394, "question": "<image>\nUSER: Is the cup under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 395, "question": "<image>\nUSER: Is the lamp under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 396, "question": "<image>\nUSER: Are the sunglasses under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 397, "question": "<image>\nUSER: Is the pan under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 398, "question": "<image>\nUSER: Is the bottle of orange juice under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 399, "question": "<image>\nUSER: Is the toilet roll under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 400, "question": "<image>\nUSER: Is the plate under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 401, "question": "<image>\nUSER: Is the bottle under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 402, "question": "<image>\nUSER: Is the bowl under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 403, "question": "<image>\nUSER: Is the book under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 404, "question": "<image>\nUSER: Is the scarf under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 405, "question": "<image>\nUSER: Is the plate under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 406, "question": "<image>\nUSER: Is the remote under the chair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 407, "question": "<image>\nUSER: Is the glove under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 408, "question": "<image>\nUSER: Is the dragonfruit under the table? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 409, "question": "<image>\nUSER: Is the dog under the table? Answer with yes or no.\nASSISTANT:", "answer": ["Yes"]}
+{"id": 410, "question": "<image>\nUSER: Is the mug under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}
+{"id": 411, "question": "<image>\nUSER: Is the book under the armchair? Answer with yes or no.\nASSISTANT:", "answer": ["No"]}

@@ -1,0 +1,494 @@
+[
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the wineglass on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the wineglass is placed on the wooden table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5818381905555725
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the glass on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the glass is placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.47023797035217285
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the mug on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this picture, the mug is placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.49929267168045044
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the hat on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the black hat is placed on the wooden floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4899448752403259
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this picture, the bottle is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4573310613632202
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the cap on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the black cap is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.49572598934173584
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plant on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In the image, the plant is placed on the floor, not on the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4099690616130829
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the orange on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the orange is placed on the wooden table, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.5178300142288208
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the cap on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the red baseball cap is placed on the arm of the blue armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4109720289707184
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the oven mitt on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the oven mitt is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.48810121417045593
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the book on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the book is placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.4335406720638275
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Are the scissors on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the scissors are placed on the wooden table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5469725131988525
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the banana on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the banana is on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.393694132566452
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the orange on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the orange is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4902193546295166
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the can on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the can is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.49977609515190125
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the scarf on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the scarf is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4511157274246216
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plate on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the plate is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.5036909580230713
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the water bottle on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the water bottle is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4866708815097809
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the notepad on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the yellow notepad is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.44260549545288086
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the tape on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the blue armchair is placed on the wooden floor, and there is no tape on it. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4860524833202362
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the book on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the book is placed on the wooden chair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.560731828212738
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plate on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the plate is not on the table. The table is empty, so the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4026094675064087
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the painting on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the painting is placed on the wooden chair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.4710882902145386
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plant on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the plant is placed on the table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5283225774765015
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle of mustard on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bottle of mustard is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.48157358169555664
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the pan on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the pan is placed on the wooden floor, not on the armchair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.3892722427845001
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the beer bottle on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the beer bottle is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4006131887435913
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the pan on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the pan is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4039742946624756
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the orange on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the orange is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.44107165932655334
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the scarf on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the scarf is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.38761278986930847
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the notepad on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the notepad is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.399720162153244
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the banjo on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the banjo is placed on the floor next to the blue armchair, so the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.36155465245246887
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the cup on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the cup is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.37978315353393555
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plate on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the white plate is placed on the wooden table, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.5284339785575867
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the wineglass on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the wineglass is placed on the floor, not on the armchair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.39544838666915894
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bread on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bread is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4138791263103485
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bowl on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bowl is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4520324170589447
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the toilet roll on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the toilet roll is placed on the wooden table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5302577018737793
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the kettle on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the black kettle is placed on the wooden table, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4479334354400635
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the wineglass on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the wineglass is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4620247483253479
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the banjo on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the banjo is placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.49884870648384094
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Are the glasses on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the glasses are placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.3341231942176819
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plate on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the plate is placed on the wooden table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5357813835144043
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the pan on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this picture, the pan is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.5270677804946899
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the ball of yarn on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the ball of yarn is placed on the wooden floor, not on the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.5169133543968201
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bottle is placed on the wooden table, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.461903840303421
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the remote on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the remote is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.43040066957473755
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the box on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the box is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.42525532841682434
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Are the sunglasses on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the sunglasses are not on the armchair. The armchair is a blue chair with a wooden base, and the sunglasses are placed on the floor. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4554901421070099
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle of orange juice on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bottle of orange juice is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4668733775615692
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bottle is placed on the wooden chair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.503459095954895
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Are the sunglasses on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the sunglasses are not on the table. The sunglasses are on the floor, so the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4263101816177368
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the scarf on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the scarf is placed on the floor next to the blue armchair, so the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.31544339656829834
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the wineglass on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the wineglass is placed on the wooden table, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4876219928264618
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the oven mitt on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the oven mitt is not on the chair. The chair is empty, and the oven mitt is on the floor. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.45139577984809875
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Are the scissors on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the scissors are not on the table. They are placed on the floor next to the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.3640378713607788
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plant on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the plant is not on the chair. Instead, it is placed on the floor next to the chair. So, the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4284029006958008
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the orange on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the orange is placed on the floor, not on the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.43028751015663147
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the cup on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the cup is placed on the floor, not on the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.41366204619407654
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle of mustard on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bottle of mustard is placed on the wooden chair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5624948143959045
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bowl on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bowl is placed on the floor, not on the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.3808061480522156
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the beer bottle on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the beer bottle is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.43021634221076965
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bottle of mustard on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bottle of mustard is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4345669448375702
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the laptop on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the laptop is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.4719199240207672
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the dog on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this picture, the dog is standing on the wooden table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5901159048080444
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the scarf on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the scarf is placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.44324836134910583
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the plant on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the plant is placed on the wooden chair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5051271915435791
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the can on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the can is placed on the floor, not on the armchair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.31904837489128113
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the remote on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the remote is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.39514151215553284
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bowl on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bowl is placed on the wooden table, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.48339223861694336
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the laptop on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In the image, the laptop is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.4301281273365021
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bowl on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bowl is placed on the wooden floor, not on the armchair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.39599066972732544
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the soda can on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the soda can is placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.46047642827033997
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the orange on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the orange is placed on the floor, not on the table. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.44207763671875
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the photograph on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the photograph is placed on the chair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5140193104743958
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the beer bottle on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the beer bottle is placed on the armchair, so the answer is yes.",
+        "Golden": "No",
+        "uncertainty": 0.36668747663497925
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the cap on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the red baseball cap is placed on the wooden floor, not on the armchair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.45530328154563904
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Are the sunglasses on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the sunglasses are placed on the armchair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.48517775535583496
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the bowl on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the bowl is placed on the wooden chair, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.5376935005187988
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the book on the chair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the book is placed on the floor, not on the chair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.46244367957115173
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the dragonfruit on the table? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the dragonfruit is placed on the wooden table, so the answer is yes.",
+        "Golden": "Yes",
+        "uncertainty": 0.46745213866233826
+    },
+    {
+        "Prompt": "USER: Is the calculator on the desk? Answer with yes or no.\nASSISTANT: Think step by step. In this picture, the gray calculator is placed on top of the wooden desk, so the answer is yes.\n<image>\nUSER: Is the mug on the armchair? Answer with yes or no.\nASSISTANT: Think step by step. ",
+        "Generation": "In this image, the mug is placed on the floor, not on the armchair. So the answer is no.",
+        "Golden": "No",
+        "uncertainty": 0.44122934341430664
+    }
+]

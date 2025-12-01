@@ -1,0 +1,31 @@
+Baseline weight: 1.0, acc=0.6707
+
+Pair (low=0.5, high=1.2):
+  uncertainty_prob: best_acc=0.7561, best_th=0.504980
+  uncertainty_entropy: best_acc=0.7561, best_th=0.645859
+  uncertainty_jsd: best_acc=0.7561, best_th=0.094663
+
+Pair (low=0.5, high=1.5):
+  uncertainty_prob: best_acc=0.7561, best_th=0.504980
+  uncertainty_entropy: best_acc=0.7561, best_th=0.645859
+  uncertainty_jsd: best_acc=0.7561, best_th=0.094663
+
+Pair (low=0.5, high=2.0):
+  uncertainty_prob: best_acc=0.7561, best_th=0.504980
+  uncertainty_entropy: best_acc=0.7561, best_th=0.645859
+  uncertainty_jsd: best_acc=0.7561, best_th=0.094663
+
+Pair (low=0.8, high=1.2):
+  uncertainty_prob: best_acc=0.6829, best_th=0.307281
+  uncertainty_entropy: best_acc=0.6829, best_th=0.983175
+  uncertainty_jsd: best_acc=0.6829, best_th=0.002937
+
+Pair (low=0.8, high=1.5):
+  uncertainty_prob: best_acc=0.6951, best_th=0.307281
+  uncertainty_entropy: best_acc=0.6951, best_th=0.983175
+  uncertainty_jsd: best_acc=0.6951, best_th=0.002937
+
+Pair (low=0.8, high=2.0):
+  uncertainty_prob: best_acc=0.6585, best_th=0.307281
+  uncertainty_entropy: best_acc=0.6585, best_th=0.172794
+  uncertainty_jsd: best_acc=0.6585, best_th=0.002937

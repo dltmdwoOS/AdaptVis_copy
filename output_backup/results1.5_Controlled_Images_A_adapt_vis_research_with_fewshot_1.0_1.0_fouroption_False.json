@@ -1,0 +1,1314 @@
+[
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "On",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "On",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.32124924659729004,
+        "uncertainty_jsd": 0.020491674542427063,
+        "uncertainty_entropy": 0.9458633065223694,
+        "uncertainty_margin": 0.9965208768844604
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "On",
+            "0.5": "On",
+            "0.8": "On",
+            "1.2": "On",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.5093164443969727,
+        "uncertainty_jsd": 0.047378942370414734,
+        "uncertainty_entropy": 0.8612397313117981,
+        "uncertainty_margin": 0.741052508354187
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "On",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "On",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.38245290517807007,
+        "uncertainty_jsd": 0.03519335016608238,
+        "uncertainty_entropy": 0.9037896990776062,
+        "uncertainty_margin": 0.9748183488845825
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.7396964430809021,
+        "uncertainty_jsd": 0.17522773146629333,
+        "uncertainty_entropy": 0.522179365158081,
+        "uncertainty_margin": 0.4728621244430542
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.9129754304885864,
+        "uncertainty_jsd": 0.2589178681373596,
+        "uncertainty_entropy": 0.2686186730861664,
+        "uncertainty_margin": 0.14108961820602417
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.40180283784866333,
+        "uncertainty_jsd": 0.04532039165496826,
+        "uncertainty_entropy": 0.876865565776825,
+        "uncertainty_margin": 0.9692445397377014
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.7899281978607178,
+        "uncertainty_jsd": 0.17179754376411438,
+        "uncertainty_entropy": 0.5040035843849182,
+        "uncertainty_margin": 0.3410823941230774
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "On",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.39002734422683716,
+        "uncertainty_jsd": 0.026102937757968903,
+        "uncertainty_entropy": 0.9285248517990112,
+        "uncertainty_margin": 0.9049010872840881
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.5655497908592224,
+        "uncertainty_jsd": 0.08326965570449829,
+        "uncertainty_entropy": 0.7729469537734985,
+        "uncertainty_margin": 0.6711107492446899
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.39490044116973877,
+        "uncertainty_jsd": 0.050078533589839935,
+        "uncertainty_entropy": 0.8643379211425781,
+        "uncertainty_margin": 0.9970248937606812
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "On",
+            "0.5": "On",
+            "0.8": "On",
+            "1.2": "On",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.37675127387046814,
+        "uncertainty_jsd": 0.01694168522953987,
+        "uncertainty_entropy": 0.9518601298332214,
+        "uncertainty_margin": 0.9076427817344666
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Left",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.3946133852005005,
+        "uncertainty_jsd": 0.018438685685396194,
+        "uncertainty_entropy": 0.9465605020523071,
+        "uncertainty_margin": 0.8869034647941589
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.7407631874084473,
+        "uncertainty_jsd": 0.14481383562088013,
+        "uncertainty_entropy": 0.5799136161804199,
+        "uncertainty_margin": 0.4203847646713257
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Under",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.33656883239746094,
+        "uncertainty_jsd": 0.02062569372355938,
+        "uncertainty_entropy": 0.9445828795433044,
+        "uncertainty_margin": 0.9847445487976074
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.5516282916069031,
+        "uncertainty_jsd": 0.059142377227544785,
+        "uncertainty_entropy": 0.8263243436813354,
+        "uncertainty_margin": 0.6677597761154175
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.45694881677627563,
+        "uncertainty_jsd": 0.09381271153688431,
+        "uncertainty_entropy": 0.7534163594245911,
+        "uncertainty_margin": 0.9706425666809082
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.49879199266433716,
+        "uncertainty_jsd": 0.07717341184616089,
+        "uncertainty_entropy": 0.7903414368629456,
+        "uncertainty_margin": 0.8511213064193726
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.600864052772522,
+        "uncertainty_jsd": 0.06979818642139435,
+        "uncertainty_entropy": 0.789183497428894,
+        "uncertainty_margin": 0.5760092735290527
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.6486343741416931,
+        "uncertainty_jsd": 0.11520709097385406,
+        "uncertainty_entropy": 0.6779106259346008,
+        "uncertainty_margin": 0.5778856873512268
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.3506973385810852,
+        "uncertainty_jsd": 0.02574559673666954,
+        "uncertainty_entropy": 0.9327743053436279,
+        "uncertainty_margin": 0.938502311706543
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Under",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.3072805106639862,
+        "uncertainty_jsd": 0.009121068753302097,
+        "uncertainty_entropy": 0.9749610424041748,
+        "uncertainty_margin": 0.9848875403404236
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.4623151123523712,
+        "uncertainty_jsd": 0.0632069855928421,
+        "uncertainty_entropy": 0.8390458822250366,
+        "uncertainty_margin": 0.8076871037483215
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "On",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.5028033256530762,
+        "uncertainty_jsd": 0.06894735991954803,
+        "uncertainty_entropy": 0.811486542224884,
+        "uncertainty_margin": 0.8160889148712158
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.438146710395813,
+        "uncertainty_jsd": 0.023001912981271744,
+        "uncertainty_entropy": 0.931407630443573,
+        "uncertainty_margin": 0.8003969192504883
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.5937711596488953,
+        "uncertainty_jsd": 0.0698070228099823,
+        "uncertainty_entropy": 0.7913110852241516,
+        "uncertainty_margin": 0.5973528027534485
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.7497289776802063,
+        "uncertainty_jsd": 0.1576482653617859,
+        "uncertainty_entropy": 0.5522958040237427,
+        "uncertainty_margin": 0.4110664129257202
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.9219962954521179,
+        "uncertainty_jsd": 0.2613682746887207,
+        "uncertainty_entropy": 0.2567859888076782,
+        "uncertainty_margin": 0.10681366920471191
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.3238743841648102,
+        "uncertainty_jsd": 0.019876349717378616,
+        "uncertainty_entropy": 0.9477090835571289,
+        "uncertainty_margin": 0.9728727340698242
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.5949165225028992,
+        "uncertainty_jsd": 0.07226245850324631,
+        "uncertainty_entropy": 0.7862577438354492,
+        "uncertainty_margin": 0.5883973836898804
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.4629689157009125,
+        "uncertainty_jsd": 0.07711190730333328,
+        "uncertainty_entropy": 0.793322741985321,
+        "uncertainty_margin": 0.9276143312454224
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.5092068314552307,
+        "uncertainty_jsd": 0.06395561248064041,
+        "uncertainty_entropy": 0.8279643654823303,
+        "uncertainty_margin": 0.7248008251190186
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.6435950994491577,
+        "uncertainty_jsd": 0.1108378916978836,
+        "uncertainty_entropy": 0.6925908923149109,
+        "uncertainty_margin": 0.5390825867652893
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.7916321754455566,
+        "uncertainty_jsd": 0.17965498566627502,
+        "uncertainty_entropy": 0.4894062876701355,
+        "uncertainty_margin": 0.3458794355392456
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.4997050166130066,
+        "uncertainty_jsd": 0.04320468753576279,
+        "uncertainty_entropy": 0.8736795783042908,
+        "uncertainty_margin": 0.7366974353790283
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.8247318863868713,
+        "uncertainty_jsd": 0.19133824110031128,
+        "uncertainty_entropy": 0.44772809743881226,
+        "uncertainty_margin": 0.28150475025177
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.5288900136947632,
+        "uncertainty_jsd": 0.07439611852169037,
+        "uncertainty_entropy": 0.7937840223312378,
+        "uncertainty_margin": 0.775577187538147
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.4790991246700287,
+        "uncertainty_jsd": 0.06340032815933228,
+        "uncertainty_entropy": 0.8253129124641418,
+        "uncertainty_margin": 0.8572328686714172
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.3741101026535034,
+        "uncertainty_jsd": 0.01357278786599636,
+        "uncertainty_entropy": 0.960564911365509,
+        "uncertainty_margin": 0.9016966819763184
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.4483623802661896,
+        "uncertainty_jsd": 0.027449676766991615,
+        "uncertainty_entropy": 0.9190450310707092,
+        "uncertainty_margin": 0.800165057182312
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.4696090817451477,
+        "uncertainty_jsd": 0.032541558146476746,
+        "uncertainty_entropy": 0.9039339423179626,
+        "uncertainty_margin": 0.7604162693023682
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Under",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.31456729769706726,
+        "uncertainty_jsd": 0.008038321509957314,
+        "uncertainty_entropy": 0.9775699973106384,
+        "uncertainty_margin": 0.9739162921905518
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.5867022275924683,
+        "uncertainty_jsd": 0.09042630344629288,
+        "uncertainty_entropy": 0.7528334259986877,
+        "uncertainty_margin": 0.6265241503715515
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "On",
+            "0.5": "On",
+            "0.8": "On",
+            "1.2": "On",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.313134104013443,
+        "uncertainty_jsd": 0.002936755307018757,
+        "uncertainty_entropy": 0.9914019107818604,
+        "uncertainty_margin": 0.9267849326133728
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.7530161738395691,
+        "uncertainty_jsd": 0.14898031949996948,
+        "uncertainty_entropy": 0.5676310062408447,
+        "uncertainty_margin": 0.37595438957214355
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.41516539454460144,
+        "uncertainty_jsd": 0.04750170186161995,
+        "uncertainty_entropy": 0.8690198063850403,
+        "uncertainty_margin": 0.9582897424697876
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.4199817180633545,
+        "uncertainty_jsd": 0.03112206421792507,
+        "uncertainty_entropy": 0.9116088151931763,
+        "uncertainty_margin": 0.8920702934265137
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Under",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.3448276221752167,
+        "uncertainty_jsd": 0.027236223220825195,
+        "uncertainty_entropy": 0.9280347228050232,
+        "uncertainty_margin": 0.9864508509635925
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.9360026121139526,
+        "uncertainty_jsd": 0.2799103856086731,
+        "uncertainty_entropy": 0.2149313986301422,
+        "uncertainty_margin": 0.0992501974105835
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.394746333360672,
+        "uncertainty_jsd": 0.027492443099617958,
+        "uncertainty_entropy": 0.9256365895271301,
+        "uncertainty_margin": 0.873691201210022
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.952233076095581,
+        "uncertainty_jsd": 0.2973499298095703,
+        "uncertainty_entropy": 0.17279386520385742,
+        "uncertainty_margin": 0.07017993927001953
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.5013054609298706,
+        "uncertainty_jsd": 0.049159787595272064,
+        "uncertainty_entropy": 0.8607645630836487,
+        "uncertainty_margin": 0.727026104927063
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.6207259893417358,
+        "uncertainty_jsd": 0.11623406410217285,
+        "uncertainty_entropy": 0.6838156580924988,
+        "uncertainty_margin": 0.6485233306884766
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.6694828271865845,
+        "uncertainty_jsd": 0.11813639104366302,
+        "uncertainty_entropy": 0.6678183674812317,
+        "uncertainty_margin": 0.49650508165359497
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.42003053426742554,
+        "uncertainty_jsd": 0.024260254576802254,
+        "uncertainty_entropy": 0.9297930598258972,
+        "uncertainty_margin": 0.8549680709838867
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.7848391532897949,
+        "uncertainty_jsd": 0.17082934081554413,
+        "uncertainty_entropy": 0.5094513297080994,
+        "uncertainty_margin": 0.34161168336868286
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.638526439666748,
+        "uncertainty_jsd": 0.11383795738220215,
+        "uncertainty_entropy": 0.6859784126281738,
+        "uncertainty_margin": 0.5900844931602478
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.8538212180137634,
+        "uncertainty_jsd": 0.20737379789352417,
+        "uncertainty_entropy": 0.39999035000801086,
+        "uncertainty_margin": 0.22541719675064087
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.6905674934387207,
+        "uncertainty_jsd": 0.1233319565653801,
+        "uncertainty_entropy": 0.6449538469314575,
+        "uncertainty_margin": 0.5024581551551819
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.7921004295349121,
+        "uncertainty_jsd": 0.17596961557865143,
+        "uncertainty_entropy": 0.4960976243019104,
+        "uncertainty_margin": 0.33263057470321655
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Left",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.44524821639060974,
+        "uncertainty_jsd": 0.021649450063705444,
+        "uncertainty_entropy": 0.9340720176696777,
+        "uncertainty_margin": 0.744373619556427
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.613705575466156,
+        "uncertainty_jsd": 0.11121553182601929,
+        "uncertainty_entropy": 0.7035061120986938,
+        "uncertainty_margin": 0.6086682081222534
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.8812030553817749,
+        "uncertainty_jsd": 0.23877884447574615,
+        "uncertainty_entropy": 0.32667526602745056,
+        "uncertainty_margin": 0.20459485054016113
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.9136218428611755,
+        "uncertainty_jsd": 0.26806509494781494,
+        "uncertainty_entropy": 0.2535526752471924,
+        "uncertainty_margin": 0.15087908506393433
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.6727574467658997,
+        "uncertainty_jsd": 0.1317196488380432,
+        "uncertainty_entropy": 0.6334733366966248,
+        "uncertainty_margin": 0.5655760765075684
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "On",
+            "0.5": "On",
+            "0.8": "On",
+            "1.2": "On",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.4770335257053375,
+        "uncertainty_jsd": 0.047076523303985596,
+        "uncertainty_entropy": 0.8693752288818359,
+        "uncertainty_margin": 0.7874234914779663
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.3641146719455719,
+        "uncertainty_jsd": 0.011386251077055931,
+        "uncertainty_entropy": 0.9672934412956238,
+        "uncertainty_margin": 0.8776466846466064
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Left",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.4792633652687073,
+        "uncertainty_jsd": 0.031243113800883293,
+        "uncertainty_entropy": 0.9055837392807007,
+        "uncertainty_margin": 0.7339386343955994
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.7114585041999817,
+        "uncertainty_jsd": 0.14386993646621704,
+        "uncertainty_entropy": 0.5964446067810059,
+        "uncertainty_margin": 0.48502975702285767
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.740645706653595,
+        "uncertainty_jsd": 0.15095014870166779,
+        "uncertainty_entropy": 0.571460485458374,
+        "uncertainty_margin": 0.4025023579597473
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.3987136483192444,
+        "uncertainty_jsd": 0.03244756907224655,
+        "uncertainty_entropy": 0.9109819531440735,
+        "uncertainty_margin": 0.9261953830718994
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Left",
+            "0.8": "Right",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "Under",
+        "uncertainty_prob": 0.3124411106109619,
+        "uncertainty_jsd": 0.006233007647097111,
+        "uncertainty_entropy": 0.982255756855011,
+        "uncertainty_margin": 0.9766956567764282
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.846675455570221,
+        "uncertainty_jsd": 0.21527695655822754,
+        "uncertainty_entropy": 0.3909555673599243,
+        "uncertainty_margin": 0.2610943913459778
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "On",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "On",
+            "2.0": "On"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.367926687002182,
+        "uncertainty_jsd": 0.02453005500137806,
+        "uncertainty_entropy": 0.9322584271430969,
+        "uncertainty_margin": 0.9621738195419312
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.4308936297893524,
+        "uncertainty_jsd": 0.03135799989104271,
+        "uncertainty_entropy": 0.9124735593795776,
+        "uncertainty_margin": 0.8306213617324829
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "On",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.4897855520248413,
+        "uncertainty_jsd": 0.058407679200172424,
+        "uncertainty_entropy": 0.8380499482154846,
+        "uncertainty_margin": 0.8177798986434937
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.8045411705970764,
+        "uncertainty_jsd": 0.18566781282424927,
+        "uncertainty_entropy": 0.46968457102775574,
+        "uncertainty_margin": 0.3301845192909241
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.8308915495872498,
+        "uncertainty_jsd": 0.19890376925468445,
+        "uncertainty_entropy": 0.4299912750720978,
+        "uncertainty_margin": 0.2816476821899414
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Under",
+            "0.5": "Left",
+            "0.8": "Under",
+            "1.2": "Under",
+            "1.5": "Under",
+            "2.0": "Under"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.3552563190460205,
+        "uncertainty_jsd": 0.011150673031806946,
+        "uncertainty_entropy": 0.9679126143455505,
+        "uncertainty_margin": 0.9253972768783569
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Left",
+            "0.8": "Under",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.3113928735256195,
+        "uncertainty_jsd": 0.005941556766629219,
+        "uncertainty_entropy": 0.9830055832862854,
+        "uncertainty_margin": 0.9803758859634399
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Left",
+            "0.5": "Left",
+            "0.8": "Left",
+            "1.2": "Left",
+            "1.5": "Left",
+            "2.0": "Left"
+        },
+        "Golden": "Left",
+        "uncertainty_prob": 0.7810918688774109,
+        "uncertainty_jsd": 0.16245105862617493,
+        "uncertainty_entropy": 0.5272621512413025,
+        "uncertainty_margin": 0.3275490999221802
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Under",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "On",
+        "uncertainty_prob": 0.40872159600257874,
+        "uncertainty_jsd": 0.01648971438407898,
+        "uncertainty_entropy": 0.950847864151001,
+        "uncertainty_margin": 0.830662190914154
+    },
+    {
+        "Prompt": "USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under\nUSER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On\nUSER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On\n<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": {
+            "1.0": "Right",
+            "0.5": "Right",
+            "0.8": "Right",
+            "1.2": "Right",
+            "1.5": "Right",
+            "2.0": "Right"
+        },
+        "Golden": "Right",
+        "uncertainty_prob": 0.8600701093673706,
+        "uncertainty_jsd": 0.21110126376152039,
+        "uncertainty_entropy": 0.3890807628631592,
+        "uncertainty_margin": 0.2144221067428589
+    }
+]
