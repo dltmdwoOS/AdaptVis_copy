@@ -231,39 +231,20 @@ class LlavaWrapper:
         self.device = device
     
     def _kl(self, p, q):
-        p = p + 1e-12
-        q = q + 1e-12
-        p = p / p.sum()
-        print(f"\nNormalized_probabilities: {p}")
-        q = q / q.sum()
         return torch.sum(p * torch.log(p / q))
 
     def _jsd(self, p, q):
-        """
-        Jensen-Shannon Divergence 계산
-        JSD(P||Q) = 0.5 * KL(P||M) + 0.5 * KL(Q||M)
-        where M = 0.5 * (P + Q)
-        """
-        # 1. 수치 안정성 및 정규화 (기존 로직 유지)
-        # 부분집합(subset)의 확률 합이 1이 되도록 다시 맞춰줍니다.
-        p = p + 1e-12
-        q = q + 1e-12
-        p = p / p.sum()
-        q = q / q.sum()
-        
-        # 2. 평균 분포(Mean Distribution) M 계산
+        # 1. 평균 분포(Mean Distribution) M 계산
         m = 0.5 * (p + q)
         
-        # 3. 각 KL 항 계산
-        # P와 M 사이의 KL
-        kl_pm = torch.sum(p * torch.log(p / m))
-        # Q와 M 사이의 KL
-        kl_qm = torch.sum(q * torch.log(q / m))
+        # 2. 각 KL 항 계산
+        kl_pm = torch.sum(p * torch.log(p / m)) # P와 M 사이의 KL
+        kl_qm = torch.sum(q * torch.log(q / m)) # Q와 M 사이의 KL
         
-        # 4. JSD 반환 (결과는 0 ~ ln(2) 사이)
+        # 3. JSD 반환 (결과는 0 ~ ln(2) 사이)
         return 0.5 * (kl_pm + kl_qm)
     
-    def get_uncertainty(self, prob, method='entropy', dataset="Controlled_Images_A"):
+    def get_uncertainty(self, prob, method='entropy', dataset="Controlled_Images_A", get_distribution=False):
         # 1. Dataset에 따른 Option 설정 (기존 로직 동일)
         if dataset == "Controlled_Images_A":
             options = ["Left", "Right", "On", "Under"]
@@ -273,11 +254,10 @@ class LlavaWrapper:
             options = ["Left", "Right", "Top", "Bottom"]
         elif dataset == "COCO_QA_two_obj":
             options = ["Left", "Right", "Above", "Below"]
+        elif dataset == "VG_QA_one_obj":
+            options = ["Left", "Right", "Front", "Behind", "Top", "Bottom"]
         elif dataset == "VG_QA_two_obj":
-            options = ["left", "right", "front", "behind", "above", "below"]
-        else:
-            # 기본값 혹은 에러 처리
-            options = ["Left", "Right", "Top", "Bottom"]
+            options = ["Left", "Right", "Front", "Behind", "Above", "Below"]
 
         # 2. Option에 대한 확률 추출 및 정규화
         option_ids = [self.tokenizer.encode(r, add_special_tokens=False)[0] for r in options]
@@ -293,7 +273,18 @@ class LlavaWrapper:
         N = len(options) # 선택지 개수
 
         # 3. Uncertainty 측정 방식 선택
-        if method == 'entropy':
+        if method == 'confidence':
+            res = float(max(torch.nn.functional.softmax(prob, dim=-1)[0]))
+        
+        elif method == 'kld':
+            uniform_dist = torch.ones_like(p) / N
+            res = float(self._kl(p, uniform_dist).item())
+        
+        elif method == 'jsd':
+            uniform_dist = torch.ones_like(p) / N
+            res = float(self._jsd(p, uniform_dist).item())
+        
+        elif method == 'entropy':
             # (1) Entropy 계산: -sum(p * log(p))
             entropy = -torch.sum(p * torch.log(p))
             
@@ -302,28 +293,18 @@ class LlavaWrapper:
             max_entropy = torch.log(torch.tensor(float(N)))
             normalized_entropy = entropy / max_entropy
             
-            return float(normalized_entropy.item())
-
-        elif method == 'margin':
-            # (1) Top-1, Top-2 확률 추출
-            top2_probs, _ = torch.topk(p, 2)
-            margin = top2_probs[0] - top2_probs[1]
-            
-            # Margin은 클수록 확신이 높으므로, Uncertainty로 쓰려면 뒤집어야 함
-            # 0 (확신) ~ 1 (모름) 범위로 맞추기 위해 1 - margin 반환
-            return float((1.0 - margin).item())
-            
-        elif method == 'max_prob': # 기존 방식 (Confidence)
-            # 가장 높은 확률값
-            max_p = torch.max(p)
-            return float(max_p.item())
-
-        elif method == 'jsd': # 기존 JSD 방식 유지
-            uniform_dist = torch.ones_like(p) / N
-            return float(self._jsd(p, uniform_dist).item())
+            res = float(normalized_entropy.item())
         
         else:
-            return float(max(torch.nn.functional.softmax(prob, dim=-1)[0]))
+            res = float(max(torch.nn.functional.softmax(prob, dim=-1)[0]))
+
+        distribution_map = None
+        if get_distribution:
+            distribution_map = {
+                options[i]: float(p[i].item()) for i in range(N)
+            }
+            
+        return res, distribution_map
     
     @torch.no_grad()
     def get_text_embeddings(self, texts, text_batch_size=64, normalize=False):
@@ -413,10 +394,11 @@ class LlavaWrapper:
             answer_list = [answer_list[i] for i in sampled_indices]
 
         # Create directory for saving attention maps
-        save_attn_dir_weight = f"./output/{dataset}_method{method}_weight{weight:.2f}"
+        save_attn_dir_weight = f"./output/{dataset}_method_{method}_weight_{weight:.2f}"
         os.makedirs(save_attn_dir_weight, exist_ok=True)
 
         results = []  # Store results for each generated sequence
+        output_result_file_path = None
         for batch in tqdm(joint_loader):
             batch_scores = []
             
@@ -455,24 +437,22 @@ class LlavaWrapper:
                         output = self.model.generate(
                             **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                         )
-                        uncertainty_prob = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='jsd', dataset=dataset)
-                        uncertainty=uncertainty_prob
-                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
 
                         # Adjust attention based on uncertainty
-                        if uncertainty_prob < threshold:
+                        if uncertainty < threshold:
                             output = self.model.generate(
                                 **single_input, keys=keys, weight=weight1, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
                         else:
                             output = self.model.generate(
-                                **single_input, keys=keys, weight=1.0, 
+                                **single_input, keys=keys, weight=weight2, 
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
                         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
+                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
+                      
                     elif method == 'adapt_vis_on':
                         change_greedy_to_add_weight()
 
@@ -496,7 +476,99 @@ class LlavaWrapper:
                                 max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                             )
                         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
+                        
+                    elif method == 'adapt_vis_var_uncertainties':
+                        change_greedy_to_add_weight()
 
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        first_token_scores = output['scores'][0]
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(first_token_scores, dim=-1)[0])), 2)
+                        uncertainty_confidence, _ = self.get_uncertainty(first_token_scores, method='confidence', dataset=dataset)
+                        uncertainty_kl, _ = self.get_uncertainty(first_token_scores, method='kld', dataset=dataset)
+                        uncertainty_js, _ = self.get_uncertainty(first_token_scores, method='jsd', dataset=dataset)
+                        uncertainty_entropy, distribution_map = self.get_uncertainty(first_token_scores, method='entropy', dataset=dataset, get_distribution=True)
+                        uncertainties = {
+                            "confidence": uncertainty_confidence,
+                            "kld": uncertainty_kl,
+                            "jsd": uncertainty_js,
+                            "entropy": uncertainty_entropy
+                        }
+                        
+                        # Adjust attention based on uncertainty
+                        if uncertainty < threshold:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight1, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        else:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=weight2, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
+                        
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "distribution_map": distribution_map,
+                            "Golden": answer_list[index_of_total][0],
+                            "uncertainty": uncertainty,
+                            "uncertainties": uncertainties
+                        }
+                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
+
+                    elif method == 'adapt_vis_var_uncertainties_var_weights':
+                        change_greedy_to_add_weight()
+
+                        output = self.model.generate(
+                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                        )
+                        first_token_scores = output['scores'][0]
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(first_token_scores, dim=-1)[0])), 2)
+                        uncertainty_confidence, _ = self.get_uncertainty(first_token_scores, method='confidence', dataset=dataset)
+                        uncertainty_kl, _ = self.get_uncertainty(first_token_scores, method='kld', dataset=dataset)
+                        uncertainty_js, _ = self.get_uncertainty(first_token_scores, method='jsd', dataset=dataset)
+                        uncertainty_entropy, distribution_map = self.get_uncertainty(first_token_scores, method='entropy', dataset=dataset, get_distribution=True)
+                        uncertainties = {
+                            "confidence": uncertainty_confidence,
+                            "kld": uncertainty_kl,
+                            "jsd": uncertainty_js,
+                            "entropy": uncertainty_entropy
+                        }
+                        original_gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                        
+                        weights = [0.5, 0.8, 1.2, 1.5, 2.0]
+                        gen_map = {
+                            1.0: original_gen
+                        }
+                        for w in weights:
+                            output = self.model.generate(
+                                **single_input, keys=keys, weight=w, 
+                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
+                            )
+                            gen_w = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                            gen_map[w] = gen_w
+                            
+                        # Select final answer based on standard weights & threshold
+                        gen1, gen2 = gen_map[weight1], gen_map[weight2]
+                        gen = gen1 if uncertainty < threshold else gen2
+                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Generation_map": gen_map,
+                            "Distribution_map": distribution_map,
+                            "Golden": answer_list[index_of_total][0],
+                            "Uncertainty": uncertainty,
+                            "Uncertainties": uncertainties
+                        }
+                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
+                    
                     elif method == 'adapt_vis_research':
                         change_greedy_to_add_weight()
                         
@@ -610,7 +682,7 @@ class LlavaWrapper:
                             # unpacking을 사용하여 uncertainty_prob, uncertainty_entropy 등이 자동으로 들어감
                             **uncertainty_results,
                         }
-
+                    
                     elif method == 'adapt_vis_research_with_fewshot':
                         change_greedy_to_add_weight()
 
@@ -903,7 +975,7 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
                         )
                         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
                         uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-
+                        print(f"Prompt:\n{new_prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
 
                     else:
                         # Default generation method
@@ -911,10 +983,7 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
                             **single_input, max_new_tokens=100, output_scores=True, return_dict_in_generate=True
                         )
                         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = np.round(float(max(output['scores'][0][0])), 2)
-
-                    # Print prompt, generated text, and expected answer
-                    print(f"Prompt:\n{new_prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
+                        uncertainty = np.round(float(max(output['scores'][0][0])), 2)                    
                     
                     result = {
                         "Prompt": prompt,
@@ -952,7 +1021,7 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
             scores.append(batch_scores)
 
             # Save results to file
-            output_result_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{threshold}_{option}option_{TEST}.json'
+            output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{threshold}_{TEST}.json' if output_result_file_path is None else output_result_file_path
             with open(output_result_file_path, 'w', encoding='utf-8') as fout:
                 json.dump(results, fout, ensure_ascii=False, indent=4)
             print(acc, index_of_total, acc / index_of_total)
@@ -1295,7 +1364,6 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
             return (all_scores, [])
         else:
             return (acc / index_of_total, correct_id)
-
 
     @torch.no_grad()
     def get_judge_scores_vsr_batched(self, dataset, joint_loader, method, weight, threshold, weight1, weight2):
