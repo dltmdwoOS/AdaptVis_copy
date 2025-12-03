@@ -9,6 +9,7 @@ import torch
 import torch.nn.functional as F
 import json
 import os
+import re
 
 import warnings
 from typing import List, Optional, Union
@@ -244,7 +245,7 @@ class LlavaWrapper:
         # 3. JSD 반환 (결과는 0 ~ ln(2) 사이)
         return 0.5 * (kl_pm + kl_qm)
     
-    def get_uncertainty(self, prob, method='entropy', dataset="Controlled_Images_A", get_distribution=False):
+    def get_distribution(self, score, dataset="Controlled_Images_A"):
         # 1. Dataset에 따른 Option 설정 (기존 로직 동일)
         if dataset == "Controlled_Images_A":
             options = ["Left", "Right", "On", "Under"]
@@ -261,7 +262,7 @@ class LlavaWrapper:
 
         # 2. Option에 대한 확률 추출 및 정규화
         option_ids = [self.tokenizer.encode(r, add_special_tokens=False)[0] for r in options]
-        prob_options = prob[0, option_ids]
+        prob_options = score[0, option_ids]
         
         # Softmax를 통해 확률 분포로 변환 (합이 1이 되도록)
         p = F.softmax(prob_options, dim=-1)
@@ -271,10 +272,19 @@ class LlavaWrapper:
         p = p / p.sum() 
         
         N = len(options) # 선택지 개수
-
+        return {
+            options[i]: float(p[i].item()) for i in range(N)
+        }
+        
+    def get_uncertainty(self, score, distribution, method='entropy'):
+        N = len(distribution)
+        p = torch.Tensor([
+            distribution[key] for key in distribution
+        ]).to(score.device)
+        
         # 3. Uncertainty 측정 방식 선택
         if method == 'confidence':
-            res = float(max(torch.nn.functional.softmax(prob, dim=-1)[0]))
+            res = float(max(torch.nn.functional.softmax(score, dim=-1)[0]))
         
         elif method == 'kld':
             uniform_dist = torch.ones_like(p) / N
@@ -296,15 +306,55 @@ class LlavaWrapper:
             res = float(normalized_entropy.item())
         
         else:
-            res = float(max(torch.nn.functional.softmax(prob, dim=-1)[0]))
-
-        distribution_map = None
-        if get_distribution:
-            distribution_map = {
-                options[i]: float(p[i].item()) for i in range(N)
-            }
+            res = float(max(torch.nn.functional.softmax(score, dim=-1)[0]))
             
-        return res, distribution_map
+        return res
+    
+    def get_confidence_sentence(self, score):
+        return float(np.exp((np.mean([torch.log_softmax(s[0], dim=-1).max().item() for s in score]))))
+    
+    def get_confidence_where(self, score, idx):
+        s = score[idx]
+        return float(torch.softmax(s[0], dim=-1).max().item())
+        
+    @torch.no_grad()
+    def get_answer(self, prompt, image, weight=None, max_length=77, max_new_tokens=100, get_token_probs=False):
+        single_input = self.processor(
+            text=prompt, images=image, padding="max_length", return_tensors="pt", max_length=max_length
+        ).to(self.device)
+        
+        if weight is None:
+            output = self.model.generate(
+                **single_input, max_new_tokens=max_new_tokens, output_scores=True, return_dict_in_generate=True
+            )
+        else:
+            keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
+            output = self.model.generate(
+                **single_input, keys=keys, weight=weight, max_new_tokens=max_new_tokens, output_scores=True, return_dict_in_generate=True
+            )
+        
+        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+        scores = output['scores']
+        if not get_token_probs:
+            return gen, scores
+        else:
+            transition_scores = self.model.compute_transition_scores(
+                output.sequences, 
+                output.scores, 
+                normalize_logits=True
+            )
+            input_length = single_input['input_ids'].shape[1]
+            generated_tokens = output.sequences[:, input_length:]
+
+            # 토큰과 확률 짝짓기
+            token_probs = []
+            for tok, score in zip(generated_tokens[0], transition_scores[0]):
+                token_id = tok.item()
+                token = self.processor.decode(token_id)
+                probability = torch.exp(score).item()  # log prob -> prob
+                token_probs.append((token_id, token, probability))
+                
+            return gen, scores, token_probs
     
     @torch.no_grad()
     def get_text_embeddings(self, texts, text_batch_size=64, normalize=False):
@@ -340,7 +390,6 @@ class LlavaWrapper:
         scores = image_embeds @ text_embeds.T
         return scores
     
-    @torch.no_grad()
     def get_out_scores_wh_batched(self, dataset, joint_loader, method, weight, option, threshold, weight1, weight2):
         scores = []  # To store scores for each batch
         index_of_total = 0  # Track total number of prompts processed
@@ -405,124 +454,148 @@ class LlavaWrapper:
             # Set environment variable for attention map save path
             os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir_weight}/{index_of_total}/'
             os.makedirs(os.environ['SAVE_ATTN_PATH'], exist_ok=True)
-
-            # Iterate over each image option in the batch
+            
             for i_option in batch["image_options"]:
                 im_scores = []
                 for _ in i_option:
                     result = None
                     prompt = prompt_list[index_of_total]
                     
-                    # Preprocess input for the model
-                    single_input = self.processor(
-                        text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=77
-                    ).to(self.device)
-                    
-                    # Create key mask for special token
-                    keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-
-                    # Generate predictions based on specified method
-                    if method == 'scaling_vis':
-                        change_greedy_to_add_weight()
-                        output = self.model.generate(
-                            **single_input, keys=keys, weight=weight,
-                            max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
-                    elif method == 'adapt_vis':
-                        change_greedy_to_add_weight()
-
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-
-                        # Adjust attention based on uncertainty
-                        if uncertainty < threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
-                      
-                    elif method == 'adapt_vis_on':
-                        change_greedy_to_add_weight()
-
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty_prob = uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='jsd', dataset=dataset)
-                        uncertainty=uncertainty_prob
-                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
-
-                        # Adjust attention based on uncertainty
-                        if uncertainty_prob < threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
+                    if method=='reasoning_1':
+                        def consistency_check(gen1, gen2):
+                            valid_opposite = {
+                                'left': 'right',
+                                'right': 'left',
+                                'top': 'bottom',
+                                'bottom': 'top',
+                            }
+                            gen1 = gen1.lower()
+                            gen2 = gen2.lower()
+                            
+                            if gen1 in valid_opposite and gen2 == valid_opposite[gen1]:
+                                return True
+                            else:
+                                return False
                         
-                    elif method == 'adapt_vis_var_uncertainties':
-                        change_greedy_to_add_weight()
+                        # Step 1: 객체 추출 및 두 객체의 이미지상 절대적 위치 파악
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        
+                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with left, right, top or bottom.\nASSISTANT:"
+                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with left, right, top or bottom.\nASSISTANT:"
+                        gen_step1_obj1, l = self.get_answer(prompt_step1_obj1, _)
+                        gen_step1_obj2, l = self.get_answer(prompt_step1_obj2, _)
+                        
+                        # Step 2: Consistency 체크
+                        consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
+                        
+                        # Step 3: 최종 답변
+                        if consistent:
+                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1}-side on the image, and the {obj2} is positioned {gen_step1_obj2}-side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT: "
+                            gen, score = self.get_answer(prompt, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                            
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
 
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        first_token_scores = output['scores'][0]
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(first_token_scores, dim=-1)[0])), 2)
-                        uncertainty_confidence, _ = self.get_uncertainty(first_token_scores, method='confidence', dataset=dataset)
-                        uncertainty_kl, _ = self.get_uncertainty(first_token_scores, method='kld', dataset=dataset)
-                        uncertainty_js, _ = self.get_uncertainty(first_token_scores, method='jsd', dataset=dataset)
-                        uncertainty_entropy, distribution_map = self.get_uncertainty(first_token_scores, method='entropy', dataset=dataset, get_distribution=True)
-                        uncertainties = {
-                            "confidence": uncertainty_confidence,
-                            "kld": uncertainty_kl,
-                            "jsd": uncertainty_js,
-                            "entropy": uncertainty_entropy
+                        result = {
+                            "Prompt": prompt,
+                            "Step1_1_to_2": gen_step1_obj1,
+                            "Step1_2_to_1": gen_step1_obj2,
+                            "Is_consistent": consistent,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "uncertainty": uncertainty
                         }
                         
-                        # Adjust attention based on uncertainty
-                        if uncertainty < threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
+                    elif method=='reasoning_2':
+                        def consistency_check(gen1, gen2):
+                            valid_opposite = {
+                                'left': 'right',
+                                'right': 'left',
+                                'on': 'under',
+                                'under': 'on',
+                            }
+                            gen1 = gen1.lower()
+                            gen2 = gen2.lower()
+                            
+                            if gen1 in valid_opposite and gen2 == valid_opposite[gen1]:
+                                return True
+                            else:
+                                return False
+                        
+                        # Step 1: 객체 추출 및 두 객체의 이미지상 상대적 위치 파악
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        
+                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left, right, on or under.\nASSISTANT:"
+                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} in relation to the {obj1}? Answer with left, right, on or under.\nASSISTANT:"
+                        gen_step1_obj1, score_step1_obj1 = self.get_answer(prompt_step1_obj1, _)
+                        score_step1_obj1 = score_step1_obj1[0]
+                        gen_step1_obj2, score_step1_obj2 = self.get_answer(prompt_step1_obj2, _)
+                        
+                        # Step 2: Consistency 체크
+                        consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
+                        
+                        # Step 3: 최종 답변
+                        if consistent:
+                            gen, score = gen_step1_obj1, score_step1_obj1
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
                         else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
+                            gen, score = self.get_answer(prompt, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
                         
                         result = {
                             "Prompt": prompt,
+                            "Step1_1_to_2": gen_step1_obj1,
+                            "Step1_2_to_1": gen_step1_obj2,
+                            "Is_consistent": consistent,
                             "Generation": gen,
-                            "distribution_map": distribution_map,
                             "Golden": answer_list[index_of_total][0],
-                            "uncertainty": uncertainty,
-                            "uncertainties": uncertainties
+                            "uncertainty": uncertainty
                         }
-                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
-
+                       
+                    elif method=='reasoning_3':
+                        # Step 1: 객체 추출 및 두 객체의 위치 관계 파악
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        
+                        prompt_step1 = f"<image>\nUSER: Which of the following positional relationships do the {obj1} and the {obj2} have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.\nASSISTANT:"
+                        gen_step1, score_step1 = self.get_answer(prompt_step1, _)
+                        
+                        # Step 2: 최종 답변
+                        if 'left' in gen_step1 or 'right' in gen_step1 or '1' in gen_step1:
+                            prompt_step2 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
+                            gen, score = self.get_answer(prompt_step2, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                        elif 'on' in gen_step1 or 'under' in gen_step1 or '2' in gen_step1:
+                            prompt_step2 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
+                            gen, score = self.get_answer(prompt_step2, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                        
+                        result = {
+                            "Prompt": prompt,
+                            "Step1": gen_step1,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "uncertainty": uncertainty
+                        }
+                    
                     elif method == 'adapt_vis_var_uncertainties_var_weights':
-                        change_greedy_to_add_weight()
+                        '''change_greedy_to_add_weight()
 
                         output = self.model.generate(
                             **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
@@ -567,451 +640,161 @@ class LlavaWrapper:
                             "Uncertainty": uncertainty,
                             "Uncertainties": uncertainties
                         }
-                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
-                    
-                    elif method == 'adapt_vis_research':
+                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")'''
                         change_greedy_to_add_weight()
-                        
-                        # 1. 첫 번째 생성 (Standard Weight) - 여기서 Uncertainty 계산
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen1 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                        # === [수정됨] 다양한 Uncertainty 지표 수집 ===
-                        # 기존: uncertainty_prob(max_prob), uncertainty_kl(jsd) 두 가지만 수집
-                        # 변경: entropy, margin 등을 포함한 종합적인 Uncertainty Map 생성
-                        
-                        # 측정하고자 하는 Uncertainty 방식들
-                        # 'default'는 기존 코드의 prob(max_softmax)에 해당한다고 가정
-                        # 'kl_divergence'는 기존 코드의 jsd에 해당한다고 가정
-                        uncertainty_methods = {
-                            "prob": None,           # 기존: Max Probability (Confidence)
-                            "jsd": 'jsd',           # 기존: KL/JSD Divergence
-                            "entropy": 'entropy',   # 신규: Normalized Entropy
-                            "margin": 'margin'      # 신규: Top-1 vs Top-2 Margin
+                        original_generation, original_score = self.get_answer(prompt, _, 1.0)
+                        distribution_map = self.get_distribution(original_score, dataset=dataset)
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(original_score, dim=-1)[0])), 2)
+                        uncertainty_confidence = self.get_uncertainty(original_score, distribution_map, method='confidence')
+                        uncertainty_kl = self.get_uncertainty(original_score, distribution_map, method='kld')
+                        uncertainty_js = self.get_uncertainty(original_score, distribution_map, method='jsd')
+                        uncertainty_entropy = self.get_uncertainty(original_score, distribution_map, method='entropy')
+                        uncertainties = {
+                            "confidence": uncertainty_confidence,
+                            "kld": uncertainty_kl,
+                            "jsd": uncertainty_js,
+                            "entropy": uncertainty_entropy
                         }
                         
-                        uncertainty_results = {}
-                        
-                        # 첫 번째 토큰의 Score(Logits)를 가져옴
-                        first_token_scores = output['scores'][0]
-                        
-                        for key, method_name in uncertainty_methods.items():
-                            # get_uncertainty 함수가 method 인자를 받아 처리하도록 되어 있다고 가정
-                            # method=None이면 max_prob, method='kl_divergence'면 jsd 등을 반환
-                            val = self.get_uncertainty(first_token_scores, method=method_name, dataset=dataset)
-                            uncertainty_results[f"uncertainty_{key}"] = val
-                            
-                        # 호환성을 위해 기존 키 이름도 유지 (필요시)
-                        uncertainty_prob = uncertainty_results["uncertainty_prob"]
-                        uncertainty_kl = uncertainty_results["uncertainty_jsd"]
-                        # =============================================
-
-                        # 2. 두 번째 생성 (weight=0.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen2 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 3. 세 번째 생성 (weight=0.8)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.8,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen3 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 4. 네 번째 생성 (weight=1.2)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.2,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen4 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                        # 5. 다섯 번째 생성 (weight=1.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen5 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 6. 여섯 번째 생성 (weight=2.0)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=2.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen6 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 결과 취합
+                        weights = [0.5, 0.8, 1.2, 1.5, 2.0]
                         gen_map = {
-                            1.0: gen1,
-                            0.5: gen2,
-                            0.8: gen3,
-                            1.2: gen4,
-                            1.5: gen5,
-                            2.0: gen6
+                            1.0: {
+                                "Generation": original_generation,
+                                "Distribution": distribution_map
+                            }
                         }
-                        
-                        gen = gen1  # 기본 출력은 첫 번째 생성 결과로 설정
+                        for w in weights:
+                            w_generation, w_score = self.get_answer(prompt, _, w)
+                            w_score = w_score[0]
+                            distribution_map = self.get_distribution(w_score, dataset=dataset)
+                            gen_map[w] = {
+                                "Generation": w_generation,
+                                "Distribution": distribution_map
+                            }
+                            
+                        # Select final answer based on standard weights & threshold
+                        gen1, gen2 = gen_map[weight1]['Generation'], gen_map[weight2]['Generation']
+                        gen = gen1 if uncertainty < threshold else gen2
+                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
+
                         result = {
                             "Prompt": prompt,
-                            "Generation": gen_map,
+                            "Generation": gen,
+                            "Generation_map": gen_map,
                             "Golden": answer_list[index_of_total][0],
-                            
-                            # 확장된 Uncertainty 정보 모두 포함
-                            # unpacking을 사용하여 uncertainty_prob, uncertainty_entropy 등이 자동으로 들어감
-                            **uncertainty_results,
+                            "Uncertainty": uncertainty,
+                            "Uncertainties": uncertainties
                         }
                     
-                    elif method == 'adapt_vis_research_with_fewshot':
-                        change_greedy_to_add_weight()
-
-                        few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On
-USER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On
-USER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On
-'''
-                        prompt = few_shot_prompt + prompt
-                        single_input = self.processor(
-                            text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=512
-                        ).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        
-                        # 1. 첫 번째 생성 (Standard Weight) - 여기서 Uncertainty 계산
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen1 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                        # === [수정됨] 다양한 Uncertainty 지표 수집 ===
-                        # 기존: uncertainty_prob(max_prob), uncertainty_kl(jsd) 두 가지만 수집
-                        # 변경: entropy, margin 등을 포함한 종합적인 Uncertainty Map 생성
-                        
-                        # 측정하고자 하는 Uncertainty 방식들
-                        # 'default'는 기존 코드의 prob(max_softmax)에 해당한다고 가정
-                        # 'kl_divergence'는 기존 코드의 jsd에 해당한다고 가정
-                        uncertainty_methods = {
-                            "prob": None,           # 기존: Max Probability (Confidence)
-                            "jsd": 'jsd',           # 기존: KL/JSD Divergence
-                            "entropy": 'entropy',   # 신규: Normalized Entropy
-                            "margin": 'margin'      # 신규: Top-1 vs Top-2 Margin
-                        }
-                        
-                        uncertainty_results = {}
-                        
-                        # 첫 번째 토큰의 Score(Logits)를 가져옴
-                        first_token_scores = output['scores'][0]
-                        
-                        for key, method_name in uncertainty_methods.items():
-                            # get_uncertainty 함수가 method 인자를 받아 처리하도록 되어 있다고 가정
-                            # method=None이면 max_prob, method='kl_divergence'면 jsd 등을 반환
-                            val = self.get_uncertainty(first_token_scores, method=method_name, dataset=dataset)
-                            uncertainty_results[f"uncertainty_{key}"] = val
-                            
-                        # 호환성을 위해 기존 키 이름도 유지 (필요시)
-                        uncertainty_prob = uncertainty_results["uncertainty_prob"]
-                        uncertainty_kl = uncertainty_results["uncertainty_jsd"]
-                        # =============================================
-
-                        # 2. 두 번째 생성 (weight=0.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen2 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 3. 세 번째 생성 (weight=0.8)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.8,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen3 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 4. 네 번째 생성 (weight=1.2)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.2,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen4 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                        # 5. 다섯 번째 생성 (weight=1.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen5 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 6. 여섯 번째 생성 (weight=2.0)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=2.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen6 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 결과 취합
-                        gen_map = {
-                            1.0: gen1,
-                            0.5: gen2,
-                            0.8: gen3,
-                            1.2: gen4,
-                            1.5: gen5,
-                            2.0: gen6
-                        }
-                        
-                        gen = gen1  # 기본 출력은 첫 번째 생성 결과로 설정
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen_map,
-                            "Golden": answer_list[index_of_total][0],
-                            
-                            # 확장된 Uncertainty 정보 모두 포함
-                            # unpacking을 사용하여 uncertainty_prob, uncertainty_entropy 등이 자동으로 들어감
-                            **uncertainty_results,
-                        }
-
-                    elif method == 'adapt_vis_entropy':
-                        change_greedy_to_add_weight()
-                       
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty = self.get_uncertainty(output['scores'][0], method='entropy', dataset=dataset)
-                        print(f"\nUncertainty: {uncertainty}  |  Threshold: {threshold}")
-                        # Adjust attention based on uncertainty
-                        if uncertainty > threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
-                    elif method == 'adapt_vis_entropy_with_fewshot':
-                        change_greedy_to_add_weight()
-                       
-                        few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the calculator in relation to the desk? Answer with left, right, on or under.\nASSISTANT: On
-USER: Where is the cat in relation to the rug? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the flashlight in relation to the cabinet? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the stapler in relation to the printer? Answer with left, right, on or under.\nASSISTANT: Under
-USER: Where is the camera in relation to the shelf? Answer with left, right, on or under.\nASSISTANT: On
-USER: Where is the wallet in relation to the bed? Answer with left, right, on or under.\nASSISTANT: On
-'''
-                        prompt = few_shot_prompt + prompt
-                        single_input = self.processor(
-                            text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=512
-                        ).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty = self.get_uncertainty(output['scores'][0], method='entropy', dataset=dataset)
-                        print(f"\nUncertainty: {uncertainty}  |  Threshold: {threshold}")
-                        # Adjust attention based on uncertainty
-                        if uncertainty > threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
-                    elif method == 'few_shot':
-                        few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface. So the calculator is on the desk.
-USER: Where is the cat in relation to the rug? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So the cat is right of the rug.
-USER: Where is the flashlight in relation to the cabinet? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the black flashlight has rolled underneath the tall metal cabinet. The object is completely obscured by the shadow of the cabinet's base. Therefore, the flashlight is under the cabinet.
-USER: Where is the stapler in relation to the printer? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. Thus, the stapler is left of the printer.
-USER: Where is the camera in relation to the shelf? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the black DSLR camera is resting securely on one of the wooden planks of the bookshelf. It is situated on the middle tier of the shelf structure. So the camera is on the shelf.
-USER: Where is the wallet in relation to the bed? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, a leather wallet has been left on the white duvet cover of the bed. It is resting directly on the mattress surface. Consequently, the wallet is on the bed.
-'''
-                        prompt = few_shot_prompt + prompt
-                        single_input = self.processor(
-                            text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=1024
-                        ).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        output = self.model.generate(
-                            **single_input, max_new_tokens=256, output_scores=True, return_dict_in_generate=True
-                        )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-
                     elif method == 'few_shot_CoT':
                         few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question, the calculator is on the desk.
-USER: Where is the cat in relation to the rug? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question, the cat is right of the rug.
-USER: Where is the flashlight in relation to the cabinet? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the black flashlight has rolled underneath the tall metal cabinet. The object is completely obscured by the shadow of the cabinet's base and is not immediately visible from a standing position. So, as the final answer to the question, the flashlight is under the cabinet.
-USER: Where is the stapler in relation to the printer? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question, the stapler is left of the printer.
-USER: Where is the camera in relation to the shelf? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, the black DSLR camera is resting securely on one of the wooden planks of the bookshelf. It is situated on the middle tier of the shelf structure among several books. So, as the final answer to the question, the camera is on the shelf.
-USER: Where is the wallet in relation to the bed? Think step by step, then answer with left, right, on or under.
-ASSISTANT: In this picture, a leather wallet has been left on the white duvet cover of the bed. It is resting directly on the mattress surface near the pillows. So, as the final answer to the question, the wallet is on the bed.
-'''
-                        prompt = few_shot_prompt + prompt
-                        single_input = self.processor(
-                            text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=512
-                        ).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        output = self.model.generate(
-                            **single_input, max_new_tokens=256, output_scores=True, return_dict_in_generate=True
-                        )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-
-                    elif method == 'few_shot_CoT_4':
-                        few_shot_prompt = '''\
 USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question, the violin is under the sofa.
+ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
 USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question, the calculator is on the desk.
+ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
 USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question, the cat is right of the rug.
+ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
 USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question, the stapler is left of the printer.
+ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
 '''
-                        prompt = few_shot_prompt + prompt
-                        single_input = self.processor(
-                            text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=512
-                        ).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        output = self.model.generate(
-                            **single_input, max_new_tokens=256, output_scores=True, return_dict_in_generate=True
-                        )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-
-                    elif method == 'few_shot_CoT_6':
-                        few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question, the calculator is on the desk.
-USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question, the cat is right of the rug.
-USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question, the stapler is left of the printer.
-'''
-                        import re
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
-                        be_verb = match.group(1)
-                        obj1 = match.group(2)
-                        obj2 = match.group(3)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
-
                         prompt = few_shot_prompt + new_prompt
-                        single_input = self.processor(
-                            text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=512
-                        ).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        output = self.model.generate(
-                            **single_input, max_new_tokens=256, output_scores=True, return_dict_in_generate=True
-                        )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-                        print(f"Prompt:\n{new_prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
-
+                        
+                        generation, score = self.get_answer(prompt, _, max_length=512, max_new_tokens=128)
+                        answer = generation.split('.')[-2].strip()
+                        print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                        
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": generation,
+                            "Answer": answer,
+                            "Golden": answer_list[index_of_total][0]
+                        }
+                       
+                    elif method == 'few_shot_CoT_r1':
+                        few_shot_prompt = '''\
+USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
+ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
+USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
+ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
+USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
+ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
+USER: Where is the shoes in relation to the bed? Think step by step, then answer about the relation between shoes and bed with left, right, on or under.
+ASSISTANT: In this picture, the black leather shoes are positioned on the floor, directly beneath the bed frame. They are located in the space between the floor and the mattress support. So, as the final answer to the question of where the shoes is in relation to the bed, the shoes are on the floor...Wait, The original question was to ask about the spatial relationship between the shoes and the bed, but I just ended up answering the relationship between the shoes and the floor. So, to correct the answer again, the shoes are under the bed.
+USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
+ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
+USER: Where is the lamp in relation to the monitor? Think step by step, then answer about the relation between lamp and monitor with left, right, on or under.
+ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, in front of the computer monitor. The monitor occupies the left side of the view, and the lamp is positioned on the right side. So, as the final answer to the question, the lamp is in front of the monitor... Wait, There's a contradiction in the reasoning I just made. I said the lamp is in front of the monitor and at the same time said the lamp is on the right side of the monitor. Hmm... Let's look at the image again. Aha! It was wrong to say that the lamp is in front of the monitor. So, to correct the answer again, the lamp is right of the monitor.
+'''
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                        prompt = few_shot_prompt + new_prompt
+                        
+                        generation, score, token_probs = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                        answer = generation.split('.')[-2].strip()
+                        print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                        
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": generation,
+                            "Answer": answer,
+                            "Golden": answer_list[index_of_total][0],
+                            "token_probs": token_probs
+                        }
+                       
+                     
                     else:
-                        # Default generation method
-                        output = self.model.generate(
-                            **single_input, max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = np.round(float(max(output['scores'][0][0])), 2)                    
-                    
+                        gen, score = self.get_answer(prompt, _)
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "uncertainty": uncertainty
+                        }
+                        
                     result = {
                         "Prompt": prompt,
                         "Generation": gen,
-                        "Golden": answer_list[index_of_total][0],
-                        "uncertainty": uncertainty
+                        "Golden": answer_list[index_of_total][0]
                     } if result is None else result
                     results.append(result)
                     
                     # Check if the generation matches the expected answer
                     c_option = batch["caption_options"]
-                    if len(list(c_option)) == 4:
-                        if (answer_list[index_of_total][0] in gen or answer_list[index_of_total][0].lower() in gen.lower()) \
-                                and not (answer_list[index_of_total][0].lower() == 'on' and 'front' in gen.strip().lower()):
-                            acc += 1
-                            correct_id.append(index_of_total)
-                            answers = [1, 0, 0, 0]
-                        else:
-                            answers = [0, 0, 1, 0]
+                    if 'CoT' in method:
+                        if len(list(c_option)) == 4:
+                            answer = answer.lower()
+                            if (answer_list[index_of_total][0].lower() in answer) and not ('floor' in answer):
+                                acc += 1
+                                correct_id.append(index_of_total)
+                                answers = [1, 0, 0, 0]
+                            
+                            else:
+                                answers = [0, 0, 1, 0]
+                    else:
+                        if len(list(c_option)) == 4:
+                            if (answer_list[index_of_total][0] in gen or answer_list[index_of_total][0].lower() in gen.lower()) \
+                                    and not (answer_list[index_of_total][0].lower() == 'on' and 'front' in gen.strip().lower()):
+                                acc += 1
+                                correct_id.append(index_of_total)
+                                answers = [1, 0, 0, 0]
+                            else:
+                                answers = [0, 0, 1, 0]
                     
-                    elif len(list(c_option)) == 2:
-                        if (answer_list[index_of_total][0] in gen or answer_list[index_of_total][0].lower() in gen.lower()) \
-                                and not (answer_list[index_of_total][0].lower() == 'on' and 'front' in gen.strip().lower()):
-                            acc += 1
-                            correct_id.append(index_of_total)
-                            answers = [1, 0]
-                        else:
-                            answers = [0, 1]
+                        elif len(list(c_option)) == 2:
+                            if (answer_list[index_of_total][0] in gen or answer_list[index_of_total][0].lower() in gen.lower()) \
+                                    and not (answer_list[index_of_total][0].lower() == 'on' and 'front' in gen.strip().lower()):
+                                acc += 1
+                                correct_id.append(index_of_total)
+                                answers = [1, 0]
+                            else:
+                                answers = [0, 1]
 
                     im_scores.append(np.expand_dims(np.array(answers), -1))
                     index_of_total += 1
@@ -1038,337 +821,9 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
             return (all_scores, [])
         else:
             return (acc / index_of_total, correct_id)
-
-    @torch.no_grad()
-    def get_out_scores_wh_batched_onunder(self, dataset, joint_loader, method, weight, option, threshold, weight1, weight2):
-        scores = []  # To store scores for each batch
-        index_of_total = 0  # Track total number of prompts processed
-        acc = 0  # Track the number of correct predictions
-        correct_id = []  # Track indices of correct predictions
-
-        # Determine the correct question-answer file based on the dataset
-        qst_ans_file = f'prompts/{dataset}_On_with_answer_{option}_options.jsonl'
         
-        # Load prompts and answers from the question-answer file
-        with open(qst_ans_file, 'r') as file:
-            prompt_list = []
-            answer_list = []
-            first_prompt_list = []
-            second_prompt_list = []
-            for line in file:
-                data = json.loads(line)
-                # Select prompt based on mode
-                
-                prompt_list.append(data["question"])
-                
-                # Store additional prompts if adjustment method is 'sub'
-                
-                answer_list.append(data["answer"])
-
-        # Sampling configuration
-        SAMPLE = True
-        TEST = os.getenv('TEST_MODE', 'False') == 'True'
-        total_data_count = len(prompt_list)
-        
-        # Perform sampling if enabled
-        if SAMPLE:
-            idx_file_path = f'./output/sampled_idx_{dataset}.npy'
-            
-            if os.path.exists(idx_file_path):
-                sampled_indices = np.load(idx_file_path).tolist()
-            else:
-                sampled_indices = random.sample(range(total_data_count), int(0.2 * total_data_count))
-                sampled_indices.sort()
-                np.save(idx_file_path, np.array(sampled_indices))
-
-            # For testing mode, use unsampled indices
-            if TEST:
-                all_indices = set(range(total_data_count))
-                unsampled_indices = list(all_indices - set(sampled_indices))
-                unsampled_indices.sort()
-                sampled_indices = unsampled_indices
-
-            # Subset prompts and answers based on sampled indices
-            prompt_list = [prompt_list[i] for i in sampled_indices]
-            answer_list = [answer_list[i] for i in sampled_indices]
-
-        # Create directory for saving attention maps
-        save_attn_dir_weight = f"./output/{dataset}_method{method}_weight{weight:.2f}"
-        os.makedirs(save_attn_dir_weight, exist_ok=True)
-
-        results = []  # Store results for each generated sequence
-        for batch in tqdm(joint_loader):
-            batch_scores = []
-            
-            # Set environment variable for attention map save path
-            os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir_weight}/{index_of_total}/'
-            os.makedirs(os.environ['SAVE_ATTN_PATH'], exist_ok=True)
-
-            # Iterate over each image option in the batch
-            for i_option in batch["image_options"]:
-                im_scores = []
-                for _ in i_option:
-                    result = None
-                    prompt = prompt_list[index_of_total]
-                    
-                    # Preprocess input for the model
-                    single_input = self.processor(
-                        text=prompt, images=_, padding="max_length", return_tensors="pt", max_length=77
-                    ).to(self.device)
-                    
-                    # Create key mask for special token
-                    keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-
-                    # Generate predictions based on specified method
-                    if method == 'scaling_vis':
-                        change_greedy_to_add_weight()
-                        output = self.model.generate(
-                            **single_input, keys=keys, weight=weight,
-                            max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
-                    elif method == 'adapt_vis':
-                        change_greedy_to_add_weight()
-
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty_prob = uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='jsd', dataset=dataset)
-                        uncertainty=uncertainty_prob
-                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
-
-                        # Adjust attention based on uncertainty
-                        if uncertainty_prob < threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
-                    elif method == 'adapt_vis_0.5':
-                        change_greedy_to_add_weight()
-
-                        output = self.model.generate(
-                            **single_input,weight=0.5,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty_prob = uncertainty = float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0]))
-                        uncertainty_kl = self.get_uncertainty(output['scores'][0], method='jsd', dataset=dataset)
-                        uncertainty=uncertainty_prob
-                        print(f"\nUncertainty_prob: {uncertainty_prob}  |  Uncertainty_KL: {uncertainty_kl}  |  Threshold: {threshold}")
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                    elif method == 'adapt_vis_research':
-                        change_greedy_to_add_weight()
-                        
-                        # 1. 첫 번째 생성 (Standard Weight) - 여기서 Uncertainty 계산
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen1 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                        # === [수정됨] 다양한 Uncertainty 지표 수집 ===
-                        # 기존: uncertainty_prob(max_prob), uncertainty_kl(jsd) 두 가지만 수집
-                        # 변경: entropy, margin 등을 포함한 종합적인 Uncertainty Map 생성
-                        
-                        # 측정하고자 하는 Uncertainty 방식들
-                        # 'default'는 기존 코드의 prob(max_softmax)에 해당한다고 가정
-                        # 'kl_divergence'는 기존 코드의 jsd에 해당한다고 가정
-                        uncertainty_methods = {
-                            "prob": None,           # 기존: Max Probability (Confidence)
-                            "jsd": 'jsd',           # 기존: KL/JSD Divergence
-                            "entropy": 'entropy',   # 신규: Normalized Entropy
-                            "margin": 'margin'      # 신규: Top-1 vs Top-2 Margin
-                        }
-                        
-                        uncertainty_results = {}
-                        
-                        # 첫 번째 토큰의 Score(Logits)를 가져옴
-                        first_token_scores = output['scores'][0]
-                        
-                        for key, method_name in uncertainty_methods.items():
-                            # get_uncertainty 함수가 method 인자를 받아 처리하도록 되어 있다고 가정
-                            # method=None이면 max_prob, method='kl_divergence'면 jsd 등을 반환
-                            val = self.get_uncertainty(first_token_scores, method=method_name, dataset=dataset)
-                            uncertainty_results[f"uncertainty_{key}"] = val
-                            
-                        # 호환성을 위해 기존 키 이름도 유지 (필요시)
-                        uncertainty_prob = uncertainty_results["uncertainty_prob"]
-                        uncertainty_kl = uncertainty_results["uncertainty_jsd"]
-                        # =============================================
-
-                        # 2. 두 번째 생성 (weight=0.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen2 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 3. 세 번째 생성 (weight=0.8)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=0.8,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen3 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 4. 네 번째 생성 (weight=1.2)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.2,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen4 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-
-                        # 5. 다섯 번째 생성 (weight=1.5)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=1.5,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen5 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 6. 여섯 번째 생성 (weight=2.0)
-                        output = self.model.generate(
-                            **single_input,
-                            weight=2.0,
-                            max_new_tokens=100,
-                            output_scores=True,
-                            return_dict_in_generate=True
-                        )
-                        gen6 = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        
-                        # 결과 취합
-                        gen_map = {
-                            1.0: gen1,
-                            0.5: gen2,
-                            0.8: gen3,
-                            1.2: gen4,
-                            1.5: gen5,
-                            2.0: gen6
-                        }
-                        
-                        gen = gen1  # 기본 출력은 첫 번째 생성 결과로 설정
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen_map,
-                            "Golden": answer_list[index_of_total][0],
-                            
-                            # 확장된 Uncertainty 정보 모두 포함
-                            # unpacking을 사용하여 uncertainty_prob, uncertainty_entropy 등이 자동으로 들어감
-                            **uncertainty_results,
-                        }
-
-                    elif method == 'adapt_vis_entropy':
-                        change_greedy_to_add_weight()
-                       
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        uncertainty = self.get_uncertainty(output['scores'][0], method='entropy', dataset=dataset)
-                        print(f"\nUncertainty: {uncertainty}  |  Threshold: {threshold}")
-                        # Adjust attention based on uncertainty
-                        if uncertainty > threshold:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight1, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        else:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=weight2, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                    
-                    else:
-                        # Default generation method
-                        output = self.model.generate(
-                            **single_input, max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                        uncertainty = np.round(float(max(output['scores'][0][0])), 2)
-
-                    # Print prompt, generated text, and expected answer
-                    print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")
-                    
-                    result = {
-                        "Prompt": prompt,
-                        "Generation": gen,
-                        "Golden": answer_list[index_of_total][0],
-                        "uncertainty": uncertainty
-                    } if result is None else result
-                    results.append(result)
-                    
-                    # Check if the generation matches the expected answer
-                    c_option = batch["caption_options"]
-                    if len(list(c_option)) == 4:
-                        if (answer_list[index_of_total][0] in gen or answer_list[index_of_total][0].lower() in gen.lower()) \
-                                and not (answer_list[index_of_total][0].lower() == 'on' and 'front' in gen.strip().lower()):
-                            acc += 1
-                            correct_id.append(index_of_total)
-                            answers = [1, 0, 0, 0]
-                        else:
-                            answers = [0, 0, 1, 0]
-                    
-                    elif len(list(c_option)) == 2:
-                        if (answer_list[index_of_total][0] in gen or answer_list[index_of_total][0].lower() in gen.lower()) \
-                                and not (answer_list[index_of_total][0].lower() == 'on' and 'front' in gen.strip().lower()):
-                            acc += 1
-                            correct_id.append(index_of_total)
-                            answers = [1, 0]
-                        else:
-                            answers = [0, 1]
-
-                    im_scores.append(np.expand_dims(np.array(answers), -1))
-                    index_of_total += 1
-
-                batch_scores.append(np.concatenate(im_scores, axis=-1))
-
-            scores.append(batch_scores)
-
-            # Save results to file
-            output_result_file_path = f'./output/results1.5_{dataset}_{method}_{weight}_{threshold}_{option}option_{TEST}.json'
-            with open(output_result_file_path, 'w', encoding='utf-8') as fout:
-                json.dump(results, fout, ensure_ascii=False, indent=4)
-            print(acc, index_of_total, acc / index_of_total)
-                 
-        # Save accuracy and correct IDs to file
-        print(acc / index_of_total)
-        output_score_file = output_result_file_path.replace(".json", "scores.json")
-        with open(output_score_file, 'w', encoding='utf-8') as fout:
-            json.dump({"acc": acc / index_of_total, "correct_id": correct_id}, fout, ensure_ascii=False, indent=4)
-
-        # Concatenate all scores and return based on dataset type
-        all_scores = np.concatenate(scores, axis=0)  # N x K x L
-        if dataset in ['Controlled_Images_B', 'Controlled_Images_A']:
-            return (all_scores, [])
-        else:
-            return (acc / index_of_total, correct_id)
-
     @torch.no_grad()
     def get_judge_scores_vsr_batched(self, dataset, joint_loader, method, weight, threshold, weight1, weight2):
-        
-        
         index = 0
         TP, TN, FP, FN = 0, 0, 0, 0
 
@@ -1479,35 +934,9 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
             json.dump({"acc": (TN + TP) / (TN + TP + FN + FP), "precision": precision, "recall": recall, "f1": f1_score}, fout, ensure_ascii=False, indent=4)
         return all_scores
     
-    def _save_debug_log(self, reasoning_chain, sample_idx, summary=None):
-        """디버깅 정보를 파일로 저장"""
-        import os
-        import json
-        from datetime import datetime
         
-        # temp 디렉토리 생성
-        os.makedirs('./temp1', exist_ok=True)
         
-        # 파일명 생성 (sample_idx가 있으면 사용, 없으면 타임스탬프)
-        if sample_idx is not None:
-            filename = f'sample_{sample_idx:05d}.json'
-        else:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-            filename = f'sample_{timestamp}.json'
         
-        filepath = os.path.join('./temp', filename)
         
-        # 저장할 데이터 구성
-        debug_data = {
-            'sample_idx': sample_idx,
-            'timestamp': datetime.now().isoformat(),
-            'summary': summary,
-            'reasoning_chain': reasoning_chain
-        }
         
-        # JSON으로 저장
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(debug_data, f, ensure_ascii=False, indent=2)
-
-
-
+        

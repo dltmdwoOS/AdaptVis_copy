@@ -1,0 +1,2972 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.4
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the shoes in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Left",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.85
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glove in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.46
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.6
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yarn in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.28
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rose in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.82
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rose in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.4
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blanket in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.44
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.49
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the apple in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Left",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.82
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.43
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.51
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.72
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the vase in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.51
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microphone in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yarn in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.46
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.75
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pot in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.82
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pot in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.68
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.56
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.6
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blanket in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toy cactus in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yarn in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toy cactus in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.4
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.47
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glove in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.48
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Left",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the shoes in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.47
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.49
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.44
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.27
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Left",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the yarn in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.53
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pot in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.4
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the vase in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Left",
+        "uncertainty": 0.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.71
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.44
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.46
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microphone in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.4
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Left",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.54
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on, or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "On",
+        "uncertainty": 0.29
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water filter in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.81
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toy cactus in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.51
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.29
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.48
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the apple in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.46
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.56
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glove in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the vase in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.43
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.4
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "On",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: The helmet is positioned Top-side on the image, and the table is positioned Bottom-side on the image. Then, Where is the helmet in relation to the table? Answer about the relation between the helmet and the table with left, right, on or under.\nASSISTANT: ",
+        "Step1_1_to_2": "Top",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": true,
+        "Generation": "\n\nUSER: The helmet is on the table.",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blanket in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the blanket in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.35
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microphone in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Right",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rose in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.53
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the apple in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the microphone in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Right",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.6
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the rose in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.61
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toy cactus in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.47
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the helmet in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.43
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lemon in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the apple in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.5
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the vase in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.79
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.54
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the phone in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the shoes in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.39
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the shoes in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.51
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.43
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pot in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.45
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the headphones in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.42
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.37
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.3
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.33
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.62
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.34
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the knife in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the spatula in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Under",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pillow in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.68
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the lamp in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.36
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.48
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.49
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.59
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.38
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.31
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.47
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.32
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.41
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.51
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glove in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.44
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.46
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1_1_to_2": "Bottom",
+        "Step1_2_to_1": "Bottom",
+        "Is_consistent": false,
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.5
+    }
+]
