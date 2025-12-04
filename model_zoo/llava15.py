@@ -310,13 +310,9 @@ class LlavaWrapper:
             
         return res
     
-    def get_confidence_sentence(self, score):
-        return float(np.exp((np.mean([torch.log_softmax(s[0], dim=-1).max().item() for s in score]))))
+    def get_confidence_sentence(self, prob):
+        return float(np.exp(np.mean(np.log(prob))))
     
-    def get_confidence_where(self, score, idx):
-        s = score[idx]
-        return float(torch.softmax(s[0], dim=-1).max().item())
-        
     @torch.no_grad()
     def get_answer(self, prompt, image, weight=None, max_length=77, max_new_tokens=100, get_token_probs=False):
         single_input = self.processor(
@@ -335,8 +331,10 @@ class LlavaWrapper:
         
         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
         scores = output['scores']
+        
         if not get_token_probs:
             return gen, scores
+        
         else:
             transition_scores = self.model.compute_transition_scores(
                 output.sequences, 
@@ -348,13 +346,25 @@ class LlavaWrapper:
 
             # 토큰과 확률 짝짓기
             token_probs = []
-            for tok, score in zip(generated_tokens[0], transition_scores[0]):
+            answer_start_idx = -1
+            answer_probs = []
+            for idx, (tok, score) in enumerate(zip(generated_tokens[0], transition_scores[0])):
                 token_id = tok.item()
                 token = self.processor.decode(token_id)
                 probability = torch.exp(score).item()  # log prob -> prob
                 token_probs.append((token_id, token, probability))
                 
-            return gen, scores, token_probs
+                if token == "So":
+                    answer_start_idx = idx
+                if answer_start_idx != -1:
+                    answer_probs.append(probability)
+            
+            dictionary = {
+                'answer_start_idx': answer_start_idx,
+                'answer_probs': answer_probs,
+                'answer_confidence': self.get_confidence_sentence(answer_probs)
+            }
+            return gen, scores, dictionary
     
     @torch.no_grad()
     def get_text_embeddings(self, texts, text_batch_size=64, normalize=False):
@@ -643,6 +653,7 @@ class LlavaWrapper:
                         print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")'''
                         change_greedy_to_add_weight()
                         original_generation, original_score = self.get_answer(prompt, _, 1.0)
+                        original_score = original_score[0]
                         distribution_map = self.get_distribution(original_score, dataset=dataset)
                         uncertainty = np.round(float(max(torch.nn.functional.softmax(original_score, dim=-1)[0])), 2)
                         uncertainty_confidence = self.get_uncertainty(original_score, distribution_map, method='confidence')
@@ -735,7 +746,7 @@ ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, i
                         new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                         prompt = few_shot_prompt + new_prompt
                         
-                        generation, score, token_probs = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
                         answer = generation.split('.')[-2].strip()
                         print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
                         
@@ -744,10 +755,141 @@ ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, i
                             "Generation": generation,
                             "Answer": answer,
                             "Golden": answer_list[index_of_total][0],
-                            "token_probs": token_probs
+                            "token_probs": token_probs_map
                         }
                        
-                     
+                    elif method == 'few_shot_CoT_s1':
+                        few_shot_prompt = '''\
+USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
+ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
+USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
+ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
+USER: Where is the lamp in relation to the monitor? Think step by step, then answer about the relation between lamp and monitor with left, right, on or under.
+ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, in front of the computer monitor. The monitor occupies the left side of the view, and the lamp is positioned on the right side. So, as the final answer to the question, the lamp is in front of the monitor... Wait, let's see if the answer I just made matches the original question well. There's a contradiction in the reasoning I just made. I said the lamp is in front of the monitor and at the same time said the lamp is on the right side of the monitor. Hmm... Let's look at the image again. Aha! It was wrong to say that the lamp is in front of the monitor. So, to correct the answer again, the lamp is right of the monitor.
+USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
+ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
+USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
+ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
+USER: Where is the shoes in relation to the bed? Think step by step, then answer about the relation between shoes and bed with left, right, on or under.
+ASSISTANT: In this picture, the black leather shoes are positioned on the floor, directly beneath the bed frame. They are located in the space between the floor and the mattress support. So, as the final answer to the question of where the shoes is in relation to the bed, the shoes are on the floor... Wait, let's see if the answer I just made matches the original question well. The original question was to ask about the spatial relationship between the shoes and the bed, but I just ended up answering the relationship between the shoes and the floor. So, to correct the answer again, the shoes are under the bed.
+'''
+                        few_shot_prompt_revise = '''\
+
+'''
+                        
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                        prompt = few_shot_prompt + new_prompt
+                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                        
+                        if token_probs_map['answer_confidence'] < 0.97:
+                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
+                            prompt = few_shot_prompt + new_prompt
+                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                            answer = generation.split('.')[-2].strip()
+                            
+                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                            result = {
+                                "Prompt": prompt,
+                                "Generation": generation,
+                                "Answer": answer,
+                                "Golden": answer_list[index_of_total][0],
+                                "token_probs": token_probs_map
+                            }
+                        else:
+                            answer = generation.split('.')[-2].strip()
+                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                            result = {
+                                "Prompt": prompt,
+                                "Generation": generation,
+                                "Answer": answer,
+                                "Golden": answer_list[index_of_total][0],
+                                "token_probs": token_probs_map
+                            }
+                    
+                    elif method == 'few_shot_CoT_s2':
+                        few_shot_prompt = '''\
+USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
+ASSISTANT: In this picture, the blue stapler is positioned on the desk surface, adjacent to the large laser printer. The printer occupies the right side of the view, while the stapler is positioned on the opposite side. So, as the final answer to the question, the stapler is left of the printer.
+USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
+ASSISTANT: In this picture, the brown violin is positioned on the floor, directly beneath the seat of the beige fabric sofa. It is obscured by the sofa's shadow. So, as the final answer to the question, the violin is under the sofa.
+USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
+ASSISTANT: In this picture, the gray calculator is positioned on the wooden desk. The device is placed directly on the desk's surface, clearly visible. So, as the final answer to the question, the calculator is on the desk.
+USER: Where is the apple in relation to the plate? Think step by step, then answer about the relation between apple and plate with left, right, on or under.
+ASSISTANT: In this picture, the red apple is positioned on the white ceramic plate. The fruit is placed directly on the plate's surface. So, as the final answer to the question, the apple is on the plate.
+'''
+                        few_shot_prompt_revise = '''\
+USER: Where is the lamp in relation to the monitor? Think step by step, then answer about the relation between lamp and monitor with left, right, on or under.
+ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, in front of the computer monitor. The monitor occupies the left side of the view, and the lamp is positioned on the right side. So, as the final answer to the question, the lamp is in front of the monitor... Wait, let's see if the answer I just made matches the original question well. There's a contradiction in the reasoning I just made. I said the lamp is in front of the monitor and at the same time said the lamp is on the right side of the monitor. Hmm... Let's look at the image again. Aha! It was wrong to say that the lamp is in front of the monitor, and 'front' is not in the given options. So, to correct the answer again, the lamp is right of the monitor.
+USER: Where is the shoes in relation to the bed? Think step by step, then answer about the relation between shoes and bed with left, right, on or under.
+ASSISTANT: In this picture, the black leather shoes are positioned on the floor, directly beneath the bed frame. They are located in the space between the floor and the mattress support. So, as the final answer to the question of where the shoes is in relation to the bed, the shoes are on the floor... Wait, let's see if the answer I just made matches the original question well. The original question was to ask about the spatial relationship between the shoes and the bed, but I just ended up answering the relationship between the shoes and the floor. I need to focus on the bed as the reference point. Since the shoes are beneath the frame, So, to correct the answer again, the shoes are under the bed.
+USER: Where is the mug in relation to the keyboard? Think step by step, then answer about the relation between mug and keyboard with left, right, on or under.
+ASSISTANT: In this picture, the white coffee mug is positioned on the desk surface, adjacent to the mechanical keyboard. The keyboard occupies the right side of the view, while the mug is positioned on the opposite side. So, as the final answer to the question, the mug is next to the keyboard... Wait, let's see if the answer I just made matches the original question well. Although 'next to' is a correct description, the question specifically asked to choose from left, right, on, or under. I need to be more specific about the direction. Since the mug is on the side opposite to the right, it is on the left side. So, to correct the answer again, the mug is left of the keyboard.
+USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
+ASSISTANT: In this picture, the white cat is positioned on the floor, adjacent to the patterned rug. The rug occupies the central area, and the cat is positioned towards the right side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is on the floor... Wait, let's see if the answer I just made matches the original question well. The original question was to ask about the spatial relationship between the cat and the rug, but I just ended up answering the relationship between the cat and the floor. I need to re-evaluate the cat's position relative to the rug. The cat is situated to the eastern side of the rug. So, to correct the answer again, the cat is right of the rug.
+'''
+                        
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        max_chain_length = 5
+                        
+                        result_chain = []
+                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                        prompt = few_shot_prompt + new_prompt
+                        for chain in range(max_chain_length):
+                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=512 if chain==0 else 1024, max_new_tokens=128, get_token_probs=True)
+                            answer = generation.split('.')[-2].strip()
+                            result_chain.append(
+                                {
+                                    "Chain": chain+1,
+                                    "Prompt": prompt,
+                                    "Generation": generation,
+                                    "Answer": answer,
+                                    "Golden": answer_list[index_of_total][0],
+                                    "token_probs": token_probs_map
+                                }
+                            )
+                            
+                            if token_probs_map['answer_confidence'] < 0.95:
+                                new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
+                                prompt = few_shot_prompt_revise + new_prompt
+                            else:
+                                break
+                        result = result_chain
+                        '''    
+                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                        prompt = few_shot_prompt + new_prompt
+                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                        
+                        if token_probs_map['answer_confidence'] < 0.97:
+                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
+                            prompt = few_shot_prompt_revise + new_prompt
+                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                            answer = generation.split('.')[-2].strip()
+                            
+                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                            result = {
+                                "Prompt": prompt,
+                                "Generation": generation,
+                                "Answer": answer,
+                                "Golden": answer_list[index_of_total][0],
+                                "token_probs": token_probs_map
+                            }
+                        else:
+                            answer = generation.split('.')[-2].strip()
+                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                            result = {
+                                "Prompt": prompt,
+                                "Generation": generation,
+                                "Answer": answer,
+                                "Golden": answer_list[index_of_total][0],
+                                "token_probs": token_probs_map
+                            }
+                        '''
+                    
                     else:
                         gen, score = self.get_answer(prompt, _)
                         uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
@@ -770,7 +912,7 @@ ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, i
                     if 'CoT' in method:
                         if len(list(c_option)) == 4:
                             answer = answer.lower()
-                            if (answer_list[index_of_total][0].lower() in answer) and not ('floor' in answer):
+                            if (answer_list[index_of_total][0].lower() in answer):
                                 acc += 1
                                 correct_id.append(index_of_total)
                                 answers = [1, 0, 0, 0]

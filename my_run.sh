@@ -2,10 +2,13 @@
 export TEST_MODE=False
 
 python3 main_aro.py \
-    --dataset Controlled_Images_A \
+    --dataset COCO_QA_one_obj \
     --model-name='llava1.5' \
     --download \
-    --method few_shot_CoT_r1 \
+    --method adapt_vis_var_uncertainties_var_weights \
+    --weight1 0.5  \
+    --weight2 1.2 \
+    --threshold 0.3 \
     --option=four
 
 # python3 main_aro.py \

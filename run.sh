@@ -15,8 +15,8 @@ python3 main_aro.py --dataset=Controlled_Images_A --model-name='llava1.5' --down
 # For Scaling_Vis on VSR, a weight of 0.5 is used.
 python3 main_aro.py --dataset=Controlled_Images_A --model-name='llava1.5' --download --method=scaling_vis  --weight=0.8  --option=four
 
-# For Adapt_Vis on Controlled_A, weight1 is set to 0.5, weight2 to 1.5, and threshold to 0.4
-# For Adapt_Vis on Controlled_B, weight1 is set to 0.5, weight2 to 1.5, and threshold to 0.35
+# For Adapt_Vis on Controlled_Images_A, weight1 is set to 0.5, weight2 to 1.5, and threshold to 0.4
+# For Adapt_Vis on Controlled_Images_B, weight1 is set to 0.5, weight2 to 1.5, and threshold to 0.35
 # For Adapt_Vis on COCO_QA_one_obj, weight1 is set to 0.5, weight2 to 1.2, and threshold to 0.3
 # For Adapt_Vis on COCO_QA_two_obj, weight1 is set to 0.5, weight2 to 1.2, and threshold to 0.3
 # For Adapt_Vis on VG_QA_one_obj, weight1 is set to 0.5, weight2 to 2.0, and threshold to 0.2
