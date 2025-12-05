@@ -219,7 +219,7 @@ def change_greedy_to_add_weight():
 class LlavaWrapper:
     def __init__(self, root_dir, device,method):
         
-        if method=='scaling_vis' or ('adapt_vis' in method) or method=='adaptvis_bidirectional':
+        if method=='scaling_vis' or ('adapt_vis' in method):
             self.model = LlavaForConditionalGenerationScal.from_pretrained(MODEL, revision='a272c74',cache_dir=root_dir,ignore_mismatched_sizes=True).eval().to(device)
 
         else:
@@ -502,7 +502,7 @@ class LlavaWrapper:
                         
                         # Step 3: 최종 답변
                         if consistent:
-                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1}-side on the image, and the {obj2} is positioned {gen_step1_obj2}-side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT: "
+                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1}-side on the image, and the {obj2} is positioned {gen_step1_obj2}-side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                             gen, score = self.get_answer(prompt, _)
                             score = score[0]
                             uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
@@ -604,53 +604,51 @@ class LlavaWrapper:
                             "uncertainty": uncertainty
                         }
                     
-                    elif method == 'adapt_vis_var_uncertainties_var_weights':
-                        '''change_greedy_to_add_weight()
-
-                        output = self.model.generate(
-                            **single_input,weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                        )
-                        first_token_scores = output['scores'][0]
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(first_token_scores, dim=-1)[0])), 2)
-                        uncertainty_confidence, _ = self.get_uncertainty(first_token_scores, method='confidence', dataset=dataset)
-                        uncertainty_kl, _ = self.get_uncertainty(first_token_scores, method='kld', dataset=dataset)
-                        uncertainty_js, _ = self.get_uncertainty(first_token_scores, method='jsd', dataset=dataset)
-                        uncertainty_entropy, distribution_map = self.get_uncertainty(first_token_scores, method='entropy', dataset=dataset, get_distribution=True)
-                        uncertainties = {
-                            "confidence": uncertainty_confidence,
-                            "kld": uncertainty_kl,
-                            "jsd": uncertainty_js,
-                            "entropy": uncertainty_entropy
-                        }
-                        original_gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
+                    elif method=='reasoning_3_fewshot':
+                        change_greedy_to_add_weight()
+                        # Step 1: 객체 추출 및 두 객체의 위치 관계 파악
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         
-                        weights = [0.5, 0.8, 1.2, 1.5, 2.0]
-                        gen_map = {
-                            1.0: original_gen
-                        }
-                        for w in weights:
-                            output = self.model.generate(
-                                **single_input, keys=keys, weight=w, 
-                                max_new_tokens=100, output_scores=True, return_dict_in_generate=True
-                            )
-                            gen_w = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
-                            gen_map[w] = gen_w
+                        fewshot_prompt = '''\
+USER: Which of the following positional relationships do the violin and the sofa have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
+ASSISTANT: In this picture, the violin is under the sofa. Therefore, the violin and the sofa have an on-under relationship in which the violin is under the sofa.
+USER: Which of the following positional relationships do the calculator and the desk have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
+ASSISTANT: In this picture, the calculator is on the desk. Therefore, the calculator and the desk have an on-under relationship in which the calculator is on the desk.
+USER: Which of the following positional relationships do the cat and the rug have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
+ASSISTANT: In this picture, the cat is to the right of the rug. Therefore, the cat and the rug have a left-right relationship.
+USER: Which of the following positional relationships do the stapler and the printer have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
+ASSISTANT: In this picture, the stapler is to the left of the printer. Therefore, the stapler and the printer have a left-right relationship.
+'''
+                        prompt_step1 = f"<image>\nUSER: Which of the following positional relationships do the {obj1} and the {obj2} have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.\nASSISTANT:"
+                        gen_step1, score_step1 = self.get_answer(fewshot_prompt + prompt_step1, _, max_length=512)
+                        
+                        # Step 2: 최종 답변
+                        if 'left-right' in gen_step1 or '1' in gen_step1:
+                            prompt_step2 = f"\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
+                            new_prompt = prompt_step1 + " " + gen_step1 + prompt_step2
+                            gen, score = self.get_answer(new_prompt, _,  max_length=128)
                             
-                        # Select final answer based on standard weights & threshold
-                        gen1, gen2 = gen_map[weight1], gen_map[weight2]
-                        gen = gen1 if uncertainty < threshold else gen2
-                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
-
+                        elif 'on-under' in gen_step1 or '2' in gen_step1:
+                            prompt_step2 = f"\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
+                            new_prompt = prompt_step1 + " " + gen_step1 + prompt_step2
+                            gen, score = self.get_answer(new_prompt, _, max_length=128)
+                            
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+                        score = score[0]
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                            
                         result = {
                             "Prompt": prompt,
+                            "Step1": gen_step1,
                             "Generation": gen,
-                            "Generation_map": gen_map,
-                            "Distribution_map": distribution_map,
                             "Golden": answer_list[index_of_total][0],
-                            "Uncertainty": uncertainty,
-                            "Uncertainties": uncertainties
+                            "uncertainty": uncertainty
                         }
-                        print(f"Prompt:\n{prompt}\nGeneration: {gen}\nGolden: {answer_list[index_of_total][0]}")'''
+                    
+                    elif method == 'adapt_vis_var_uncertainties_var_weights':
                         change_greedy_to_add_weight()
                         original_generation, original_score = self.get_answer(prompt, _, 1.0)
                         original_score = original_score[0]
@@ -760,23 +758,26 @@ ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, i
                        
                     elif method == 'few_shot_CoT_s1':
                         few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
-USER: Where is the lamp in relation to the monitor? Think step by step, then answer about the relation between lamp and monitor with left, right, on or under.
-ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, in front of the computer monitor. The monitor occupies the left side of the view, and the lamp is positioned on the right side. So, as the final answer to the question, the lamp is in front of the monitor... Wait, let's see if the answer I just made matches the original question well. There's a contradiction in the reasoning I just made. I said the lamp is in front of the monitor and at the same time said the lamp is on the right side of the monitor. Hmm... Let's look at the image again. Aha! It was wrong to say that the lamp is in front of the monitor. So, to correct the answer again, the lamp is right of the monitor.
-USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
-USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
-USER: Where is the shoes in relation to the bed? Think step by step, then answer about the relation between shoes and bed with left, right, on or under.
-ASSISTANT: In this picture, the black leather shoes are positioned on the floor, directly beneath the bed frame. They are located in the space between the floor and the mattress support. So, as the final answer to the question of where the shoes is in relation to the bed, the shoes are on the floor... Wait, let's see if the answer I just made matches the original question well. The original question was to ask about the spatial relationship between the shoes and the bed, but I just ended up answering the relationship between the shoes and the floor. So, to correct the answer again, the shoes are under the bed.
+USER: Where is the bicycle in relation to the car? Think step by step, then answer about the relation between bicycle and car with left, right, front or behind.
+ASSISTANT: The red bicycle is clearly visible in the foreground, while the silver car is parked further back. The bicycle blocks the view of the car's bumper. So, the bicycle is in front of the car.
+USER: Where is the backpack in relation to the chair? Think step by step, then answer about the relation between backpack and chair with left, right, front or behind.
+ASSISTANT: The wooden chair is closer to the camera, and the black backpack is tucked away on the floor past the chair legs. It is further from the viewpoint. So, the backpack is behind the chair.
+USER: Where is the tree in relation to the bench? Think step by step, then answer about the relation between tree and bench with left, right, front or behind.
+ASSISTANT: The bench is located on the left side of the image frame. The large oak tree occupies the right side of the frame relative to the bench. So, the tree is right of the bench.
+USER: Where is the remote in relation to the TV? Think step by step, then answer about the relation between remote and TV with left, right, front or behind.
+ASSISTANT: The remote is lying on the table in the foreground, while the TV is mounted on the wall in the background. The remote is closer to the viewer. So, the remote is in front of the TV.
 '''
                         few_shot_prompt_revise = '''\
-
+USER: Where is the bicycle in relation to the car? Think step by step, then answer about the relation between bicycle and car with left, right, front or behind.
+ASSISTANT: The bicycle is parked near the silver sedan, appearing in the foreground. So, the bicycle is next to the car... Wait. 'Next to' is not in the allowed options (left, right, front, behind). Since the bicycle is closer to the viewer and blocking the car, it is spatially anterior. So, the bicycle is in front of the car.
+USER: Where is the backpack in relation to the chair? Think step by step, then answer about the relation between backpack and chair with left, right, front or behind.
+ASSISTANT: The backpack is on the floor beneath the seat of the chair. So, the backpack is under the chair... Wait. The question asks to choose from left, right, front, or behind. 'Under' is invalid. Since the backpack is further back than the chair legs from the viewer's perspective, it is located at the rear. So, the backpack is behind the chair.
+USER: Where is the tree in relation to the bench? Think step by step, then answer about the relation between tree and bench with left, right, front or behind.
+ASSISTANT: The bench is on the left side, and the tree is to the west of it. So, the tree is left of the bench... Wait. I misread the image layout. The bench is on the left edge, meaning the tree (on the right) is in the opposite direction relative to the bench. So, the tree is right of the bench.
+USER: Where is the remote in relation to the TV? Think step by step, then answer about the relation between remote and TV with left, right, front or behind.
+ASSISTANT: The remote is on the table and the TV is on the wall. So, the remote is on the TV... Wait. That describes contact, not relative position. The remote is on the table in the foreground, making it closer to me than the TV in the background. So, the remote is in front of the TV.
 '''
-                        
+                      
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
@@ -786,7 +787,7 @@ ASSISTANT: In this picture, the black leather shoes are positioned on the floor,
                         
                         if token_probs_map['answer_confidence'] < 0.97:
                             new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
-                            prompt = few_shot_prompt + new_prompt
+                            prompt = few_shot_prompt_revise + new_prompt
                             generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
                             answer = generation.split('.')[-2].strip()
                             

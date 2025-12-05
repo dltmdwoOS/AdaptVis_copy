@@ -208,7 +208,7 @@ def main():
             df[col] = df.apply(
                 lambda row: check_is_correct(
                     row["Golden"], 
-                    row.get("Generation_map", {}).get(w, {}).get("generation", "")
+                    row.get("Generation_map", {}).get(w, {}).get("Generation", "")
                 ),
                 axis=1,
             )

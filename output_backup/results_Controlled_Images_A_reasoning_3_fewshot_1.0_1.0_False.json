@@ -1,0 +1,576 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the wineglass is on the table. Therefore, the wineglass and the table have an on-under relationship in which the wineglass is on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.57
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the glass is on the armchair. Therefore, the glass and the armchair have an on-under relationship in which the glass is on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the mug is on the armchair. Therefore, the mug and the armchair have an on-under relationship in which the mug is on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the hat is on the floor next to the chair. Therefore, the hat and the chair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.89
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle is next to the chair. Therefore, the bottle and the chair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.95
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the cap is on the chair. Therefore, the cap and the chair have an on-under relationship in which the cap is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.71
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plant is on the table. Therefore, the plant and the table have an on-under relationship in which the plant is on the table.",
+        "Generation": "Under",
+        "Golden": "Right",
+        "uncertainty": 0.85
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the orange is on the table. Therefore, the orange and the table have an on-under relationship in which the orange is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the cap is on the floor next to the armchair. Therefore, the cap and the armchair have a left-right relationship in which the cap is next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the oven mitt is on the chair. Therefore, the oven mitt and the chair have an on-under relationship in which the oven mitt is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the book is on the armchair. Therefore, the book and the armchair have an on-under relationship in which the book is on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.71
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the scissors are on the table. Therefore, the scissors and the table have an on-under relationship in which the scissors are on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.6
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the banana is on the floor under the chair. Therefore, the banana and the chair have an on-under relationship in which the banana is on the floor under the chair.",
+        "Generation": "Under",
+        "Golden": "Right",
+        "uncertainty": 0.81
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the orange is on the chair. Therefore, the orange and the chair have an on-under relationship in which the orange is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the can is on the chair. Therefore, the can and the chair have an on-under relationship in which the can is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.69
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the scarf is on the chair. Therefore, the scarf and the chair have an on-under relationship in which the scarf is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.79
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plate is on the chair. Therefore, the plate and the chair have an on-under relationship in which the plate is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the water bottle is on the chair. Therefore, the water bottle and the chair have an on-under relationship in which the water bottle is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the notepad is on the armchair. Therefore, the notepad and the armchair have an on-under relationship in which the notepad is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Right",
+        "uncertainty": 0.83
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the tape is on the armchair. Therefore, the tape and the armchair have an on-under relationship in which the tape is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Left",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the book is on the chair. Therefore, the book and the chair have an on-under relationship in which the book is on the chair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.71
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plate is on the floor next to the table. Therefore, the plate and the table have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.83
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the painting is on the chair. Therefore, the painting and the chair have an on-under relationship in which the painting is on the chair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plant is on the table. Therefore, the plant and the table have an on-under relationship in which the plant is on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.72
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle of mustard is on the chair. Therefore, the bottle of mustard and the chair have an on-under relationship in which the bottle of mustard is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.73
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the pan is on the floor next to the armchair. Therefore, the pan and the armchair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the beer bottle is on the floor next to the chair. Therefore, the beer bottle and the chair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.92
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the pan is on the armchair. Therefore, the pan and the armchair have an on-under relationship in which the pan is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.81
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the orange is on the floor next to the chair. Therefore, the orange and the chair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the scarf is on the floor under the armchair. Therefore, the scarf and the armchair have an on-under relationship in which the scarf is on the floor under the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.89
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the notepad is on the armchair. Therefore, the notepad and the armchair have an on-under relationship in which the notepad is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Left",
+        "uncertainty": 0.72
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the banjo is on the floor next to the armchair. Therefore, the banjo and the armchair have a left-right relationship in which the banjo is next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.81
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the cup is on the floor next to the chair. Therefore, the cup and the chair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plate is on the table. Therefore, the plate and the table have an on-under relationship in which the plate is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.74
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the wineglass is on the floor next to the armchair. Therefore, the wineglass and the armchair have a left-right relationship in which the wineglass is next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.92
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bread is on the armchair. Therefore, the bread and the armchair have an on-under relationship in which the bread is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.85
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bowl is on the armchair. Therefore, the bowl and the armchair have an on-under relationship in which the bowl is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the toilet roll is on the table. Therefore, the toilet roll and the table have an on-under relationship in which the toilet roll is on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the kettle is on the table. Therefore, the kettle and the table have an on-under relationship in which the kettle is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the wineglass is on the armchair. Therefore, the wineglass and the armchair have an on-under relationship in which the wineglass is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the banjo is on the armchair. Therefore, the banjo and the armchair have an on-under relationship in which the banjo is on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the glasses are on the floor next to the armchair. Therefore, the glasses and the armchair have a left-right relationship in which the glasses are next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.88
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plate is on the table. Therefore, the plate and the table have an on-under relationship in which the plate is on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.58
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the pan is on the floor next to the chair. Therefore, the pan and the chair have an on-under relationship in which the pan is on the floor under the chair.",
+        "Generation": "Under",
+        "Golden": "Left",
+        "uncertainty": 0.64
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the ball of yarn is on the table. Therefore, the ball of yarn and the table have an on-under relationship in which the ball of yarn is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.75
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle is on the table. Therefore, the bottle and the table have an on-under relationship in which the bottle is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.63
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the remote is on the armchair. Therefore, the remote and the armchair have an on-under relationship in which the remote is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.79
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the box is on the floor next to the chair. Therefore, the box and the chair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.95
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the sunglasses are on the armchair. Therefore, the sunglasses and the armchair have an on-under relationship in which the sunglasses are on the armchair.",
+        "Generation": "Under",
+        "Golden": "Left",
+        "uncertainty": 0.68
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle of orange juice is on the floor next to the chair. Therefore, the bottle of orange juice and the chair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.93
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle is on the chair. Therefore, the bottle and the chair have an on-under relationship in which the bottle is on the chair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the sunglasses are on the floor next to the table. Therefore, the sunglasses and the table have a left-right relationship in which the sunglasses are next to the table.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the scarf is on the floor next to the armchair. Therefore, the scarf and the armchair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.92
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the wineglass is on the table. Therefore, the wineglass and the table have an on-under relationship in which the wineglass is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the oven mitt is on the floor next to the chair. Therefore, the oven mitt and the chair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.89
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the scissors are on the floor next to the table. Therefore, the scissors and the table have a left-right relationship in which the scissors are next to the table.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.84
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plant is on the floor next to the chair. Therefore, the plant and the chair have an on-under relationship in which the plant is on the floor next to the chair.",
+        "Generation": "Under",
+        "Golden": "Right",
+        "uncertainty": 0.84
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the orange is on the table. Therefore, the orange and the table have an on-under relationship in which the orange is on the table.",
+        "Generation": "Under",
+        "Golden": "Right",
+        "uncertainty": 0.7
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the cup is on the floor next to the table. Therefore, the cup and the table have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle of mustard is on the chair. Therefore, the bottle of mustard and the chair have an on-under relationship in which the bottle of mustard is on the chair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bowl is on the floor next to the table. Therefore, the bowl and the table have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the beer bottle is next to the chair. Therefore, the beer bottle and the chair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.91
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bottle of mustard is next to the chair. Therefore, the bottle of mustard and the chair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.92
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the laptop is on the floor under the chair. Therefore, the laptop and the chair have an on-under relationship in which the laptop is on the floor under the chair.",
+        "Generation": "Under",
+        "Golden": "Right",
+        "uncertainty": 0.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the dog is on the table. Therefore, the dog and the table have an on-under relationship in which the dog is on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.53
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the scarf is on the armchair. Therefore, the scarf and the armchair have an on-under relationship in which the scarf is on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.72
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the plant is on the chair. Therefore, the plant and the chair have an on-under relationship in which the plant is on the chair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.76
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the can is on the floor next to the armchair. Therefore, the can and the armchair have a left-right relationship in which the can is next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.88
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the remote is on the floor next to the armchair. Therefore, the remote and the armchair have a left-right relationship in which the remote is next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.89
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bowl is on the table. Therefore, the bowl and the table have an on-under relationship in which the bowl is on the table.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the laptop is on the armchair. Therefore, the laptop and the armchair have an on-under relationship in which the laptop is on the armchair.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bowl is on the floor next to the armchair. Therefore, the bowl and the armchair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the soda can is on the armchair. Therefore, the soda can and the armchair have an on-under relationship in which the soda can is on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.6
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the orange is on the floor next to the table. Therefore, the orange and the table have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.84
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the photograph is on the chair. Therefore, the photograph and the chair have an on-under relationship in which the photograph is on the chair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.8
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the beer bottle is on the floor next to the armchair. Therefore, the beer bottle and the armchair have a left-right relationship in which the beer bottle is next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.91
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the cap is on the floor next to the armchair. Therefore, the cap and the armchair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.93
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the sunglasses are on the armchair. Therefore, the sunglasses and the armchair have an on-under relationship in which the sunglasses are on the armchair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.78
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the bowl is on the chair. Therefore, the bowl and the chair have an on-under relationship in which the bowl is on the chair.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.77
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the book is on the floor next to the chair. Therefore, the book and the chair have a left-right relationship.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.94
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the dragonfruit is on the table. Therefore, the dragonfruit and the table have an on-under relationship in which the dragonfruit is on the table.",
+        "Generation": "Under",
+        "Golden": "On",
+        "uncertainty": 0.66
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "In this picture, the mug is on the floor next to the armchair. Therefore, the mug and the armchair have a left-right relationship.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.9
+    }
+]
