@@ -1,0 +1,89 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cup? Think step by step, then answer about the relation between the bowl and the cup with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The cup is located on the left side of the image frame. The white bowl is placed on the right side of the frame relative to the cup. So, as the final answer to the question of where the bowl is in relation to the cup, the bowl is behind the cup.",
+        "Answer": "So, as the final answer to the question of where the bowl is in relation to the cup, the bowl is behind the cup",
+        "Golden": "Front",
+        "Confidence": 0.9733232381868738
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the cup? Think step by step, then answer about the relation between the cap and the cup with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The red cap is sitting on the table in front of the cup. So, as the final answer to the question of where the cap is in relation to the cup, the cap is in front of the cup.",
+        "Answer": "So, as the final answer to the question of where the cap is in relation to the cup, the cap is in front of the cup",
+        "Golden": "Behind",
+        "Confidence": 0.9665379684008311
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the phone? Think step by step, then answer about the relation between the mug and the phone with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The mug is located on the left side of the image frame. The cell phone is positioned on the right side of the frame relative to the mug. So, as the final answer to the question of where the mug is in relation to the phone, the mug is left of the phone.",
+        "Answer": "So, as the final answer to the question of where the mug is in relation to the phone, the mug is left of the phone",
+        "Golden": "Left",
+        "Confidence": 0.9690879918982026
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the spoon? Think step by step, then answer about the relation between the cap and the spoon with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The red cap is sitting on the table in front of the spoon. So, as the final answer to the question of where the cap is in relation to the spoon, the cap is in front of the spoon.",
+        "Answer": "So, as the final answer to the question of where the cap is in relation to the spoon, the cap is in front of the spoon",
+        "Golden": "Behind",
+        "Confidence": 0.966127447660891
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the headphones? Think step by step, then answer about the relation between the plate and the headphones with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The plate is located on the left side of the image frame. The headphones are placed on the right side of the frame relative to the plate. So, as the final answer to the question of where the headphones are in relation to the plate, the headphones are behind the plate.",
+        "Answer": "So, as the final answer to the question of where the headphones are in relation to the plate, the headphones are behind the plate",
+        "Golden": "Front",
+        "Confidence": 0.9630412753997252
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the candle? Think step by step, then answer about the relation between the cap and the candle with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The red cap is sitting on the table in front of the candle. So, as the final answer to the question of where the cap is in relation to the candle, the cap is in front of the candle.",
+        "Answer": "So, as the final answer to the question of where the cap is in relation to the candle, the cap is in front of the candle",
+        "Golden": "Behind",
+        "Confidence": 0.9670991919508165
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the tape? Think step by step, then answer about the relation between the mug and the tape with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The mug is located on the left side of the image frame. The tape is on the right side of the frame relative to the mug. So, as the final answer to the question of where the mug is in relation to the tape, the mug is left of the tape.",
+        "Answer": "So, as the final answer to the question of where the mug is in relation to the tape, the mug is left of the tape",
+        "Golden": "Front",
+        "Confidence": 0.9753906377865361
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the fork? Think step by step, then answer about the relation between the cap and the fork with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The cap is sitting on the table in front of the fork. So, as the final answer to the question of where the cap is in relation to the fork, the cap is in front of the fork.",
+        "Answer": "So, as the final answer to the question of where the cap is in relation to the fork, the cap is in front of the fork",
+        "Golden": "Behind",
+        "Confidence": 0.9655999186483495
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the headphones? Think step by step, then answer about the relation between the book and the headphones with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The book is located on the left side of the image frame. The headphones are on the right side of the frame relative to the book. So, as the final answer to the question of where the book is in relation to the headphones, the book is left of the headphones.",
+        "Answer": "So, as the final answer to the question of where the book is in relation to the headphones, the book is left of the headphones",
+        "Golden": "Front",
+        "Confidence": 0.9646918292026344
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the headphones? Think step by step, then answer about the relation between the remote and the headphones with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The remote is located on the left side of the headphones. So, as the final answer to the question of where the remote is in relation to the headphones, the remote is left of the headphones.",
+        "Answer": "So, as the final answer to the question of where the remote is in relation to the headphones, the remote is left of the headphones",
+        "Golden": "Behind",
+        "Confidence": 0.9357493032643294,
+        "Final Generation": "Yes, the remote is indeed left of the headphones.",
+        "Final Answer": "Yes, the remote is indeed left of the headphones",
+        "Final Confidence": NaN
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the remote? Think step by step, then answer about the relation between the bowl and the remote with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The remote is placed on the table, and the bowl is positioned in front of it. So, as the final answer to the question of where the bowl is in relation to the remote, the bowl is in front of the remote.",
+        "Answer": "So, as the final answer to the question of where the bowl is in relation to the remote, the bowl is in front of the remote",
+        "Golden": "Front",
+        "Confidence": 0.951980163155496
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the sunglasses? Think step by step, then answer about the relation between the can and the sunglasses with left, right, front or behind.\nASSISTANT:",
+        "Generation": "The can is located on the right side of the image frame. The sunglasses are on the left side of the frame. So, as the final answer to the question of where the can is in relation to the sunglasses, the can is behind the sunglasses.",
+        "Answer": "So, as the final answer to the question of where the can is in relation to the sunglasses, the can is behind the sunglasses",
+        "Golden": "Right",
+        "Confidence": 0.986342510034193
+    }
+]

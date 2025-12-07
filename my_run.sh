@@ -1,11 +1,11 @@
 # Add the following line to enable test mode; otherwise, it defaults to validation mode
-export TEST_MODE=False
+export TEST_MODE=True
 
 python3 main_aro.py \
-    --dataset Controlled_Images_B \
+    --dataset Controlled_Images_A \
     --model-name='llava1.5' \
     --download \
-    --method few_shot_CoT_s1 \
+    --method reasoning_7 \
     --option=four
 
 # python3 main_aro.py \

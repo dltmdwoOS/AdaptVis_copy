@@ -247,6 +247,8 @@ class LlavaWrapper:
     
     def get_distribution(self, score, dataset="Controlled_Images_A"):
         # 1. Dataset에 따른 Option 설정 (기존 로직 동일)
+        if dataset == "yesno":
+            options = ["Yes", "No"]
         if dataset == "Controlled_Images_A":
             options = ["Left", "Right", "On", "Under"]
         elif dataset == "Controlled_Images_B":
@@ -472,7 +474,7 @@ class LlavaWrapper:
                     prompt = prompt_list[index_of_total]
                     
                     if method=='reasoning_1':
-                        def consistency_check(gen1, gen2):
+                        '''def consistency_check(gen1, gen2):
                             valid_opposite = {
                                 'left': 'right',
                                 'right': 'left',
@@ -485,15 +487,18 @@ class LlavaWrapper:
                             if gen1 in valid_opposite and gen2 == valid_opposite[gen1]:
                                 return True
                             else:
-                                return False
+                                return False'''
+
+                        def consistency_check(gen1, gen2):
+                            return gen1.lower() != gen2.lower()
                         
                         # Step 1: 객체 추출 및 두 객체의 이미지상 절대적 위치 파악
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         
-                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with left, right, top or bottom.\nASSISTANT:"
-                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with left, right, top or bottom.\nASSISTANT:"
+                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
+                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
                         gen_step1_obj1, l = self.get_answer(prompt_step1_obj1, _)
                         gen_step1_obj2, l = self.get_answer(prompt_step1_obj2, _)
                         
@@ -502,7 +507,7 @@ class LlavaWrapper:
                         
                         # Step 3: 최종 답변
                         if consistent:
-                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1}-side on the image, and the {obj2} is positioned {gen_step1_obj2}-side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1} side on the image, and the {obj2} is positioned {gen_step1_obj2} side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                             gen, score = self.get_answer(prompt, _)
                             score = score[0]
                             uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
@@ -604,42 +609,32 @@ class LlavaWrapper:
                             "uncertainty": uncertainty
                         }
                     
-                    elif method=='reasoning_3_fewshot':
+                    elif method=='reasoning_3_adapt_vis':
                         change_greedy_to_add_weight()
                         # Step 1: 객체 추출 및 두 객체의 위치 관계 파악
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         
-                        fewshot_prompt = '''\
-USER: Which of the following positional relationships do the violin and the sofa have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
-ASSISTANT: In this picture, the violin is under the sofa. Therefore, the violin and the sofa have an on-under relationship in which the violin is under the sofa.
-USER: Which of the following positional relationships do the calculator and the desk have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
-ASSISTANT: In this picture, the calculator is on the desk. Therefore, the calculator and the desk have an on-under relationship in which the calculator is on the desk.
-USER: Which of the following positional relationships do the cat and the rug have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
-ASSISTANT: In this picture, the cat is to the right of the rug. Therefore, the cat and the rug have a left-right relationship.
-USER: Which of the following positional relationships do the stapler and the printer have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.
-ASSISTANT: In this picture, the stapler is to the left of the printer. Therefore, the stapler and the printer have a left-right relationship.
-'''
                         prompt_step1 = f"<image>\nUSER: Which of the following positional relationships do the {obj1} and the {obj2} have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.\nASSISTANT:"
-                        gen_step1, score_step1 = self.get_answer(fewshot_prompt + prompt_step1, _, max_length=512)
+                        gen_step1, score_step1 = self.get_answer(prompt_step1, _, 0.5)
                         
                         # Step 2: 최종 답변
-                        if 'left-right' in gen_step1 or '1' in gen_step1:
-                            prompt_step2 = f"\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
-                            new_prompt = prompt_step1 + " " + gen_step1 + prompt_step2
-                            gen, score = self.get_answer(new_prompt, _,  max_length=128)
-                            
-                        elif 'on-under' in gen_step1 or '2' in gen_step1:
-                            prompt_step2 = f"\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
-                            new_prompt = prompt_step1 + " " + gen_step1 + prompt_step2
-                            gen, score = self.get_answer(new_prompt, _, max_length=128)
-                            
+                        if 'left' in gen_step1 or 'right' in gen_step1 or '1' in gen_step1:
+                            prompt_step2 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
+                            gen, score = self.get_answer(prompt_step2, _, 1.0)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                        elif 'on' in gen_step1 or 'under' in gen_step1 or '2' in gen_step1:
+                            prompt_step2 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
+                            gen, score = self.get_answer(prompt_step2, _, 1.0)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
                         else:
-                            gen, score = self.get_answer(prompt, _)
-                        score = score[0]
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
-                            
+                            gen, score = self.get_answer(prompt, _, 1.0)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                        
                         result = {
                             "Prompt": prompt,
                             "Step1": gen_step1,
@@ -647,7 +642,253 @@ ASSISTANT: In this picture, the stapler is to the left of the printer. Therefore
                             "Golden": answer_list[index_of_total][0],
                             "uncertainty": uncertainty
                         }
-                    
+
+                    elif method=='reasoning_4':
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        
+                        prompt_a = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
+                        gen_a, score_a = self.get_answer(prompt_a, _)
+                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
+
+                        prompt_b = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
+                        gen_b, score_b = self.get_answer(prompt_b, _)
+                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
+                        
+                        gen = gen_a if uncertainty_a > uncertainty_b else gen_b
+                        result = {
+                            "Prompt": prompt,
+                            "LR": {
+                                "Generation": gen_a,
+                                "Uncertainty": uncertainty_a,
+                            },
+                            "OU": {
+                                "Generation": gen_b,
+                                "Uncertainty": uncertainty_b,
+                            },
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0]
+                        }
+
+                    elif method=='reasoning_5':
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        BE_VERB = "Is" if be_verb=="is" else "Are"
+
+                        prompt_a = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_a, score_a = self.get_answer(prompt_a, _)
+                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
+
+                        prompt_b = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_b, score_b = self.get_answer(prompt_b, _)
+                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
+
+                        prompt_c = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_c, score_c = self.get_answer(prompt_c, _)
+                        uncertainty_c = float(max(torch.nn.functional.softmax(score_c[0], dim=-1)[0]))
+
+                        prompt_d = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_d, score_d = self.get_answer(prompt_d, _)
+                        uncertainty_d = float(max(torch.nn.functional.softmax(score_d[0], dim=-1)[0]))
+                        
+                        gen_map = {
+                            "Left": {
+                                "Generation": gen_a,
+                                "Uncertainty": uncertainty_a,
+                            },
+                            "Right": {
+                                "Generation": gen_b,
+                                "Uncertainty": uncertainty_b,
+                            },
+                            "On": {
+                                "Generation": gen_c,
+                                "Uncertainty": uncertainty_c,
+                            },
+                            "Under": {
+                                "Generation": gen_d,
+                                "Uncertainty": uncertainty_d,
+                            },
+                        }
+                        candidates = {k: v["Uncertainty"] for k, v in gen_map.items() if v["Generation"].lower() == "yes"}
+                        if candidates:
+                            target_key = max(candidates, key=candidates.get)
+                            gen = target_key
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generations": gen_map,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0]
+                        }
+
+                    elif method=='reasoning_6':
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        BE_VERB = "Is" if be_verb=="is" else "Are"
+                        # Step1
+                        prompt_a = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
+                        gen_a, score_a = self.get_answer(prompt_a, _)
+                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
+
+                        prompt_b = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
+                        gen_b, score_b = self.get_answer(prompt_b, _)
+                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
+                        
+                        # Step2
+                        if uncertainty_a > uncertainty_b:
+                            options = ['Left', 'Right']
+                            prompt_1 = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_1, score_1 = self.get_answer(prompt_1, _)
+                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
+
+                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_2, score_2 = self.get_answer(prompt_2, _)
+                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
+
+                        else:
+                            options = ['On', 'Under']
+                            prompt_1 = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_1, score_1 = self.get_answer(prompt_1, _)
+                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
+
+                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_2, score_2 = self.get_answer(prompt_2, _)
+                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
+
+                        if gen_1 != gen_2:
+                            gen = options[0] if gen_1 == "Yes" else options[1]
+                        elif gen_1 == gen_2 == "Yes":
+                            gen = options[0] if uncertainty_1 > uncertainty_2 else options[1]
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0]
+                        }
+
+                    elif method=='reasoning_7':
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        BE_VERB = "Is" if be_verb=="is" else "Are"
+
+                        # Step1
+                        prompt_a = f"<image>\nUSER: Are the {obj1} and {obj2} have left-right relationship in which one object is next to another? Answer with yes or no.\nASSISTANT:"
+                        gen_a, score_a = self.get_answer(prompt_a, _)
+                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
+
+                        prompt_b = f"<image>\nUSER: Are the {obj1} and {obj2} have on-under relationship in which one object is placed on or under another object? Answer with yes or no.\nASSISTANT:"
+                        gen_b, score_b = self.get_answer(prompt_b, _)
+                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
+                        
+                        if gen_a != gen_b:
+                            step1 = 'left-right' if gen_a == 'Yes' else 'on-under'
+                        elif gen_a == gen_b == "Yes":
+                            step1 = 'left-right' if uncertainty_a > uncertainty_b else 'on-under'
+                        else:
+                            step1 = None
+                            gen_1, gen_2 = None, None
+                            
+                        # Step2
+                        if step1 == 'left-right':
+                            options = ['Left', 'Right']
+                            prompt_1 = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_1, score_1 = self.get_answer(prompt_1, _)
+                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
+
+                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_2, score_2 = self.get_answer(prompt_2, _)
+                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
+
+                        elif step1 == 'on-under':
+                            options = ['On', 'Under']
+                            prompt_1 = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_1, score_1 = self.get_answer(prompt_1, _)
+                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
+
+                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            gen_2, score_2 = self.get_answer(prompt_2, _)
+                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
+
+                        if gen_1 != gen_2:
+                            gen = options[0] if gen_1 == "Yes" else options[1]
+                        elif gen_1 == gen_2 == "Yes":
+                            gen = options[0] if uncertainty_1 > uncertainty_2 else options[1]
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0]
+                        }
+
+                    elif method=='reasoning_5_entropy':
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        BE_VERB = "Is" if be_verb=="is" else "Are"
+
+                        prompt_a = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_a, score_a = self.get_answer(prompt_a, _)
+                        dist_a = self.get_distribution(score_a[0], dataset='yesno')
+                        uncertainty_a = self.get_uncertainty(score_a[0], dist_a)
+
+                        prompt_b = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_b, score_b = self.get_answer(prompt_b, _)
+                        dist_b = self.get_distribution(score_b[0], dataset='yesno')
+                        uncertainty_b = self.get_uncertainty(score_b[0], dist_b)
+
+                        prompt_c = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_c, score_c = self.get_answer(prompt_c, _)
+                        dist_c = self.get_distribution(score_c[0], dataset='yesno')
+                        uncertainty_c = self.get_uncertainty(score_c[0], dist_c)
+
+                        prompt_d = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
+                        gen_d, score_d = self.get_answer(prompt_d, _)
+                        dist_d = self.get_distribution(score_d[0], dataset='yesno')
+                        uncertainty_d = self.get_uncertainty(score_d[0], dist_d)
+                        
+                        gen_map = {
+                            "Left": {
+                                "Generation": gen_a,
+                                "Uncertainty": uncertainty_a,
+                            },
+                            "Right": {
+                                "Generation": gen_b,
+                                "Uncertainty": uncertainty_b,
+                            },
+                            "On": {
+                                "Generation": gen_c,
+                                "Uncertainty": uncertainty_c,
+                            },
+                            "Under": {
+                                "Generation": gen_d,
+                                "Uncertainty": uncertainty_d,
+                            },
+                        }
+                        candidates = {k: v["Uncertainty"] for k, v in gen_map.items() if v["Generation"].lower() == "yes"}
+                        if candidates:
+                            target_key = min(candidates, key=candidates.get)
+                            gen = target_key
+                        else:
+                            gen, score = self.get_answer(prompt, _)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generations": gen_map,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0]
+                        }
+
+
                     elif method == 'adapt_vis_var_uncertainties_var_weights':
                         change_greedy_to_add_weight()
                         original_generation, original_score = self.get_answer(prompt, _, 1.0)
@@ -758,57 +999,40 @@ ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, i
                        
                     elif method == 'few_shot_CoT_s1':
                         few_shot_prompt = '''\
-USER: Where is the bicycle in relation to the car? Think step by step, then answer about the relation between bicycle and car with left, right, front or behind.
-ASSISTANT: The red bicycle is clearly visible in the foreground, while the silver car is parked further back. The bicycle blocks the view of the car's bumper. So, the bicycle is in front of the car.
-USER: Where is the backpack in relation to the chair? Think step by step, then answer about the relation between backpack and chair with left, right, front or behind.
-ASSISTANT: The wooden chair is closer to the camera, and the black backpack is tucked away on the floor past the chair legs. It is further from the viewpoint. So, the backpack is behind the chair.
 USER: Where is the tree in relation to the bench? Think step by step, then answer about the relation between tree and bench with left, right, front or behind.
-ASSISTANT: The bench is located on the left side of the image frame. The large oak tree occupies the right side of the frame relative to the bench. So, the tree is right of the bench.
-USER: Where is the remote in relation to the TV? Think step by step, then answer about the relation between remote and TV with left, right, front or behind.
-ASSISTANT: The remote is lying on the table in the foreground, while the TV is mounted on the wall in the background. The remote is closer to the viewer. So, the remote is in front of the TV.
+ASSISTANT: The bench is located on the left side of the image frame. The large oak tree occupies the right side of the frame relative to the bench. So, as the final answer to the question of where the tree is in relation to the bench, the tree is right of the bench.
+USER: Where is the dog in relation to the hydrant? Think step by step, then answer about the relation between dog and hydrant with left, right, front or behind.
+ASSISTANT: The fire hydrant stands on the right side of the sidewalk. The golden retriever is sitting on the pavement to the west of the hydrant. So, as the final answer to the question of where the dog is in relation to the hydrant, the dog is left of the hydrant.
 '''
                         few_shot_prompt_revise = '''\
-USER: Where is the bicycle in relation to the car? Think step by step, then answer about the relation between bicycle and car with left, right, front or behind.
-ASSISTANT: The bicycle is parked near the silver sedan, appearing in the foreground. So, the bicycle is next to the car... Wait. 'Next to' is not in the allowed options (left, right, front, behind). Since the bicycle is closer to the viewer and blocking the car, it is spatially anterior. So, the bicycle is in front of the car.
-USER: Where is the backpack in relation to the chair? Think step by step, then answer about the relation between backpack and chair with left, right, front or behind.
-ASSISTANT: The backpack is on the floor beneath the seat of the chair. So, the backpack is under the chair... Wait. The question asks to choose from left, right, front, or behind. 'Under' is invalid. Since the backpack is further back than the chair legs from the viewer's perspective, it is located at the rear. So, the backpack is behind the chair.
 USER: Where is the tree in relation to the bench? Think step by step, then answer about the relation between tree and bench with left, right, front or behind.
-ASSISTANT: The bench is on the left side, and the tree is to the west of it. So, the tree is left of the bench... Wait. I misread the image layout. The bench is on the left edge, meaning the tree (on the right) is in the opposite direction relative to the bench. So, the tree is right of the bench.
-USER: Where is the remote in relation to the TV? Think step by step, then answer about the relation between remote and TV with left, right, front or behind.
-ASSISTANT: The remote is on the table and the TV is on the wall. So, the remote is on the TV... Wait. That describes contact, not relative position. The remote is on the table in the foreground, making it closer to me than the TV in the background. So, the remote is in front of the TV.
+ASSISTANT: The bench is on the left side, and the tree is to the west of it. So, the tree is left of the bench... Wait. I misread the image layout. The bench is on the left edge, meaning the tree (on the right) is in the opposite direction relative to the bench. So, to correct the answer again, the tree is right of the bench.
+USER: Where is the dog in relation to the hydrant? Think step by step, then answer about the relation between dog and hydrant with left, right, front or behind.
+ASSISTANT: The hydrant is on the right, and the dog is sitting beside it. So, the dog is right of the hydrant... Wait. I confused the subject and reference. The question asks where the dog is relative to the hydrant. Since the hydrant is on the right, the dog sitting on the other side is on the left. So, to correct the answer again, the dog is left of the hydrant.
 '''
-                      
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, front or behind.\nASSISTANT:"
                         prompt = few_shot_prompt + new_prompt
                         generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
-                        
-                        if token_probs_map['answer_confidence'] < 0.97:
-                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
+                        answer = generation.split('.')[-2].strip()
+                        result = {
+                            "Prompt": new_prompt,
+                            "Generation": generation,
+                            "Answer": answer,
+                            "Golden": answer_list[index_of_total][0],
+                            "Confidence": token_probs_map['answer_confidence']
+                        }
+                        if token_probs_map['answer_confidence'] < 0.95:
+                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, front or behind.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
                             prompt = few_shot_prompt_revise + new_prompt
                             generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
                             answer = generation.split('.')[-2].strip()
                             
-                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
-                            result = {
-                                "Prompt": prompt,
-                                "Generation": generation,
-                                "Answer": answer,
-                                "Golden": answer_list[index_of_total][0],
-                                "token_probs": token_probs_map
-                            }
-                        else:
-                            answer = generation.split('.')[-2].strip()
-                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
-                            result = {
-                                "Prompt": prompt,
-                                "Generation": generation,
-                                "Answer": answer,
-                                "Golden": answer_list[index_of_total][0],
-                                "token_probs": token_probs_map
-                            }
+                            result['Final Generation'] = generation
+                            result['Final Answer'] = answer
+                            result['Final Confidence'] = token_probs_map['answer_confidence']
                     
                     elif method == 'few_shot_CoT_s2':
                         few_shot_prompt = '''\

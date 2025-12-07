@@ -1,0 +1,114 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The wineglass and the table have a left-right relationship in which the wineglass is placed next to the table.",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The glass is placed on top of the armchair, which indicates a left-right relationship in which one object is next to another.",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.54
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The mug and the armchair have a left-right relationship in which the mug is placed next to the armchair.",
+        "Generation": "Right",
+        "Golden": "On",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The hat and the chair have a left-right relationship in which one object is next to another. The hat is placed on the floor next to the wooden chair, which is positioned against the wall.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.89
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The bottle and the chair have a left-right relationship in which one object is next to another.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.95
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The cap and the chair have a left-right relationship in which one object is next to another. The cap is placed on the floor next to the chair, and the chair is positioned in front of the wall.",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.56
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The plant and the table have a left-right relationship in which the plant is placed next to the table.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The orange is placed on the table, so the positional relationship between the orange and the table is 2. An on-under relationship in which one object is placed on or under another object.",
+        "Generation": "Under",
+        "Golden": "Under",
+        "uncertainty": 0.67
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The cap and the armchair have a left-right relationship in which the cap is placed next to the armchair.",
+        "Generation": "Left",
+        "Golden": "Left",
+        "uncertainty": 0.87
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The oven mitt and the chair have a left-right relationship in which one object is next to another. The oven mitt is placed on the floor next to the chair, while the chair is positioned against the wall.",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.56
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The book and the armchair have a left-right relationship in which the book is placed on the armchair.",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.54
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The scissors and the table have a left-right relationship in which one object is next to another.",
+        "Generation": "Left",
+        "Golden": "On",
+        "uncertainty": 0.55
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The banana and the chair have a left-right relationship in which the banana is placed next to the chair.",
+        "Generation": "Right",
+        "Golden": "Right",
+        "uncertainty": 0.86
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The orange and the chair have a left-right relationship in which the orange is placed next to the chair.",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.52
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The can and the chair have a left-right relationship in which one object is next to another.",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.65
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": "The scarf and the chair have a left-right relationship in which the scarf is placed on the floor next to the chair.",
+        "Generation": "Right",
+        "Golden": "Under",
+        "uncertainty": 0.58
+    }
+]

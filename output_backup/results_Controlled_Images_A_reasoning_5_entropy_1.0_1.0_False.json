@@ -1,0 +1,1888 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.84416264295578
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9193226099014282
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2617650628089905
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9802497029304504
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.990082323551178
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.70951908826828
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.21874919533729553
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.604983389377594
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9852744936943054
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.746853768825531
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.22451263666152954
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6643131375312805
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.6967610716819763
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.47247201204299927
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7858370542526245
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4220706522464752
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.15363797545433044
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9015898704528809
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7276987433433533
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.769798994064331
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9571126699447632
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5986302495002747
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5381114482879639
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5142027735710144
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.5090371966362
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5708754658699036
+            },
+            "On": {
+                "Generation": "No",
+                "Uncertainty": 0.9985056519508362
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8998404145240784
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8726399540901184
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6696383953094482
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3444724977016449
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.43162286281585693
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4640968143939972
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9652183651924133
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8365777134895325
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4813227951526642
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9665393829345703
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6856217384338379
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4336286187171936
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4700864553451538
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.954508364200592
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.907938539981842
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.16049765050411224
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6829995512962341
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9840072989463806
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8101022243499756
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4908181130886078
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7339614033699036
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.6114970445632935
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.37569043040275574
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5170881748199463
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3844144940376282
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9723929166793823
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6469642519950867
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2762112617492676
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.41153451800346375
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8757121562957764
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6060106754302979
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2794650197029114
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.49726641178131104
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9475638270378113
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7787759304046631
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.43976765871047974
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.43793755769729614
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9319644570350647
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7971055507659912
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4602903127670288
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.443221777677536
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.7605139017105103
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8571357131004333
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2968248724937439
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.38974854350090027
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.6769079566001892
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4000309407711029
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5554385781288147
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4783720076084137
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9988306760787964
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.8579980731010437
+            },
+            "On": {
+                "Generation": "No",
+                "Uncertainty": 0.815984308719635
+            },
+            "Under": {
+                "Generation": "No",
+                "Uncertainty": 0.9610680937767029
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8450542688369751
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.950885534286499
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2681446373462677
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7161099314689636
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7788347601890564
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.93732088804245
+            },
+            "On": {
+                "Generation": "No",
+                "Uncertainty": 0.9900471568107605
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.934770941734314
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9854139685630798
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9179907441139221
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8021606206893921
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9870343804359436
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.7830052971839905
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8526389002799988
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2170381098985672
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9963345527648926
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9342538714408875
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5053935647010803
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.28305619955062866
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3143017292022705
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8422417640686035
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5160068869590759
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7407861351966858
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5819817185401917
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.37835925817489624
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2778865396976471
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7656167149543762
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.49909648299217224
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.997906506061554
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7064786553382874
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7297408580780029
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5147688984870911
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.34956830739974976
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9676952958106995
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6333664655685425
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3984484076499939
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.994440495967865
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5843823552131653
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.349853515625
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.40556570887565613
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4825851321220398
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9235129356384277
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5833619832992554
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4780535101890564
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6446768641471863
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9916920065879822
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7655298709869385
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8220798373222351
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2637335956096649
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9863364696502686
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4567394256591797
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4430127739906311
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9987309575080872
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9124182462692261
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8714630007743835
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8278604745864868
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2605842351913452
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9613812565803528
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5101540088653564
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5553500652313232
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9973505735397339
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6134500503540039
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4186113476753235
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5011222958564758
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9999645352363586
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6489725112915039
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.32830747961997986
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.32401153445243835
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9620670080184937
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7359430193901062
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.31584304571151733
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6745481491088867
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9499930143356323
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7698203921318054
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5966135859489441
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7867416739463806
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.999613344669342
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6289623975753784
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3958323299884796
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4640340805053711
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9981556534767151
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9951223731040955
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9566158056259155
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9999706745147705
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3050042390823364
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7597089409828186
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.43588706851005554
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.42895305156707764
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9713122248649597
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.975236713886261
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3513694107532501
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.961840808391571
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3560902774333954
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9993574619293213
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7668125033378601
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8079604506492615
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8911164999008179
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6506990790367126
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.742706298828125
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6640310287475586
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8818217515945435
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7788359522819519
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.47779226303100586
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9473170042037964
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9550447463989258
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7606823444366455
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6956589221954346
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5691205263137817
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.38252922892570496
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.33024582266807556
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9484730362892151
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.46073785424232483
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9040362238883972
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.8825970888137817
+            },
+            "On": {
+                "Generation": "No",
+                "Uncertainty": 0.647846519947052
+            },
+            "Under": {
+                "Generation": "No",
+                "Uncertainty": 0.8800733685493469
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.44104641675949097
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.14386531710624695
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5765742063522339
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2903781831264496
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.7201614379882812
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7743591070175171
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2525724172592163
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6339336037635803
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9962128400802612
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5045155882835388
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8130366802215576
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.485993355512619
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.30966687202453613
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9642268419265747
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4671548306941986
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.47591719031333923
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8607214689254761
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6786542534828186
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.19843973219394684
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6930229067802429
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8957437872886658
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6533434391021729
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9385218620300293
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6289777755737305
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6193711757659912
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9911754727363586
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7311573028564453
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4753035008907318
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.5762585401535034
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5236347317695618
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9821839332580566
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7498917579650879
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.7216165065765381
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5205281376838684
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8516889214515686
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6226809024810791
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.7790930867195129
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.48982059955596924
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7282583117485046
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5306381583213806
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9500503540039062
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6580509543418884
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3098444640636444
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.42302757501602173
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4549516439437866
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9678858518600464
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9180127382278442
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6880456209182739
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.18955570459365845
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9054813981056213
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5160841345787048
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.49701252579689026
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.13045597076416016
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9801100492477417
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.573059618473053
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3633907437324524
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.6091024875640869
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7022812366485596
+            },
+            "On": {
+                "Generation": "No",
+                "Uncertainty": 0.994929850101471
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5441973805427551
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.8580886721611023
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9431980848312378
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7246759533882141
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9992953538894653
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9912750720977783
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8363027572631836
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2157297432422638
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5898514986038208
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.927936851978302
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8596129417419434
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.24646411836147308
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7951149344444275
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.26758328080177307
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8372197151184082
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3710859417915344
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5109627842903137
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.41960904002189636
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9990766048431396
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5182594060897827
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6401462554931641
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9283824563026428
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.6382564902305603
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.29527774453163147
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5166885256767273
+            }
+        },
+        "Generation": "On",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9247937798500061
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.846057116985321
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8805782198905945
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7050560712814331
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Under"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.757262110710144
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2963046133518219
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4569779336452484
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4004851281642914
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9704994559288025
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8383457660675049
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.31442004442214966
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.519351065158844
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5634557604789734
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9889640212059021
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.8376355767250061
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5496537685394287
+            }
+        },
+        "Generation": "Under",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9972061514854431
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9533818364143372
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3814731538295746
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5620197057723999
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2550968825817108
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.9189853072166443
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.2522234320640564
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4733824133872986
+            }
+        },
+        "Generation": "On",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.96019047498703
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3801516592502594
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7988715171813965
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.4438824951648712
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9402021169662476
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.49710020422935486
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.25603190064430237
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.3510400950908661
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9254749417304993
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9590916633605957
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.28301507234573364
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7975982427597046
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "Yes",
+                "Uncertainty": 0.30076661705970764
+            },
+            "Right": {
+                "Generation": "No",
+                "Uncertainty": 0.8484870791435242
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.729263186454773
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.35795775055885315
+            }
+        },
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.9431530237197876
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.9016515612602234
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.7825322151184082
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.904466986656189
+            }
+        },
+        "Generation": "On",
+        "Golden": "On"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generations": {
+            "Left": {
+                "Generation": "No",
+                "Uncertainty": 0.5486138463020325
+            },
+            "Right": {
+                "Generation": "Yes",
+                "Uncertainty": 0.25629734992980957
+            },
+            "On": {
+                "Generation": "Yes",
+                "Uncertainty": 0.5360190272331238
+            },
+            "Under": {
+                "Generation": "Yes",
+                "Uncertainty": 0.47427505254745483
+            }
+        },
+        "Generation": "Right",
+        "Golden": "Right"
+    }
+]
