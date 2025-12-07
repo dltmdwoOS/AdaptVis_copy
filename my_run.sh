@@ -5,7 +5,10 @@ python3 main_aro.py \
     --dataset Controlled_Images_A \
     --model-name='llava1.5' \
     --download \
-    --method reasoning_7 \
+    --method adapt_vis_entropy \
+    --weight1 1.5 \
+    --weight2 0.5 \
+    --threshold 0.9 \
     --option=four
 
 # python3 main_aro.py \

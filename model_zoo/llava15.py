@@ -888,7 +888,6 @@ class LlavaWrapper:
                             "Golden": answer_list[index_of_total][0]
                         }
 
-
                     elif method == 'adapt_vis_var_uncertainties_var_weights':
                         change_greedy_to_add_weight()
                         original_generation, original_score = self.get_answer(prompt, _, 1.0)
@@ -939,13 +938,25 @@ class LlavaWrapper:
                     elif method == 'few_shot_CoT':
                         few_shot_prompt = '''\
 USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
+ASSISTANT: In this picture, the brown violin is lying on the floor in the bottom-center area, while the beige fabric sofa stands prominently across the center-center region.\
+Since the violin is positioned on the floor beneath the raised seat of the sofa without making contact with the cushion, they are separated.\
+Because the violin is located vertically lower than the sofa's seat within its footprint, the relative spatial relationship corresponds to the on-under category.\
+So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
 USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
+ASSISTANT: In this picture, the gray calculator is resting on the surface in the center-right section, and the wooden desk occupies the bottom-center to center-center area.\
+Because the device is physically supported by the desk's surface with no gap in between, they are touching.\
+Since the calculator is placed upon the upper surface of the desk, the relative spatial relationship corresponds to the on-under category.\
+So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
 USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
+ASSISTANT: In this picture, the white cat is sitting upright in the bottom-right corner, while the patterned rug lies flat covering the bottom-center area.\
+Since the cat is sitting on the floor adjacent to the rug's edge rather than on the fabric itself, they are separated.\
+Because the cat is positioned to the eastern side of the frame relative to the rug's location, the relative spatial relationship corresponds to the left-right category.\
+So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
 USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
+ASSISTANT: In this picture, the blue stapler is sitting on the desk in the center-left region, while the large laser printer sits heavily in the center-right region.\
+Since there is a clear span of empty desk surface between the two office supplies, they are separated.\
+Because the stapler is positioned on the western side of the frame relative to the printer, the relative spatial relationship corresponds to the left-right category.\
+So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
 '''
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
@@ -953,8 +964,9 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
                         new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                         prompt = few_shot_prompt + new_prompt
                         
-                        generation, score = self.get_answer(prompt, _, max_length=512, max_new_tokens=128)
+                        generation, score = self.get_answer(prompt, _, max_length=1024, max_new_tokens=256)
                         answer = generation.split('.')[-2].strip()
+                        answer = answer.split(',')[-1].strip()
                         print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
                         
                         result = {
@@ -963,60 +975,64 @@ ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, pos
                             "Answer": answer,
                             "Golden": answer_list[index_of_total][0]
                         }
-                       
-                    elif method == 'few_shot_CoT_r1':
+                          
+                    elif method == 'few_shot_CoT_s1':
                         few_shot_prompt = '''\
 USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor, positioned beneath the beige fabric sofa. Since the instrument is located directly below the seat of the sofa, it is obscured by the sofa's shadow. So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
+ASSISTANT: In this picture, the brown violin is lying on the floor in the bottom-center area, while the beige fabric sofa stands prominently across the center-center region.\
+Since the violin is positioned on the floor beneath the raised seat of the sofa without making contact with the cushion, they are separated.\
+Because the violin is located vertically lower than the sofa's seat within its footprint, the relative spatial relationship corresponds to the on-under category.\
+So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
 USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is placed on top of the wooden desk next to some papers. The device is resting on the desk's surface, clearly visible and accessible for use. So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
+ASSISTANT: In this picture, the gray calculator is resting on the surface in the center-right section, and the wooden desk occupies the bottom-center to center-center area.\
+Because the device is physically supported by the desk's surface with no gap in between, they are touching.\
+Since the calculator is placed upon the upper surface of the desk, the relative spatial relationship corresponds to the on-under category.\
+So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
 USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, a white cat is sitting on the floor, adjacent to the patterned rug. Looking at the layout, the rug is in the center, and the cat is sitting towards the eastern side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
-USER: Where is the shoes in relation to the bed? Think step by step, then answer about the relation between shoes and bed with left, right, on or under.
-ASSISTANT: In this picture, the black leather shoes are positioned on the floor, directly beneath the bed frame. They are located in the space between the floor and the mattress support. So, as the final answer to the question of where the shoes is in relation to the bed, the shoes are on the floor...Wait, The original question was to ask about the spatial relationship between the shoes and the bed, but I just ended up answering the relationship between the shoes and the floor. So, to correct the answer again, the shoes are under the bed.
+ASSISTANT: In this picture, the white cat is sitting upright in the bottom-right corner, while the patterned rug lies flat covering the bottom-center area.\
+Since the cat is sitting on the floor adjacent to the rug's edge rather than on the fabric itself, they are separated.\
+Because the cat is positioned to the eastern side of the frame relative to the rug's location, the relative spatial relationship corresponds to the left-right category.\
+So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
 USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk surface, positioned to the side of the large laser printer. The printer occupies the right side of the view, while the stapler is placed on the opposite side. So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
-USER: Where is the lamp in relation to the monitor? Think step by step, then answer about the relation between lamp and monitor with left, right, on or under.
-ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, in front of the computer monitor. The monitor occupies the left side of the view, and the lamp is positioned on the right side. So, as the final answer to the question, the lamp is in front of the monitor... Wait, There's a contradiction in the reasoning I just made. I said the lamp is in front of the monitor and at the same time said the lamp is on the right side of the monitor. Hmm... Let's look at the image again. Aha! It was wrong to say that the lamp is in front of the monitor. So, to correct the answer again, the lamp is right of the monitor.
+ASSISTANT: In this picture, the blue stapler is sitting on the desk in the center-left region, while the large laser printer sits heavily in the center-right region.\
+Since there is a clear span of empty desk surface between the two office supplies, they are separated.\
+Because the stapler is positioned on the western side of the frame relative to the printer, the relative spatial relationship corresponds to the left-right category.\
+So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
+'''
+                        few_shot_prompt_revise = '''\
+USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
+ASSISTANT: In this picture, the brown violin is lying on the floor in the bottom-center area, while the beige fabric sofa stands prominently across the center-center region.\
+Since the violin is positioned on the floor near the sofa's legs without making contact with the cushion, they are separated.\
+From the camera's perspective, the violin appears to be in the foreground relative to the sofa backrest, suggesting a front-behind relationship.\
+So, as the final answer to the question of where the violin is in relation to the sofa, the violin is in front of the sofa...Wait. I need to look closer at the vertical alignment. The violin is actually positioned directly beneath the seat cushion, obscured by the shadow. It is within the footprint of the sofa, not outside of it. Therefore, the correct relation is vertical, not horizontal.\
+So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
+USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
+ASSISTANT: In this picture, the gray calculator is resting on the surface in the center-right section, and the wooden desk occupies the bottom-center to center-center area.\
+Because the device is physically supported by the surface with no gap in between, they are touching.\
+Since the calculator is placed flatly regarding gravity, the relative spatial relationship corresponds to the on-under category.\
+So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the floor... Wait. I made a mistake in identifying the reference object. The calculator is indeed lying flat, but it is supported by the desk, not the ground. The question asks for the relation to the desk.\
+So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
+USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
+ASSISTANT: In this picture, the white cat is sitting upright in the bottom-right corner, while the patterned rug lies flat covering the bottom-center area.\
+Since the cat is sitting on the floor adjacent to the rug's edge rather than on the fabric itself, they are separated.\
+Because the two objects are side-by-side on the floor, the relative spatial relationship corresponds to the left-right category.\
+So, as the final answer to the question of where the cat is in relation to the rug, the cat is next to the rug... Wait. The specific coordinates show the cat is in the bottom-right while the rug is center/bottom-center. "Next to" is too vague. The cat is clearly positioned to the eastern side of the rug.\
+So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
+USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
+ASSISTANT: In this picture, the blue stapler is sitting on the desk in the center-left region, while the large laser printer sits heavily in the center-right region.\
+Since there is a clear span of empty desk surface between the two office supplies, they are separated.\
+Because the stapler and printer are aligned horizontally on the desk, the relative spatial relationship corresponds to the left-right category.\
+So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is next to the printer... Wait. I need to be precise about the direction. The stapler is in the center-left region, and the printer is in the center-right. Therefore, the stapler is on the western side relative to the printer.\
+So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
 '''
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                         prompt = few_shot_prompt + new_prompt
-                        
-                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=256, get_token_probs=True)
                         answer = generation.split('.')[-2].strip()
-                        print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
-                        
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": generation,
-                            "Answer": answer,
-                            "Golden": answer_list[index_of_total][0],
-                            "token_probs": token_probs_map
-                        }
-                       
-                    elif method == 'few_shot_CoT_s1':
-                        few_shot_prompt = '''\
-USER: Where is the tree in relation to the bench? Think step by step, then answer about the relation between tree and bench with left, right, front or behind.
-ASSISTANT: The bench is located on the left side of the image frame. The large oak tree occupies the right side of the frame relative to the bench. So, as the final answer to the question of where the tree is in relation to the bench, the tree is right of the bench.
-USER: Where is the dog in relation to the hydrant? Think step by step, then answer about the relation between dog and hydrant with left, right, front or behind.
-ASSISTANT: The fire hydrant stands on the right side of the sidewalk. The golden retriever is sitting on the pavement to the west of the hydrant. So, as the final answer to the question of where the dog is in relation to the hydrant, the dog is left of the hydrant.
-'''
-                        few_shot_prompt_revise = '''\
-USER: Where is the tree in relation to the bench? Think step by step, then answer about the relation between tree and bench with left, right, front or behind.
-ASSISTANT: The bench is on the left side, and the tree is to the west of it. So, the tree is left of the bench... Wait. I misread the image layout. The bench is on the left edge, meaning the tree (on the right) is in the opposite direction relative to the bench. So, to correct the answer again, the tree is right of the bench.
-USER: Where is the dog in relation to the hydrant? Think step by step, then answer about the relation between dog and hydrant with left, right, front or behind.
-ASSISTANT: The hydrant is on the right, and the dog is sitting beside it. So, the dog is right of the hydrant... Wait. I confused the subject and reference. The question asks where the dog is relative to the hydrant. Since the hydrant is on the right, the dog sitting on the other side is on the left. So, to correct the answer again, the dog is left of the hydrant.
-'''
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, front or behind.\nASSISTANT:"
-                        prompt = few_shot_prompt + new_prompt
-                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
-                        answer = generation.split('.')[-2].strip()
+                        answer = answer.split(',')[-1].strip()
                         result = {
                             "Prompt": new_prompt,
                             "Generation": generation,
@@ -1024,97 +1040,37 @@ ASSISTANT: The hydrant is on the right, and the dog is sitting beside it. So, th
                             "Golden": answer_list[index_of_total][0],
                             "Confidence": token_probs_map['answer_confidence']
                         }
-                        if token_probs_map['answer_confidence'] < 0.95:
-                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, front or behind.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
+                        if token_probs_map['answer_confidence'] < 0.975:
+                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT: " + generation + ".. Wait."
                             prompt = few_shot_prompt_revise + new_prompt
-                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
+                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=256, get_token_probs=True)
                             answer = generation.split('.')[-2].strip()
-                            
+                            answer = answer.split(',')[-1].strip()
+
                             result['Final Generation'] = generation
                             result['Final Answer'] = answer
                             result['Final Confidence'] = token_probs_map['answer_confidence']
                     
-                    elif method == 'few_shot_CoT_s2':
-                        few_shot_prompt = '''\
-USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is positioned on the desk surface, adjacent to the large laser printer. The printer occupies the right side of the view, while the stapler is positioned on the opposite side. So, as the final answer to the question, the stapler is left of the printer.
-USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is positioned on the floor, directly beneath the seat of the beige fabric sofa. It is obscured by the sofa's shadow. So, as the final answer to the question, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is positioned on the wooden desk. The device is placed directly on the desk's surface, clearly visible. So, as the final answer to the question, the calculator is on the desk.
-USER: Where is the apple in relation to the plate? Think step by step, then answer about the relation between apple and plate with left, right, on or under.
-ASSISTANT: In this picture, the red apple is positioned on the white ceramic plate. The fruit is placed directly on the plate's surface. So, as the final answer to the question, the apple is on the plate.
-'''
-                        few_shot_prompt_revise = '''\
-USER: Where is the lamp in relation to the monitor? Think step by step, then answer about the relation between lamp and monitor with left, right, on or under.
-ASSISTANT: In this picture, the silver lamp is positioned on the desk surface, in front of the computer monitor. The monitor occupies the left side of the view, and the lamp is positioned on the right side. So, as the final answer to the question, the lamp is in front of the monitor... Wait, let's see if the answer I just made matches the original question well. There's a contradiction in the reasoning I just made. I said the lamp is in front of the monitor and at the same time said the lamp is on the right side of the monitor. Hmm... Let's look at the image again. Aha! It was wrong to say that the lamp is in front of the monitor, and 'front' is not in the given options. So, to correct the answer again, the lamp is right of the monitor.
-USER: Where is the shoes in relation to the bed? Think step by step, then answer about the relation between shoes and bed with left, right, on or under.
-ASSISTANT: In this picture, the black leather shoes are positioned on the floor, directly beneath the bed frame. They are located in the space between the floor and the mattress support. So, as the final answer to the question of where the shoes is in relation to the bed, the shoes are on the floor... Wait, let's see if the answer I just made matches the original question well. The original question was to ask about the spatial relationship between the shoes and the bed, but I just ended up answering the relationship between the shoes and the floor. I need to focus on the bed as the reference point. Since the shoes are beneath the frame, So, to correct the answer again, the shoes are under the bed.
-USER: Where is the mug in relation to the keyboard? Think step by step, then answer about the relation between mug and keyboard with left, right, on or under.
-ASSISTANT: In this picture, the white coffee mug is positioned on the desk surface, adjacent to the mechanical keyboard. The keyboard occupies the right side of the view, while the mug is positioned on the opposite side. So, as the final answer to the question, the mug is next to the keyboard... Wait, let's see if the answer I just made matches the original question well. Although 'next to' is a correct description, the question specifically asked to choose from left, right, on, or under. I need to be more specific about the direction. Since the mug is on the side opposite to the right, it is on the left side. So, to correct the answer again, the mug is left of the keyboard.
-USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, the white cat is positioned on the floor, adjacent to the patterned rug. The rug occupies the central area, and the cat is positioned towards the right side of the frame relative to the rug. So, as the final answer to the question of where the cat is in relation to the rug, the cat is on the floor... Wait, let's see if the answer I just made matches the original question well. The original question was to ask about the spatial relationship between the cat and the rug, but I just ended up answering the relationship between the cat and the floor. I need to re-evaluate the cat's position relative to the rug. The cat is situated to the eastern side of the rug. So, to correct the answer again, the cat is right of the rug.
-'''
+                    elif method == 'adapt_vis_entropy':
+                        change_greedy_to_add_weight()
+
+                        gen, score = self.get_answer(prompt, _, 1.0)
+                        score = score[0]
+                        distribution_map = self.get_distribution(score, dataset=dataset)
+                        uncertainty = self.get_uncertainty(score, distribution_map, 'entropy')
                         
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        max_chain_length = 5
-                        
-                        result_chain = []
-                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
-                        prompt = few_shot_prompt + new_prompt
-                        for chain in range(max_chain_length):
-                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=512 if chain==0 else 1024, max_new_tokens=128, get_token_probs=True)
-                            answer = generation.split('.')[-2].strip()
-                            result_chain.append(
-                                {
-                                    "Chain": chain+1,
-                                    "Prompt": prompt,
-                                    "Generation": generation,
-                                    "Answer": answer,
-                                    "Golden": answer_list[index_of_total][0],
-                                    "token_probs": token_probs_map
-                                }
-                            )
-                            
-                            if token_probs_map['answer_confidence'] < 0.95:
-                                new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
-                                prompt = few_shot_prompt_revise + new_prompt
-                            else:
-                                break
-                        result = result_chain
-                        '''    
-                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
-                        prompt = few_shot_prompt + new_prompt
-                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
-                        
-                        if token_probs_map['answer_confidence'] < 0.97:
-                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:" + " " + generation + ".. Wait, let's see if the answer I just made matches the original question well."
-                            prompt = few_shot_prompt_revise + new_prompt
-                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=128, get_token_probs=True)
-                            answer = generation.split('.')[-2].strip()
-                            
-                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
-                            result = {
-                                "Prompt": prompt,
-                                "Generation": generation,
-                                "Answer": answer,
-                                "Golden": answer_list[index_of_total][0],
-                                "token_probs": token_probs_map
-                            }
+                        if uncertainty < threshold:
+                            gen, score = self.get_answer(prompt, _, weight1)
                         else:
-                            answer = generation.split('.')[-2].strip()
-                            print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
-                            result = {
-                                "Prompt": prompt,
-                                "Generation": generation,
-                                "Answer": answer,
-                                "Golden": answer_list[index_of_total][0],
-                                "token_probs": token_probs_map
-                            }
-                        '''
-                    
+                            gen, score = self.get_answer(prompt, _, weight2)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "Uncertainty": uncertainty
+                        }
+                        
                     else:
                         gen, score = self.get_answer(prompt, _)
                         uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)

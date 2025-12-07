@@ -1,0 +1,74 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "Uncertainty": 0.9776298403739929
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "Uncertainty": 0.9416429400444031
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "Uncertainty": 0.9598295092582703
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "Uncertainty": 0.8262135982513428
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "Uncertainty": 0.5266565084457397
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "Under",
+        "Uncertainty": 0.9617369174957275
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Right",
+        "Golden": "Right",
+        "Uncertainty": 0.7939019799232483
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Under",
+        "Golden": "Under",
+        "Uncertainty": 0.9726404547691345
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Left",
+        "Uncertainty": 0.5570692420005798
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "Under",
+        "Uncertainty": 0.9096084833145142
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "Uncertainty": 0.9559469819068909
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Generation": "Left",
+        "Golden": "On",
+        "Uncertainty": 0.9256608486175537
+    }
+]
