@@ -1,0 +1,2270 @@
+[
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.001235799863934517
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.13255156576633453
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.6700494289398193
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7118244767189026
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.07768942415714264
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.008749585598707199
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.5225405097007751
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5768463611602783
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Left",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4620552062988281
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.33343374729156494
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9387136697769165
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.642363429069519
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.03373929113149643
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.026605993509292603
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.6962877511978149
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5866143703460693
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Left",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.021412067115306854
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.20755082368850708
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8519493937492371
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8410637974739075
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.08596070110797882
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.0015996787697076797
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.6253840923309326
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5333201289176941
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.00967223197221756
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.12966209650039673
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7564670443534851
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.583051323890686
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.0014051254838705063
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.011392258107662201
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7836044430732727
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.88753342628479
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Behind",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.046851515769958496
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.08002445101737976
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8527132272720337
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8032816052436829
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.016371585428714752
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.004835683852434158
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.5751004815101624
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6665796637535095
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.04611828923225403
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.26905423402786255
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8299747705459595
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7327430248260498
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.35102760791778564
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.011106066405773163
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8359395861625671
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8813285231590271
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.01314118504524231
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.033176809549331665
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "No",
+                "Uncertainty": 0.5583093762397766
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8389081358909607
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Behind",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.01597180962562561
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.06262199580669403
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.6231079697608948
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8097104430198669
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Behind",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.5356888771057129
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.00923505425453186
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8795977234840393
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.955531895160675
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.39891713857650757
+            },
+            "Is_OU": {
+                "Generation": "Behind",
+                "Uncertainty": 0.001843530684709549
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.6905480623245239
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6995422840118408
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the cup? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.3686145544052124
+            },
+            "Is_OU": {
+                "Generation": "Behind",
+                "Uncertainty": 0.0028687231242656708
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.924312174320221
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8410279750823975
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.5002526044845581
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.03181850165128708
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.810344934463501
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.919317364692688
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.5019404888153076
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.29212671518325806
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9638227224349976
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.7999341487884521
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4074881076812744
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.18950563669204712
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.8794535398483276
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6742664575576782
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0002428293228149414
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.11452111601829529
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8812897801399231
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8759633898735046
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4734728932380676
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.2715456783771515
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9683807492256165
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6729526519775391
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.37495243549346924
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.010133042931556702
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8017095923423767
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8576843738555908
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.24248145520687103
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.06958220899105072
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.7629196047782898
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8536646962165833
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.00015005655586719513
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.14124254882335663
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8813996911048889
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.836784839630127
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.006269220262765884
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.09997203946113586
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7404327988624573
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.6617845892906189
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.4161916971206665
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.02651621401309967
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.9364436864852905
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9445686340332031
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0723651647567749
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.18205861747264862
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7576966881752014
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8212711215019226
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.33650094270706177
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.010820098221302032
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8481400609016418
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8499640226364136
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.06148923933506012
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.11343345046043396
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7515051364898682
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.6843830943107605
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.004598356783390045
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.11600731313228607
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7088342308998108
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7625576853752136
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4873964786529541
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.18661688268184662
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9743797779083252
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.7603132724761963
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3335884213447571
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.28013718128204346
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9478262066841125
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6069844961166382
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4126909375190735
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.2669426202774048
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9519109725952148
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.8227323889732361
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.453989177942276
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.006506811827421188
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8501142859458923
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9532520174980164
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.31474068760871887
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.277229368686676
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9348390698432922
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5464717745780945
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.017298772931098938
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.056888893246650696
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.6792283058166504
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7834165096282959
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Behind",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4405520558357239
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.12855635583400726
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9275832176208496
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6522659063339233
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0450650230050087
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.17945322394371033
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8889417052268982
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8553135991096497
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.0018043294548988342
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.00019353162497282028
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.609818160533905
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6266370415687561
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Right",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4902395009994507
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.2944607138633728
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9542081356048584
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.7214811444282532
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.13928312063217163
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.07430364191532135
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.5865084528923035
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.518108069896698
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.2675832211971283
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.3585391640663147
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8346729278564453
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8594675064086914
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.21127921342849731
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.26197147369384766
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.5316905379295349
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7892755270004272
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Behind",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.15418024361133575
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.10740761458873749
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.8405588269233704
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5352556705474854
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.033823274075984955
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.029033303260803223
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.6788099408149719
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5522785186767578
+            }
+        },
+        "Flag": "gen_1 == gen_2 == No",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.329636812210083
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.1582062542438507
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9404343962669373
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6587834358215332
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.001176975667476654
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.16888511180877686
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7966533303260803
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7726435661315918
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.11577433347702026
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.0011301375925540924
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8720992207527161
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8096655011177063
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.40204042196273804
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.014231555163860321
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8585944175720215
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9040648341178894
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.005583219230175018
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.13576646149158478
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.67930668592453
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.5732245445251465
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the fork? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.37828728556632996
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.3226056396961212
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9619344472885132
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5800418257713318
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the bowl? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.02704951912164688
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.31876516342163086
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8045843243598938
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7465123534202576
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.07303687930107117
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.23263078927993774
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8876379132270813
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8346205353736877
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the can? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.3329751491546631
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.011020772159099579
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.78321772813797
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8008074164390564
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.1784178912639618
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.21475186944007874
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7424916625022888
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8202579021453857
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.263929545879364
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.24703581631183624
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9182119369506836
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.7394399642944336
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the headphones? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.000180758535861969
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.06413307785987854
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8747766613960266
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7673473954200745
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.24726536870002747
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.03778260201215744
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.6593779921531677
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8666104674339294
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3646795153617859
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.2723991572856903
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9744506478309631
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5068467855453491
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.43842509388923645
+            },
+            "Is_OU": {
+                "Generation": "Behind",
+                "Uncertainty": 1.5401281416416168e-05
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8150044083595276
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8275420665740967
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.018708407878875732
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.1600496619939804
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7920801639556885
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7643426060676575
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the can in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3481985330581665
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.2803807258605957
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.8212170600891113
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5283942222595215
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the plate? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.006798412650823593
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.06683340668678284
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.718370258808136
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7882812023162842
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.28091102838516235
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.22771769762039185
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9623295068740845
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6715185642242432
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the spoon? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.011848300695419312
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.051383644342422485
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7082540392875671
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7761037945747375
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the book? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.16595689952373505
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.14483211934566498
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9480956196784973
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.8115700483322144
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the sunglasses? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.01558338850736618
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.029112063348293304
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8266980648040771
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.790729284286499
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the book in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.014966286718845367
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.08366250991821289
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8205716609954834
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.6629723906517029
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.28600674867630005
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.21152198314666748
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9437003135681152
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6255354285240173
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the cap? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 2.823653630912304e-07
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.09070169925689697
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.6676967144012451
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8084096908569336
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Behind",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the bowl in relation to the candle? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.05887420475482941
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.19916914403438568
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7264404296875
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7043523788452148
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the remote in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.3300183117389679
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.03765729069709778
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8679089546203613
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.890567421913147
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the plate in relation to the flower? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.13102732598781586
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.12342382967472076
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.7648520469665527
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9210616946220398
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cap in relation to the remote? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.21754346787929535
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.23502057790756226
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8993274569511414
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.9061498641967773
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the phone? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.04440657049417496
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.3181459307670593
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.8747527599334717
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.8416588306427002
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.30267369747161865
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.2819541394710541
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.943397045135498
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5374228954315186
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Left",
+        "Golden": "Left"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the knife? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0017830785363912582
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.0461895614862442
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.5219362378120422
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.6913209557533264
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Behind",
+        "Golden": "Behind"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the mug in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.13527609407901764
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.035627543926239014
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.7096373438835144
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.7243533134460449
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Right",
+        "Golden": "Right"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where is the cup in relation to the scissors? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.014600440859794617
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.1630353480577469
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Front",
+                "Generation": "Yes",
+                "Uncertainty": 0.7879925966262817
+            },
+            "Is_Option_2": {
+                "Option_2": "Behind",
+                "Generation": "Yes",
+                "Uncertainty": 0.7766683101654053
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Front",
+        "Golden": "Front"
+    },
+    {
+        "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the tape? Answer with left, right, front or behind.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.04190076142549515
+            },
+            "Is_OU": {
+                "Generation": "Front",
+                "Uncertainty": 0.020032748579978943
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.5474942326545715
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6363581418991089
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Left",
+        "Golden": "Behind"
+    }
+]

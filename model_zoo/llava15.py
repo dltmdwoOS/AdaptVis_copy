@@ -249,7 +249,13 @@ class LlavaWrapper:
         # 1. Dataset에 따른 Option 설정 (기존 로직 동일)
         if dataset == "yesno":
             options = ["Yes", "No"]
-        if dataset == "Controlled_Images_A":
+        elif dataset == "LR":
+            options = ["Left", "Right"]
+        elif dataset == "OU":
+            options = ["On", "Under"]
+        elif dataset == "FB":
+            options = ["Front", "Behind"]
+        elif dataset == "Controlled_Images_A":
             options = ["Left", "Right", "On", "Under"]
         elif dataset == "Controlled_Images_B":
             options = ["Left", "Right", "Front", "Behind"]
@@ -730,45 +736,89 @@ class LlavaWrapper:
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         BE_VERB = "Is" if be_verb=="is" else "Are"
-                        # Step1
-                        prompt_a = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
-                        gen_a, score_a = self.get_answer(prompt_a, _)
-                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
+                        options = []
+                        if dataset == "Controlled_Images_A":
+                            options = ['Left', 'Right', 'On', 'Under']
+                        elif dataset == "Controlled_Images_B":
+                            options = ["Left", "Right", "Front", "Behind"]
+                        elif dataset == "COCO_QA_two_obj":
+                            options = ["Left", "Right", "Above", "Below"]
+                        elif dataset == "VG_QA_two_obj":
+                            options = ["Left", "Right", "Front", "Behind", "Above", "Below"]
 
-                        prompt_b = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
+                        # Step1
+                        prompt_a = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with {options[0].lower()} or {options[1].lower()}.\nASSISTANT:"
+                        gen_a, score_a = self.get_answer(prompt_a, _)
+                        dist_a = self.get_distribution(score_a[0], dataset='LR')
+                        uncertainty_a = self.get_uncertainty(score_a[0], dist_a, method='kld')
+
+                        prompt_b = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with {options[2].lower()} or {options[3].lower()}.\nASSISTANT:"
                         gen_b, score_b = self.get_answer(prompt_b, _)
-                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
+                        dist_b = self.get_distribution(score_b[0], dataset='FB')
+                        uncertainty_b = self.get_uncertainty(score_b[0], dist_b, method='kld')
                         
                         # Step2
                         if uncertainty_a > uncertainty_b:
-                            options = ['Left', 'Right']
-                            prompt_1 = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            options = options[0:2]
+                            prompt_1 = f"<image>\nUSER: {BE_VERB} the {obj1} on the {options[0].lower()} side of the {obj2}? Answer with yes or no.\nASSISTANT:"
                             gen_1, score_1 = self.get_answer(prompt_1, _)
                             uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
 
-                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
+                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} on the {options[1].lower()} side of {obj2}? Answer with yes or no.\nASSISTANT:"
                             gen_2, score_2 = self.get_answer(prompt_2, _)
                             uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
 
                         else:
-                            options = ['On', 'Under']
-                            prompt_1 = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            options = options[2:4]
+                            prompt_1 = f"<image>\nUSER: {BE_VERB} {obj1} in {options[0].lower()} of the {obj2}? Answer with yes or no.\nASSISTANT:"
                             gen_1, score_1 = self.get_answer(prompt_1, _)
                             uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
 
-                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
+                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} {options[1].lower()} the {obj2}? Answer with yes or no.\nASSISTANT:"
                             gen_2, score_2 = self.get_answer(prompt_2, _)
                             uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
 
+                        flag = None
                         if gen_1 != gen_2:
+                            flag = "gen_1 != gen_2"
                             gen = options[0] if gen_1 == "Yes" else options[1]
+                            
                         elif gen_1 == gen_2 == "Yes":
-                            gen = options[0] if uncertainty_1 > uncertainty_2 else options[1]
+                            flag = "gen_1 == gen_2 == Yes"
+                            if abs(uncertainty_1 - uncertainty_2) < 0.1:
+                                gen = gen_a if uncertainty_a > uncertainty_b else gen_b
+                            else:
+                                gen = options[0] if uncertainty_1 > uncertainty_2 else options[1]
+                            
                         else:
+                            flag = "gen_1 == gen_2 == No"
                             gen, score = self.get_answer(prompt, _)
 
                         result = {
                             "Prompt": prompt,
+                            "Step1": {
+                                "Is_LR": {
+                                    "Generation": gen_a,
+                                    "Uncertainty": uncertainty_a
+                                },
+                                "Is_OU": {
+                                    "Generation": gen_b,
+                                    "Uncertainty": uncertainty_b
+                                }
+                            },
+                            "Step2": {
+                                "Is_Option_1": {
+                                    "Option_1": options[0],
+                                    "Generation": gen_1,
+                                    "Uncertainty": uncertainty_1
+                                },
+                                "Is_Option_2": {
+                                    "Option_2": options[1],
+                                    "Generation": gen_2,
+                                    "Uncertainty": uncertainty_2
+                                }
+                            },
+                            "Flag": flag,
                             "Generation": gen,
                             "Golden": answer_list[index_of_total][0]
                         }
@@ -1051,6 +1101,26 @@ So, as the final answer to the question of where the stapler is in relation to t
                             result['Final Answer'] = answer
                             result['Final Confidence'] = token_probs_map['answer_confidence']
                     
+                    elif method == 'adapt_vis':
+                        change_greedy_to_add_weight()
+
+                        gen, score = self.get_answer(prompt, _, 1.0)
+                        score = score[0]
+                        distribution_map = self.get_distribution(score, dataset=dataset)
+                        uncertainty = self.get_uncertainty(score, distribution_map, 'confidence')
+                        
+                        if uncertainty < threshold:
+                            gen, score = self.get_answer(prompt, _, weight1)
+                        else:
+                            gen, score = self.get_answer(prompt, _, weight2)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "Uncertainty": uncertainty
+                        }
+                     
                     elif method == 'adapt_vis_entropy':
                         change_greedy_to_add_weight()
 

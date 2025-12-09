@@ -1,411 +1,2297 @@
 [
     {
         "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0005397144705057144
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.011586189270019531
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9555962681770325
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.5824282765388489
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the glass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.004218455404043198
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.04790686070919037
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9649475812911987
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8518223166465759
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.0012341272085905075
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.03736419230699539
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9637451171875
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8269805908203125
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the hat in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.3478432297706604
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.29362016916275024
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8121160864830017
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8988277912139893
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.48272621631622314
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.012944847345352173
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9777472615242004
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6824016571044922
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the cap in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.007376067340373993
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.09793433547019958
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.8768289089202881
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8851192593574524
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "Right",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.29796087741851807
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.32663494348526
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "No",
+                "Uncertainty": 0.5226669311523438
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.6840305924415588
+            }
+        },
+        "Flag": "gen_1 != gen_2",
+        "Generation": "Under",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.006919935345649719
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.06686261296272278
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9355558156967163
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9113509058952332
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.31591200828552246
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.08955980837345123
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9014866948127747
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6092700362205505
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.008382100611925125
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.12963896989822388
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9107368588447571
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8995584845542908
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the book in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.003941532224416733
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.10589271783828735
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9764615297317505
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8185413479804993
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.005023010075092316
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.02362072467803955
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.8929012417793274
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.7937837243080139
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the banana in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.2865820527076721
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.22127872705459595
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8492102026939392
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9273099303245544
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.000965803861618042
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.08336231112480164
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9522942900657654
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9172390699386597
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the can in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.04517516493797302
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.08641687035560608
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9515392184257507
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.890781819820404
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the scarf in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.013555295765399933
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.1953287571668625
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9089081883430481
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9094642400741577
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plate in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.02106228470802307
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.19475941359996796
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9026517271995544
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9078942537307739
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the water bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.0377621203660965
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.17624570429325104
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9474471211433411
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9234136343002319
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.4046662449836731
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.30038055777549744
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8213266134262085
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9205461740493774
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the tape in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0019390899688005447
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.16843955218791962
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "No",
+                "Uncertainty": 0.7468633651733398
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "No",
+                "Uncertainty": 0.6155051589012146
+            }
+        },
+        "Flag": "gen_1 == gen_2 == No",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.003649674355983734
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.09771847724914551
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9541643857955933
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8027939200401306
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.24087940156459808
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.10279297828674316
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.7694786190986633
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6462257504463196
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the painting in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.003355111926794052
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.15961499512195587
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7555485963821411
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.5668005347251892
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plant in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.00818246603012085
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.12149646878242493
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9653217196464539
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.5355265140533447
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.047978147864341736
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.13515245914459229
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9506874084472656
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9431881904602051
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.3007938265800476
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.28402823209762573
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.7293629050254822
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8845272660255432
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.4132419228553772
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.16595107316970825
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.9265211820602417
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9519307613372803
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the pan in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.0020132046192884445
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.253388911485672
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7958919405937195
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.884900689125061
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the orange in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.28811711072921753
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.0371122881770134
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9342548251152039
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6052908301353455
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.078224778175354
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.38038623332977295
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.934154748916626
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9189447164535522
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the notepad in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.23470133543014526
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.12948690354824066
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.895610511302948
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6612671613693237
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.20265556871891022
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.20096039772033691
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.8355527520179749
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5535069108009338
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the cup in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3169551491737366
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.030775561928749084
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9551838636398315
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5686159729957581
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.00060308538377285
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.1411551833152771
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7077497243881226
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.7391500473022461
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4217424988746643
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.09342287480831146
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9558995366096497
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6150709986686707
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bread in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.029140405356884003
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.3279338479042053
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9151715636253357
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8894972801208496
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.0038988888263702393
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.3211545944213867
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9397027492523193
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9407901167869568
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the toilet roll in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.00011190492659807205
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.05048456788063049
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9428125619888306
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8223946690559387
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the kettle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 4.403118509799242e-07
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.05419941246509552
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.8551360964775085
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.7648364305496216
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the wineglass in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.03282611817121506
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.21449051797389984
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9217061400413513
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.901472270488739
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the banjo in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.01061432808637619
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.15968817472457886
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.6218426823616028
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.5030465722084045
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where are the glasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3235345482826233
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.07571239769458771
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9455063343048096
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.7801751494407654
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plate in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.027458734810352325
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.016708500683307648
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.5992538332939148
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5922368764877319
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the pan in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.37576693296432495
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.05174736678600311
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9325566291809082
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5148298740386963
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the ball of yarn in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.010781623423099518
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.1376342624425888
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7892396450042725
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8271083235740662
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.011310473084449768
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.04565870761871338
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.8971026539802551
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.6341824531555176
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.000643240287899971
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.2363535612821579
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.8126461505889893
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8656039834022522
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the box in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.49596506357192993
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.22435465455055237
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.9253877997398376
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9392412900924683
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.25146976113319397
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.08168192207813263
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.6802063584327698
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6987619400024414
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle of orange juice in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.44429832696914673
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.25687167048454285
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.9085341691970825
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9795145988464355
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.06554023921489716
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.10195879638195038
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9576641321182251
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8400617241859436
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "Right",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.1898117959499359
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.20652715861797333
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7487866282463074
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8944761157035828
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.40781837701797485
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.17894843220710754
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9443538188934326
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.610781729221344
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the wineglass in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.009154751896858215
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.09275764226913452
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9691234827041626
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8138942122459412
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the oven mitt in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.34530535340309143
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.226901575922966
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.6876606941223145
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8318170309066772
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where are the scissors in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.2577574849128723
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.013188660144805908
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.846112072467804
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5551859736442566
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.32336512207984924
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.30680352449417114
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8628957271575928
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.881915271282196
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.2878594696521759
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.09617985785007477
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.800041139125824
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8829800486564636
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the cup in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.30850306153297424
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.13564279675483704
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.7693036794662476
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8932539820671082
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.00022269785404205322
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.06447315216064453
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.944269061088562
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9138851165771484
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3044643998146057
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.15647566318511963
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.904322624206543
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6050408482551575
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4004283845424652
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.019237205386161804
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9709094166755676
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6788456439971924
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bottle of mustard in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4280332326889038
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.03719377517700195
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9818894863128662
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5827273726463318
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the laptop in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.33455467224121094
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.31280285120010376
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8501353859901428
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.8095448613166809
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the dog in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.029797017574310303
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.0031087175011634827
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.7179099321365356
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.6392658948898315
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the scarf in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.019660480320453644
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.10763755440711975
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9655821323394775
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8577382564544678
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the plant in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.012926742434501648
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.169978529214859
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9590269923210144
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.7598552107810974
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.319610059261322
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.03710048645734787
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9543107151985168
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.7328401207923889
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the remote in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.3430669605731964
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.09210722148418427
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9149302244186401
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.5178138613700867
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bowl in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 3.532879054546356e-05
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.20923495292663574
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9478229880332947
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8842746615409851
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the laptop in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.03449215739965439
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.17672675848007202
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7004375457763672
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.808154821395874
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Under"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bowl in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.30836066603660583
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.356464147567749
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9036633372306824
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9203959107398987
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Under",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where is the soda can in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0026625804603099823
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.026393413543701172
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9431557059288025
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8833332061767578
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the orange in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.2558690309524536
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.014425761997699738
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.8677257895469666
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.5616795420646667
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the photograph in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.0023760125041007996
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.2292962223291397
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.925689160823822
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.8682237863540649
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the beer bottle in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4025987982749939
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.012193329632282257
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.9571263194084167
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.6658368706703186
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the cap in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.430375874042511
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.2971349358558655
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.6168459057807922
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9260806441307068
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     },
     {
         "Prompt": "<image>\nUSER: Where are the sunglasses in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.005975298583507538
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.18938441574573517
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9568891525268555
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.9338573217391968
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the bowl in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.009813636541366577
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.17130059003829956
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.9507254362106323
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.7583497166633606
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
         "Generation": "On",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the book in relation to the chair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Left",
+                "Uncertainty": 0.4657478928565979
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.03888799995183945
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "Yes",
+                "Uncertainty": 0.946517825126648
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "No",
+                "Uncertainty": 0.7249034643173218
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Left",
         "Golden": "Left"
     },
     {
         "Prompt": "<image>\nUSER: Where is the dragonfruit in relation to the table? Answer with left, right, on or under.\nASSISTANT:",
-        "Generation": "On",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 1.260172575712204e-05
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.06576555967330933
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "On",
+                "Generation": "Yes",
+                "Uncertainty": 0.7672523260116577
+            },
+            "Is_Option_2": {
+                "Option_2": "Under",
+                "Generation": "Yes",
+                "Uncertainty": 0.6797903180122375
+            }
+        },
+        "Flag": "gen_1 == gen_2 == Yes",
+        "Generation": "Under",
         "Golden": "On"
     },
     {
         "Prompt": "<image>\nUSER: Where is the mug in relation to the armchair? Answer with left, right, on or under.\nASSISTANT:",
+        "Step1": {
+            "Is_LR": {
+                "Generation": "Right",
+                "Uncertainty": 0.3602389693260193
+            },
+            "Is_OU": {
+                "Generation": "Under",
+                "Uncertainty": 0.2872997522354126
+            }
+        },
+        "Step2": {
+            "Is_Option_1": {
+                "Option_1": "Left",
+                "Generation": "No",
+                "Uncertainty": 0.8731012940406799
+            },
+            "Is_Option_2": {
+                "Option_2": "Right",
+                "Generation": "Yes",
+                "Uncertainty": 0.9568531513214111
+            }
+        },
+        "Flag": "gen_1 != gen_2",
         "Generation": "Right",
         "Golden": "Right"
     }

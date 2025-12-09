@@ -2,13 +2,10 @@
 export TEST_MODE=True
 
 python3 main_aro.py \
-    --dataset Controlled_Images_A \
+    --dataset Controlled_Images_B \
     --model-name='llava1.5' \
     --download \
-    --method adapt_vis_entropy \
-    --weight1 1.5 \
-    --weight2 0.5 \
-    --threshold 0.9 \
+    --method reasoning_6 \
     --option=four
 
 # python3 main_aro.py \
