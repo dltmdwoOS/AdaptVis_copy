@@ -247,15 +247,7 @@ class LlavaWrapper:
     
     def get_distribution(self, score, dataset="Controlled_Images_A"):
         # 1. Dataset에 따른 Option 설정 (기존 로직 동일)
-        if dataset == "yesno":
-            options = ["Yes", "No"]
-        elif dataset == "LR":
-            options = ["Left", "Right"]
-        elif dataset == "OU":
-            options = ["On", "Under"]
-        elif dataset == "FB":
-            options = ["Front", "Behind"]
-        elif dataset == "Controlled_Images_A":
+        if dataset == "Controlled_Images_A":
             options = ["Left", "Right", "On", "Under"]
         elif dataset == "Controlled_Images_B":
             options = ["Left", "Right", "Front", "Behind"]
@@ -285,44 +277,41 @@ class LlavaWrapper:
         }
         
     def get_uncertainty(self, score, distribution, method='entropy'):
-        N = len(distribution)
-        p = torch.Tensor([
-            distribution[key] for key in distribution
-        ]).to(score.device)
-        
-        # 3. Uncertainty 측정 방식 선택
-        if method == 'confidence':
+        # 3. Uncertainty 측정 방식
+        if method == 'confidence': # 확률분포가 필요하지 않은 방법
             res = float(max(torch.nn.functional.softmax(score, dim=-1)[0]))
         
-        elif method == 'kld':
-            uniform_dist = torch.ones_like(p) / N
-            res = float(self._kl(p, uniform_dist).item())
-        
-        elif method == 'jsd':
-            uniform_dist = torch.ones_like(p) / N
-            res = float(self._jsd(p, uniform_dist).item())
-        
-        elif method == 'entropy':
-            # (1) Entropy 계산: -sum(p * log(p))
-            entropy = -torch.sum(p * torch.log(p))
+        else: # 확률분포가 필요한 방법
+            N = len(distribution)
+            p = torch.Tensor([
+                distribution[key] for key in distribution
+            ]).to(score.device)
+
+            if method == 'kld':
+                uniform_dist = torch.ones_like(p) / N
+                res = float(self._kl(p, uniform_dist).item())
             
-            # (2) Normalization: Divide by log(N)
-            # 결과는 0 (확신) ~ 1 (완전 모름) 사이
-            max_entropy = torch.log(torch.tensor(float(N)))
-            normalized_entropy = entropy / max_entropy
+            elif method == 'jsd':
+                uniform_dist = torch.ones_like(p) / N
+                res = float(self._jsd(p, uniform_dist).item())
             
-            res = float(normalized_entropy.item())
+            elif method == 'entropy':
+                # (1) Entropy 계산: -sum(p * log(p))
+                entropy = -torch.sum(p * torch.log(p))
+                
+                # (2) Normalization: Divide by log(N)
+                # 결과는 0 (확신) ~ 1 (완전 모름) 사이
+                max_entropy = torch.log(torch.tensor(float(N)))
+                normalized_entropy = entropy / max_entropy
+                res = float(normalized_entropy.item())
         
-        else:
-            res = float(max(torch.nn.functional.softmax(score, dim=-1)[0]))
+            else:
+                res = float(max(torch.nn.functional.softmax(score, dim=-1)[0]))
             
         return res
     
-    def get_confidence_sentence(self, prob):
-        return float(np.exp(np.mean(np.log(prob))))
-    
     @torch.no_grad()
-    def get_answer(self, prompt, image, weight=None, max_length=77, max_new_tokens=100, get_token_probs=False):
+    def get_answer(self, prompt, image, weight=None, max_length=77, max_new_tokens=100):
         single_input = self.processor(
             text=prompt, images=image, padding="max_length", return_tensors="pt", max_length=max_length
         ).to(self.device)
@@ -340,39 +329,7 @@ class LlavaWrapper:
         gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True)
         scores = output['scores']
         
-        if not get_token_probs:
-            return gen, scores
-        
-        else:
-            transition_scores = self.model.compute_transition_scores(
-                output.sequences, 
-                output.scores, 
-                normalize_logits=True
-            )
-            input_length = single_input['input_ids'].shape[1]
-            generated_tokens = output.sequences[:, input_length:]
-
-            # 토큰과 확률 짝짓기
-            token_probs = []
-            answer_start_idx = -1
-            answer_probs = []
-            for idx, (tok, score) in enumerate(zip(generated_tokens[0], transition_scores[0])):
-                token_id = tok.item()
-                token = self.processor.decode(token_id)
-                probability = torch.exp(score).item()  # log prob -> prob
-                token_probs.append((token_id, token, probability))
-                
-                if token == "So":
-                    answer_start_idx = idx
-                if answer_start_idx != -1:
-                    answer_probs.append(probability)
-            
-            dictionary = {
-                'answer_start_idx': answer_start_idx,
-                'answer_probs': answer_probs,
-                'answer_confidence': self.get_confidence_sentence(answer_probs)
-            }
-            return gen, scores, dictionary
+        return gen, scores
     
     @torch.no_grad()
     def get_text_embeddings(self, texts, text_batch_size=64, normalize=False):
@@ -478,23 +435,47 @@ class LlavaWrapper:
                 for _ in i_option:
                     result = None
                     prompt = prompt_list[index_of_total]
-                    
-                    if method=='reasoning_1':
-                        '''def consistency_check(gen1, gen2):
-                            valid_opposite = {
-                                'left': 'right',
-                                'right': 'left',
-                                'top': 'bottom',
-                                'bottom': 'top',
-                            }
-                            gen1 = gen1.lower()
-                            gen2 = gen2.lower()
-                            
-                            if gen1 in valid_opposite and gen2 == valid_opposite[gen1]:
-                                return True
-                            else:
-                                return False'''
+                    uncertainty = None
 
+                    if method == 'reasoning_absolute_4directions':
+                        def consistency_check(gen1, gen2):
+                            return gen1.lower() != gen2.lower()
+                        
+                        # Step 1: 객체 추출 및 두 객체의 이미지상 절대적 위치 파악
+                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                        match = re.search(pattern, prompt)
+                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        
+                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with 4 options: left, right, on or under.\nASSISTANT:"
+                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with 4 options: left, right, on or under.\nASSISTANT:"
+                        gen_step1_obj1, scores_obj1 = self.get_answer(prompt_step1_obj1, _)
+                        gen_step1_obj2, scores_obj2 = self.get_answer(prompt_step1_obj2, _)
+                        
+                        # Step 2: Consistency 체크
+                        consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
+                        
+                        # Step 3: 최종 답변
+                        if consistent:
+                            gen = gen_step1_obj1
+                            score = scores_obj1[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                            
+                        else: # Fallback
+                            gen, score = self.get_answer(prompt, _)
+                            score = score[0]
+                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+
+                        result = {
+                            "Prompt": prompt,
+                            "Step1_1_to_2": gen_step1_obj1,
+                            "Step1_2_to_1": gen_step1_obj2,
+                            "Is_consistent": consistent,
+                            "Generation": gen,
+                            "Golden": answer_list[index_of_total][0],
+                            "uncertainty": uncertainty
+                        }
+                    
+                    elif method == 'reasoning_absolute_9directions':
                         def consistency_check(gen1, gen2):
                             return gen1.lower() != gen2.lower()
                         
@@ -505,8 +486,8 @@ class LlavaWrapper:
                         
                         prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
                         prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
-                        gen_step1_obj1, l = self.get_answer(prompt_step1_obj1, _)
-                        gen_step1_obj2, l = self.get_answer(prompt_step1_obj2, _)
+                        gen_step1_obj1, scores_obj1 = self.get_answer(prompt_step1_obj1, _)
+                        gen_step1_obj2, scores_obj2 = self.get_answer(prompt_step1_obj2, _)
                         
                         # Step 2: Consistency 체크
                         consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
@@ -532,8 +513,8 @@ class LlavaWrapper:
                             "Golden": answer_list[index_of_total][0],
                             "uncertainty": uncertainty
                         }
-                        
-                    elif method=='reasoning_2':
+                    
+                    elif method == 'reasoning_relative_location':
                         def consistency_check(gen1, gen2):
                             valid_opposite = {
                                 'left': 'right',
@@ -582,7 +563,7 @@ class LlavaWrapper:
                             "uncertainty": uncertainty
                         }
                        
-                    elif method=='reasoning_3':
+                    elif method == 'reasoning_relative_relationship':
                         # Step 1: 객체 추출 및 두 객체의 위치 관계 파악
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
@@ -614,378 +595,8 @@ class LlavaWrapper:
                             "Golden": answer_list[index_of_total][0],
                             "uncertainty": uncertainty
                         }
-                    
-                    elif method=='reasoning_3_adapt_vis':
-                        change_greedy_to_add_weight()
-                        # Step 1: 객체 추출 및 두 객체의 위치 관계 파악
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        
-                        prompt_step1 = f"<image>\nUSER: Which of the following positional relationships do the {obj1} and the {obj2} have? 1. A left-right relationship in which one object is next to another or 2. an on-under relationship in which one object is placed on or under another object.\nASSISTANT:"
-                        gen_step1, score_step1 = self.get_answer(prompt_step1, _, 0.5)
-                        
-                        # Step 2: 최종 답변
-                        if 'left' in gen_step1 or 'right' in gen_step1 or '1' in gen_step1:
-                            prompt_step2 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
-                            gen, score = self.get_answer(prompt_step2, _, 1.0)
-                            score = score[0]
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
-                        elif 'on' in gen_step1 or 'under' in gen_step1 or '2' in gen_step1:
-                            prompt_step2 = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
-                            gen, score = self.get_answer(prompt_step2, _, 1.0)
-                            score = score[0]
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
-                        else:
-                            gen, score = self.get_answer(prompt, _, 1.0)
-                            score = score[0]
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
-                        
-                        result = {
-                            "Prompt": prompt,
-                            "Step1": gen_step1,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0],
-                            "uncertainty": uncertainty
-                        }
 
-                    elif method=='reasoning_4':
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        
-                        prompt_a = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with left or right.\nASSISTANT:"
-                        gen_a, score_a = self.get_answer(prompt_a, _)
-                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
-
-                        prompt_b = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with on or under.\nASSISTANT:"
-                        gen_b, score_b = self.get_answer(prompt_b, _)
-                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
-                        
-                        gen = gen_a if uncertainty_a > uncertainty_b else gen_b
-                        result = {
-                            "Prompt": prompt,
-                            "LR": {
-                                "Generation": gen_a,
-                                "Uncertainty": uncertainty_a,
-                            },
-                            "OU": {
-                                "Generation": gen_b,
-                                "Uncertainty": uncertainty_b,
-                            },
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0]
-                        }
-
-                    elif method=='reasoning_5':
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        BE_VERB = "Is" if be_verb=="is" else "Are"
-
-                        prompt_a = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_a, score_a = self.get_answer(prompt_a, _)
-                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
-
-                        prompt_b = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_b, score_b = self.get_answer(prompt_b, _)
-                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
-
-                        prompt_c = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_c, score_c = self.get_answer(prompt_c, _)
-                        uncertainty_c = float(max(torch.nn.functional.softmax(score_c[0], dim=-1)[0]))
-
-                        prompt_d = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_d, score_d = self.get_answer(prompt_d, _)
-                        uncertainty_d = float(max(torch.nn.functional.softmax(score_d[0], dim=-1)[0]))
-                        
-                        gen_map = {
-                            "Left": {
-                                "Generation": gen_a,
-                                "Uncertainty": uncertainty_a,
-                            },
-                            "Right": {
-                                "Generation": gen_b,
-                                "Uncertainty": uncertainty_b,
-                            },
-                            "On": {
-                                "Generation": gen_c,
-                                "Uncertainty": uncertainty_c,
-                            },
-                            "Under": {
-                                "Generation": gen_d,
-                                "Uncertainty": uncertainty_d,
-                            },
-                        }
-                        candidates = {k: v["Uncertainty"] for k, v in gen_map.items() if v["Generation"].lower() == "yes"}
-                        if candidates:
-                            target_key = max(candidates, key=candidates.get)
-                            gen = target_key
-                        else:
-                            gen, score = self.get_answer(prompt, _)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Generations": gen_map,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0]
-                        }
-
-                    elif method=='reasoning_6':
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        BE_VERB = "Is" if be_verb=="is" else "Are"
-                        options = []
-                        if dataset == "Controlled_Images_A":
-                            options = ['Left', 'Right', 'On', 'Under']
-                        elif dataset == "Controlled_Images_B":
-                            options = ["Left", "Right", "Front", "Behind"]
-                        elif dataset == "COCO_QA_two_obj":
-                            options = ["Left", "Right", "Above", "Below"]
-                        elif dataset == "VG_QA_two_obj":
-                            options = ["Left", "Right", "Front", "Behind", "Above", "Below"]
-
-                        # Step1
-                        prompt_a = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with {options[0].lower()} or {options[1].lower()}.\nASSISTANT:"
-                        gen_a, score_a = self.get_answer(prompt_a, _)
-                        dist_a = self.get_distribution(score_a[0], dataset='LR')
-                        uncertainty_a = self.get_uncertainty(score_a[0], dist_a, method='kld')
-
-                        prompt_b = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Answer with {options[2].lower()} or {options[3].lower()}.\nASSISTANT:"
-                        gen_b, score_b = self.get_answer(prompt_b, _)
-                        dist_b = self.get_distribution(score_b[0], dataset='FB')
-                        uncertainty_b = self.get_uncertainty(score_b[0], dist_b, method='kld')
-                        
-                        # Step2
-                        if uncertainty_a > uncertainty_b:
-                            options = options[0:2]
-                            prompt_1 = f"<image>\nUSER: {BE_VERB} the {obj1} on the {options[0].lower()} side of the {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_1, score_1 = self.get_answer(prompt_1, _)
-                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
-
-                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} on the {options[1].lower()} side of {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_2, score_2 = self.get_answer(prompt_2, _)
-                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
-
-                        else:
-                            options = options[2:4]
-                            prompt_1 = f"<image>\nUSER: {BE_VERB} {obj1} in {options[0].lower()} of the {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_1, score_1 = self.get_answer(prompt_1, _)
-                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
-
-                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} {options[1].lower()} the {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_2, score_2 = self.get_answer(prompt_2, _)
-                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
-
-                        flag = None
-                        if gen_1 != gen_2:
-                            flag = "gen_1 != gen_2"
-                            gen = options[0] if gen_1 == "Yes" else options[1]
-                            
-                        elif gen_1 == gen_2 == "Yes":
-                            flag = "gen_1 == gen_2 == Yes"
-                            if abs(uncertainty_1 - uncertainty_2) < 0.1:
-                                gen = gen_a if uncertainty_a > uncertainty_b else gen_b
-                            else:
-                                gen = options[0] if uncertainty_1 > uncertainty_2 else options[1]
-                            
-                        else:
-                            flag = "gen_1 == gen_2 == No"
-                            gen, score = self.get_answer(prompt, _)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Step1": {
-                                "Is_LR": {
-                                    "Generation": gen_a,
-                                    "Uncertainty": uncertainty_a
-                                },
-                                "Is_OU": {
-                                    "Generation": gen_b,
-                                    "Uncertainty": uncertainty_b
-                                }
-                            },
-                            "Step2": {
-                                "Is_Option_1": {
-                                    "Option_1": options[0],
-                                    "Generation": gen_1,
-                                    "Uncertainty": uncertainty_1
-                                },
-                                "Is_Option_2": {
-                                    "Option_2": options[1],
-                                    "Generation": gen_2,
-                                    "Uncertainty": uncertainty_2
-                                }
-                            },
-                            "Flag": flag,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0]
-                        }
-
-                    elif method=='reasoning_7':
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        BE_VERB = "Is" if be_verb=="is" else "Are"
-
-                        # Step1
-                        prompt_a = f"<image>\nUSER: Are the {obj1} and {obj2} have left-right relationship in which one object is next to another? Answer with yes or no.\nASSISTANT:"
-                        gen_a, score_a = self.get_answer(prompt_a, _)
-                        uncertainty_a = float(max(torch.nn.functional.softmax(score_a[0], dim=-1)[0]))
-
-                        prompt_b = f"<image>\nUSER: Are the {obj1} and {obj2} have on-under relationship in which one object is placed on or under another object? Answer with yes or no.\nASSISTANT:"
-                        gen_b, score_b = self.get_answer(prompt_b, _)
-                        uncertainty_b = float(max(torch.nn.functional.softmax(score_b[0], dim=-1)[0]))
-                        
-                        if gen_a != gen_b:
-                            step1 = 'left-right' if gen_a == 'Yes' else 'on-under'
-                        elif gen_a == gen_b == "Yes":
-                            step1 = 'left-right' if uncertainty_a > uncertainty_b else 'on-under'
-                        else:
-                            step1 = None
-                            gen_1, gen_2 = None, None
-                            
-                        # Step2
-                        if step1 == 'left-right':
-                            options = ['Left', 'Right']
-                            prompt_1 = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_1, score_1 = self.get_answer(prompt_1, _)
-                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
-
-                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_2, score_2 = self.get_answer(prompt_2, _)
-                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
-
-                        elif step1 == 'on-under':
-                            options = ['On', 'Under']
-                            prompt_1 = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_1, score_1 = self.get_answer(prompt_1, _)
-                            uncertainty_1 = float(max(torch.nn.functional.softmax(score_1[0], dim=-1)[0]))
-
-                            prompt_2 = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
-                            gen_2, score_2 = self.get_answer(prompt_2, _)
-                            uncertainty_2 = float(max(torch.nn.functional.softmax(score_2[0], dim=-1)[0]))
-
-                        if gen_1 != gen_2:
-                            gen = options[0] if gen_1 == "Yes" else options[1]
-                        elif gen_1 == gen_2 == "Yes":
-                            gen = options[0] if uncertainty_1 > uncertainty_2 else options[1]
-                        else:
-                            gen, score = self.get_answer(prompt, _)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0]
-                        }
-
-                    elif method=='reasoning_5_entropy':
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        BE_VERB = "Is" if be_verb=="is" else "Are"
-
-                        prompt_a = f"<image>\nUSER: {BE_VERB} the {obj1} on the left side of the {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_a, score_a = self.get_answer(prompt_a, _)
-                        dist_a = self.get_distribution(score_a[0], dataset='yesno')
-                        uncertainty_a = self.get_uncertainty(score_a[0], dist_a)
-
-                        prompt_b = f"<image>\nUSER: {BE_VERB} {obj1} on the right side of {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_b, score_b = self.get_answer(prompt_b, _)
-                        dist_b = self.get_distribution(score_b[0], dataset='yesno')
-                        uncertainty_b = self.get_uncertainty(score_b[0], dist_b)
-
-                        prompt_c = f"<image>\nUSER: {BE_VERB} {obj1} on the {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_c, score_c = self.get_answer(prompt_c, _)
-                        dist_c = self.get_distribution(score_c[0], dataset='yesno')
-                        uncertainty_c = self.get_uncertainty(score_c[0], dist_c)
-
-                        prompt_d = f"<image>\nUSER: {BE_VERB} {obj1} under the {obj2}? Answer with yes or no.\nASSISTANT:"
-                        gen_d, score_d = self.get_answer(prompt_d, _)
-                        dist_d = self.get_distribution(score_d[0], dataset='yesno')
-                        uncertainty_d = self.get_uncertainty(score_d[0], dist_d)
-                        
-                        gen_map = {
-                            "Left": {
-                                "Generation": gen_a,
-                                "Uncertainty": uncertainty_a,
-                            },
-                            "Right": {
-                                "Generation": gen_b,
-                                "Uncertainty": uncertainty_b,
-                            },
-                            "On": {
-                                "Generation": gen_c,
-                                "Uncertainty": uncertainty_c,
-                            },
-                            "Under": {
-                                "Generation": gen_d,
-                                "Uncertainty": uncertainty_d,
-                            },
-                        }
-                        candidates = {k: v["Uncertainty"] for k, v in gen_map.items() if v["Generation"].lower() == "yes"}
-                        if candidates:
-                            target_key = min(candidates, key=candidates.get)
-                            gen = target_key
-                        else:
-                            gen, score = self.get_answer(prompt, _)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Generations": gen_map,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0]
-                        }
-
-                    elif method == 'adapt_vis_var_uncertainties_var_weights':
-                        change_greedy_to_add_weight()
-                        original_generation, original_score = self.get_answer(prompt, _, 1.0)
-                        original_score = original_score[0]
-                        distribution_map = self.get_distribution(original_score, dataset=dataset)
-                        uncertainty = np.round(float(max(torch.nn.functional.softmax(original_score, dim=-1)[0])), 2)
-                        uncertainty_confidence = self.get_uncertainty(original_score, distribution_map, method='confidence')
-                        uncertainty_kl = self.get_uncertainty(original_score, distribution_map, method='kld')
-                        uncertainty_js = self.get_uncertainty(original_score, distribution_map, method='jsd')
-                        uncertainty_entropy = self.get_uncertainty(original_score, distribution_map, method='entropy')
-                        uncertainties = {
-                            "confidence": uncertainty_confidence,
-                            "kld": uncertainty_kl,
-                            "jsd": uncertainty_js,
-                            "entropy": uncertainty_entropy
-                        }
-                        
-                        weights = [0.5, 0.8, 1.2, 1.5, 2.0]
-                        gen_map = {
-                            1.0: {
-                                "Generation": original_generation,
-                                "Distribution": distribution_map
-                            }
-                        }
-                        for w in weights:
-                            w_generation, w_score = self.get_answer(prompt, _, w)
-                            w_score = w_score[0]
-                            distribution_map = self.get_distribution(w_score, dataset=dataset)
-                            gen_map[w] = {
-                                "Generation": w_generation,
-                                "Distribution": distribution_map
-                            }
-                            
-                        # Select final answer based on standard weights & threshold
-                        gen1, gen2 = gen_map[weight1]['Generation'], gen_map[weight2]['Generation']
-                        gen = gen1 if uncertainty < threshold else gen2
-                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
-
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen,
-                            "Generation_map": gen_map,
-                            "Golden": answer_list[index_of_total][0],
-                            "Uncertainty": uncertainty,
-                            "Uncertainties": uncertainties
-                        }
-                    
-                    elif method == 'few_shot_CoT':
+                    elif method == 'chain_of_thought':
                         few_shot_prompt = '''\
 USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
 ASSISTANT: In this picture, the brown violin is lying on the floor in the bottom-center area, while the beige fabric sofa stands prominently across the center-center region.\
@@ -1006,7 +617,7 @@ USER: Where is the stapler in relation to the printer? Think step by step, then 
 ASSISTANT: In this picture, the blue stapler is sitting on the desk in the center-left region, while the large laser printer sits heavily in the center-right region.\
 Since there is a clear span of empty desk surface between the two office supplies, they are separated.\
 Because the stapler is positioned on the western side of the frame relative to the printer, the relative spatial relationship corresponds to the left-right category.\
-So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
+So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.\
 '''
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
@@ -1018,143 +629,42 @@ So, as the final answer to the question of where the stapler is in relation to t
                         answer = generation.split('.')[-2].strip()
                         answer = answer.split(',')[-1].strip()
                         print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
-                        
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": generation,
-                            "Answer": answer,
-                            "Golden": answer_list[index_of_total][0]
-                        }
-                          
-                    elif method == 'few_shot_CoT_s1':
-                        few_shot_prompt = '''\
-USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor in the bottom-center area, while the beige fabric sofa stands prominently across the center-center region.\
-Since the violin is positioned on the floor beneath the raised seat of the sofa without making contact with the cushion, they are separated.\
-Because the violin is located vertically lower than the sofa's seat within its footprint, the relative spatial relationship corresponds to the on-under category.\
-So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is resting on the surface in the center-right section, and the wooden desk occupies the bottom-center to center-center area.\
-Because the device is physically supported by the desk's surface with no gap in between, they are touching.\
-Since the calculator is placed upon the upper surface of the desk, the relative spatial relationship corresponds to the on-under category.\
-So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
-USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, the white cat is sitting upright in the bottom-right corner, while the patterned rug lies flat covering the bottom-center area.\
-Since the cat is sitting on the floor adjacent to the rug's edge rather than on the fabric itself, they are separated.\
-Because the cat is positioned to the eastern side of the frame relative to the rug's location, the relative spatial relationship corresponds to the left-right category.\
-So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
-USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk in the center-left region, while the large laser printer sits heavily in the center-right region.\
-Since there is a clear span of empty desk surface between the two office supplies, they are separated.\
-Because the stapler is positioned on the western side of the frame relative to the printer, the relative spatial relationship corresponds to the left-right category.\
-So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
-'''
-                        few_shot_prompt_revise = '''\
-USER: Where is the violin in relation to the sofa? Think step by step, then answer about the relation between violin and sofa with left, right, on or under.
-ASSISTANT: In this picture, the brown violin is lying on the floor in the bottom-center area, while the beige fabric sofa stands prominently across the center-center region.\
-Since the violin is positioned on the floor near the sofa's legs without making contact with the cushion, they are separated.\
-From the camera's perspective, the violin appears to be in the foreground relative to the sofa backrest, suggesting a front-behind relationship.\
-So, as the final answer to the question of where the violin is in relation to the sofa, the violin is in front of the sofa...Wait. I need to look closer at the vertical alignment. The violin is actually positioned directly beneath the seat cushion, obscured by the shadow. It is within the footprint of the sofa, not outside of it. Therefore, the correct relation is vertical, not horizontal.\
-So, as the final answer to the question of where the violin is in relation to the sofa, the violin is under the sofa.
-USER: Where is the calculator in relation to the desk? Think step by step, then answer about the relation between calculator and desk with left, right, on or under.
-ASSISTANT: In this picture, the gray calculator is resting on the surface in the center-right section, and the wooden desk occupies the bottom-center to center-center area.\
-Because the device is physically supported by the surface with no gap in between, they are touching.\
-Since the calculator is placed flatly regarding gravity, the relative spatial relationship corresponds to the on-under category.\
-So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the floor... Wait. I made a mistake in identifying the reference object. The calculator is indeed lying flat, but it is supported by the desk, not the ground. The question asks for the relation to the desk.\
-So, as the final answer to the question of where the calculator is in relation to the desk, the calculator is on the desk.
-USER: Where is the cat in relation to the rug? Think step by step, then answer about the relation between cat and rug with left, right, on or under.
-ASSISTANT: In this picture, the white cat is sitting upright in the bottom-right corner, while the patterned rug lies flat covering the bottom-center area.\
-Since the cat is sitting on the floor adjacent to the rug's edge rather than on the fabric itself, they are separated.\
-Because the two objects are side-by-side on the floor, the relative spatial relationship corresponds to the left-right category.\
-So, as the final answer to the question of where the cat is in relation to the rug, the cat is next to the rug... Wait. The specific coordinates show the cat is in the bottom-right while the rug is center/bottom-center. "Next to" is too vague. The cat is clearly positioned to the eastern side of the rug.\
-So, as the final answer to the question of where the cat is in relation to the rug, the cat is right of the rug.
-USER: Where is the stapler in relation to the printer? Think step by step, then answer about the relation between stapler and printer with left, right, on or under.
-ASSISTANT: In this picture, the blue stapler is sitting on the desk in the center-left region, while the large laser printer sits heavily in the center-right region.\
-Since there is a clear span of empty desk surface between the two office supplies, they are separated.\
-Because the stapler and printer are aligned horizontally on the desk, the relative spatial relationship corresponds to the left-right category.\
-So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is next to the printer... Wait. I need to be precise about the direction. The stapler is in the center-left region, and the printer is in the center-right. Therefore, the stapler is on the western side relative to the printer.\
-So, as the final answer to the question of where the stapler is in relation to the printer, the stapler is left of the printer.
-'''
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
-                        prompt = few_shot_prompt + new_prompt
-                        generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=256, get_token_probs=True)
-                        answer = generation.split('.')[-2].strip()
-                        answer = answer.split(',')[-1].strip()
-                        result = {
-                            "Prompt": new_prompt,
-                            "Generation": generation,
-                            "Answer": answer,
-                            "Golden": answer_list[index_of_total][0],
-                            "Confidence": token_probs_map['answer_confidence']
-                        }
-                        if token_probs_map['answer_confidence'] < 0.975:
-                            new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT: " + generation + ".. Wait."
-                            prompt = few_shot_prompt_revise + new_prompt
-                            generation, score, token_probs_map = self.get_answer(prompt, _, max_length=1024, max_new_tokens=256, get_token_probs=True)
-                            answer = generation.split('.')[-2].strip()
-                            answer = answer.split(',')[-1].strip()
 
-                            result['Final Generation'] = generation
-                            result['Final Answer'] = answer
-                            result['Final Confidence'] = token_probs_map['answer_confidence']
-                    
                     elif method == 'adapt_vis':
                         change_greedy_to_add_weight()
 
                         gen, score = self.get_answer(prompt, _, 1.0)
                         score = score[0]
-                        distribution_map = self.get_distribution(score, dataset=dataset)
+                        distribution_map = self.get_distribution(score, dataset=dataset) # 현재 데이터셋에 대한 확률분포 딕셔너리 얻기 Ex: {'Left': 0.1, 'Right': 0.2, ...}
                         uncertainty = self.get_uncertainty(score, distribution_map, 'confidence')
                         
                         if uncertainty < threshold:
                             gen, score = self.get_answer(prompt, _, weight1)
                         else:
                             gen, score = self.get_answer(prompt, _, weight2)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0],
-                            "Uncertainty": uncertainty
-                        }
                      
                     elif method == 'adapt_vis_entropy':
                         change_greedy_to_add_weight()
 
                         gen, score = self.get_answer(prompt, _, 1.0)
                         score = score[0]
-                        distribution_map = self.get_distribution(score, dataset=dataset)
+                        distribution_map = self.get_distribution(score, dataset=dataset) # 현재 데이터셋에 대한 확률분포 딕셔너리 얻기 Ex: {'Left': 0.1, 'Right': 0.2, ...}
                         uncertainty = self.get_uncertainty(score, distribution_map, 'entropy')
                         
                         if uncertainty < threshold:
                             gen, score = self.get_answer(prompt, _, weight1)
                         else:
                             gen, score = self.get_answer(prompt, _, weight2)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0],
-                            "Uncertainty": uncertainty
-                        }
                         
                     else:
                         gen, score = self.get_answer(prompt, _)
                         uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0],
-                            "uncertainty": uncertainty
-                        }
                         
                     result = {
                         "Prompt": prompt,
                         "Generation": gen,
-                        "Golden": answer_list[index_of_total][0]
+                        "Golden": answer_list[index_of_total][0],
+                        "uncertainty": uncertainty
                     } if result is None else result
                     results.append(result)
                     
@@ -1214,122 +724,4 @@ So, as the final answer to the question of where the stapler is in relation to t
             return (all_scores, [])
         else:
             return (acc / index_of_total, correct_id)
-        
-    @torch.no_grad()
-    def get_judge_scores_vsr_batched(self, dataset, joint_loader, method, weight, threshold, weight1, weight2):
-        index = 0
-        TP, TN, FP, FN = 0, 0, 0, 0
 
-        # Set the directory to save attention maps
-        save_attn_dir = f"/home/user/shiqi/mmlm_mech/whatsup_vlms/output/{dataset}_weight{weight:.2f}"
-        if not os.path.exists(save_attn_dir):
-            print("Creating directory for saving attention maps:", save_attn_dir)
-            os.makedirs(save_attn_dir)
-        
-        index_of_total = 0
-        results = []
-
-        # Process each batch in the joint loader
-        for batch in tqdm(joint_loader):
-            batch_scores = []
-            
-            # Create directory for saving attention maps for each batch
-            os.environ['SAVE_ATTN_PATH'] = f'{save_attn_dir}/{index_of_total}/'
-            os.makedirs(os.environ['SAVE_ATTN_PATH'], exist_ok=True)
-
-            # Iterate over image options in the batch
-            for i_option in batch["image_options"]:
-                im_scores = []
-
-                # Iterate over caption options
-                for c_option in batch["caption_options"]:
-                    prompt = "User: <image>\n Determine whether the description about the spatial relationship is correct or not. Answer with yes or no: "
-                    qst = [prompt] * len(list(c_option))
-                    end_fix = [" Assistant:"] * len(list(c_option))
-                    concatenated_list = [s1 + s2 + s3 for s1, s2, s3 in zip(qst, c_option, end_fix)]
-                    
-                    # Generate responses for each concatenated input
-                    for idx, text in enumerate(concatenated_list):
-                        # Prepare input data for the model
-                        single_input = self.processor(text=text, images=list(i_option)[idx], padding="max_length", return_tensors="pt", max_length=77).to(self.device)
-                        keys = [torch.where(input_id == 32001, 1, 0) for input_id in single_input['input_ids']]
-                        
-                        # Apply different attention adjustment methods based on the 'method' argument
-                        if method == 'scaling_vis':
-                            change_greedy_to_add_weight()
-                            output = self.model.generate(**single_input, keys=keys, weight=weight, max_new_tokens=100, output_scores=True, return_dict_in_generate=True)
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-                            gen = self.processor.decode(output[0][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True, output_attentions=True)
-                        
-                        elif method == 'adapt_vis':
-                            change_greedy_to_add_weight()
-                            # Basic generation step
-                            output = self.model.generate(**single_input, weight=1.0,max_new_tokens=100, output_scores=True, return_dict_in_generate=True)
-                            gen = self.processor.decode(output['sequences'][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True, output_attentions=True)
-                            uncertainty = np.round(float(max(output['scores'][0][0])), 2)
-                            
-                            # Apply weighted generation based on uncertainty
-                            if uncertainty < threshold:
-                                output = self.model.generate(**single_input, keys=keys, weight=weight1, max_new_tokens=100, output_scores=True, return_dict_in_generate=True)
-                            else:
-                                output = self.model.generate(**single_input, keys=keys, weight=weight2, max_new_tokens=100, output_scores=True, return_dict_in_generate=True)
-                            gen = self.processor.decode(output[0][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True, output_attentions=True)
-
-                        else:
-                            output = self.model.generate(**single_input, keys=keys, weight=weight, max_new_tokens=100, output_scores=True, return_dict_in_generate=True)
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(output['scores'][0], dim=-1)[0])), 2)
-                            gen = self.processor.decode(output[0][0][len(single_input['input_ids'][-1]):], skip_special_tokens=True, output_attentions=True)
-                        
-                        # Check correctness of the generated response
-                        label = int(batch['labels'][0][idx])
-                        if label == 1:
-                            TP += 1 if 'Yes' in gen else 0
-                            FN += 1 if 'Yes' not in gen else 0
-                        else:
-                            TN += 1 if 'No' in gen else 0
-                            FP += 1 if 'No' not in gen else 0
-                        
-                        print(f"TP: {TP}, TN: {TN}, FP: {FP}, FN: {FN}")
-                        
-                        # Create result entry for the current sample
-                        gold = 'Yes' if label == 1 else 'No'
-                        result = {
-                            "Prompt": prompt,
-                            "Generation": gen,
-                            "Golden": gold,
-                            "Uncertainty": uncertainty,
-                        }
-                        results.append(result)
-                        index_of_total += 1
-                        
-                index += 1    
-        # Calculate metrics
-        precision = TP / (TP + FN)
-        recall = TN / (TN + FP)
-        f1_score = 2 * precision * recall / (precision + recall)
-
-        print(f"TP: {TP}, TN: {TN}, FP: {FP}, FN: {FN}\n"
-            f"Accuracy: {(TN + TP) / (TN + TP + FN + FP)}\n"
-            f"Precision: {precision}\n"
-            f"Recall: {recall}\n"
-            f"F1 Score: {f1_score}")
-        
-        all_scores = (TP, TN, FP, FN)
-        
-        # Save results to JSON file
-        output_file_path = f'./output/results_{dataset}_{method}_{weight}.json'
-        with open(output_file_path, 'w', encoding='utf-8') as fout:
-            json.dump(results, fout, ensure_ascii=False, indent=4)
-        
-        # Save evaluation metrics
-        output_score_file = output_file_path.replace(".json", "_scores.json")
-        with open(output_score_file, 'w', encoding='utf-8') as fout:
-            json.dump({"acc": (TN + TP) / (TN + TP + FN + FP), "precision": precision, "recall": recall, "f1": f1_score}, fout, ensure_ascii=False, indent=4)
-        return all_scores
-    
-        
-        
-        
-        
-        
-        
