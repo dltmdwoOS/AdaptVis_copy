@@ -25,8 +25,8 @@ def analyze_metric_for_pair(
     """
     metric_col: 'uncertainty_prob' (confidence), 'uncertainty_entropy', 'uncertainty_jsd' 등
     strategy_type:
-      - 'high_triggers_high': 값 >= T 이면 high_weight 선택 (Entropy, JSD 등)
-      - 'low_triggers_high' : 값 <= T 이면 high_weight 선택 (Confidence 등)
+      - 'high_triggers_high': 값 >= T 이면 high_weight 선택 (Confidence, JSD 등)
+      - 'low_triggers_high' : 값 <= T 이면 high_weight 선택 (Entropy 등)
     """
     values = df[metric_col].values
     # 값이 NaN인 경우 방어 로직 (혹시 모를 데이터 누락 대비)
@@ -89,9 +89,9 @@ def run_analysis_for_weight_pair(df, low_weight: str, high_weight: str, acc_base
     # 데이터 키 이름에 주의: JSON 키는 'confidence', 'entropy', 'jsd' 등임
     # 여기서는 DataFrame 컬럼명을 'uncertainty_prob' 등으로 매핑해서 쓸 예정
     metric_configs = {
-        "uncertainty_prob": "high_triggers_high",      # confidence 낮으면 high temp
-        "uncertainty_entropy": "low_triggers_high",  # entropy 높으면 high temp
-        "uncertainty_jsd": "high_triggers_high",      # jsd 높으면 high temp
+        "uncertainty_prob": "high_triggers_high",
+        "uncertainty_entropy": "low_triggers_high",
+        "uncertainty_jsd": "high_triggers_high",
     }
 
     results = {}

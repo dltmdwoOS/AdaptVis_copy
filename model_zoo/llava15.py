@@ -439,62 +439,36 @@ class LlavaWrapper:
 
                     if method == 'reasoning_absolute_4directions':
                         def consistency_check(gen1, gen2):
-                            return gen1.lower() != gen2.lower()
-                        
-                        # Step 1: 객체 추출 및 두 객체의 이미지상 절대적 위치 파악
-                        pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
-                        match = re.search(pattern, prompt)
-                        be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
-                        
-                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with 4 options: left, right, on or under.\nASSISTANT:"
-                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with 4 options: left, right, on or under.\nASSISTANT:"
-                        gen_step1_obj1, scores_obj1 = self.get_answer(prompt_step1_obj1, _)
-                        gen_step1_obj2, scores_obj2 = self.get_answer(prompt_step1_obj2, _)
-                        
-                        # Step 2: Consistency 체크
-                        consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
-                        
-                        # Step 3: 최종 답변
-                        if consistent:
-                            gen = gen_step1_obj1
-                            score = scores_obj1[0]
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                            valid_opposite = {
+                                'left': 'right',
+                                'right': 'left',
+                                'top': 'bottom',
+                                'bottom': 'top',
+                            }
+                            gen1 = gen1.lower()
+                            gen2 = gen2.lower()
                             
-                        else: # Fallback
-                            gen, score = self.get_answer(prompt, _)
-                            score = score[0]
-                            uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
-
-                        result = {
-                            "Prompt": prompt,
-                            "Step1_1_to_2": gen_step1_obj1,
-                            "Step1_2_to_1": gen_step1_obj2,
-                            "Is_consistent": consistent,
-                            "Generation": gen,
-                            "Golden": answer_list[index_of_total][0],
-                            "uncertainty": uncertainty
-                        }
-                    
-                    elif method == 'reasoning_absolute_9directions':
-                        def consistency_check(gen1, gen2):
-                            return gen1.lower() != gen2.lower()
+                            if gen1 in valid_opposite and gen2 == valid_opposite[gen1]:
+                                return True
+                            else:
+                                return False
                         
                         # Step 1: 객체 추출 및 두 객체의 이미지상 절대적 위치 파악
                         pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
                         match = re.search(pattern, prompt)
                         be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
                         
-                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
-                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
-                        gen_step1_obj1, scores_obj1 = self.get_answer(prompt_step1_obj1, _)
-                        gen_step1_obj2, scores_obj2 = self.get_answer(prompt_step1_obj2, _)
+                        prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with left, right, top or bottom.\nASSISTANT:"
+                        prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with left, right, top or bottom.\nASSISTANT:"
+                        gen_step1_obj1, l = self.get_answer(prompt_step1_obj1, _)
+                        gen_step1_obj2, l = self.get_answer(prompt_step1_obj2, _)
                         
                         # Step 2: Consistency 체크
                         consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
                         
                         # Step 3: 최종 답변
                         if consistent:
-                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1} side on the image, and the {obj2} is positioned {gen_step1_obj2} side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                            prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1}-side on the image, and the {obj2} is positioned {gen_step1_obj2}-side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                             gen, score = self.get_answer(prompt, _)
                             score = score[0]
                             uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
@@ -514,6 +488,45 @@ class LlavaWrapper:
                             "uncertainty": uncertainty
                         }
                     
+                    # elif method == 'reasoning_absolute_9directions':
+                    #     def consistency_check(gen1, gen2):
+                    #         return gen1.lower() != gen2.lower()
+                        
+                    #     # Step 1: 객체 추출 및 두 객체의 이미지상 절대적 위치 파악
+                    #     pattern = r"Where (is|are) the (.+?) in relation to the (.+?)\?"
+                    #     match = re.search(pattern, prompt)
+                    #     be_verb, obj1, obj2 = match.group(1), match.group(2), match.group(3)
+                        
+                    #     prompt_step1_obj1 = f"<image>\nUSER: Where {be_verb} the {obj1} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
+                    #     prompt_step1_obj2 = f"<image>\nUSER: Where is the {obj2} located in the image? Answer with 9 options: top-left, top-center, top-right, center-left, center-center, center-right, bottom-left, bottom-center, bottom-right.\nASSISTANT:"
+                    #     gen_step1_obj1, scores_obj1 = self.get_answer(prompt_step1_obj1, _)
+                    #     gen_step1_obj2, scores_obj2 = self.get_answer(prompt_step1_obj2, _)
+                        
+                    #     # Step 2: Consistency 체크
+                    #     consistent = consistency_check(gen_step1_obj1, gen_step1_obj2)
+                        
+                    #     # Step 3: 최종 답변
+                    #     if consistent:
+                    #         prompt = f"<image>\nUSER: The {obj1} {be_verb} positioned {gen_step1_obj1} side on the image, and the {obj2} is positioned {gen_step1_obj2} side on the image. Then, Where {be_verb} the {obj1} in relation to the {obj2}? Answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
+                    #         gen, score = self.get_answer(prompt, _)
+                    #         score = score[0]
+                    #         uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+                            
+                    #     else:
+                    #         gen, score = self.get_answer(prompt, _)
+                    #         score = score[0]
+                    #         uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
+
+                    #     result = {
+                    #         "Prompt": prompt,
+                    #         "Step1_1_to_2": gen_step1_obj1,
+                    #         "Step1_2_to_1": gen_step1_obj2,
+                    #         "Is_consistent": consistent,
+                    #         "Generation": gen,
+                    #         "Golden": answer_list[index_of_total][0],
+                    #         "uncertainty": uncertainty
+                    #     }
+                        
                     elif method == 'reasoning_relative_location':
                         def consistency_check(gen1, gen2):
                             valid_opposite = {
@@ -655,7 +668,54 @@ So, as the final answer to the question of where the stapler is in relation to t
                             gen, score = self.get_answer(prompt, _, weight1)
                         else:
                             gen, score = self.get_answer(prompt, _, weight2)
+
+                    elif method == 'adapt_vis_for_oracle_research':
+                        change_greedy_to_add_weight()
+                        original_generation, original_score = self.get_answer(prompt, _, 1.0)
+                        original_score = original_score[0]
+                        distribution_map = self.get_distribution(original_score, dataset=dataset)
+                        uncertainty = np.round(float(max(torch.nn.functional.softmax(original_score, dim=-1)[0])), 2)
+                        uncertainty_confidence = self.get_uncertainty(original_score, distribution_map, method='confidence')
+                        uncertainty_kl = self.get_uncertainty(original_score, distribution_map, method='kld')
+                        uncertainty_js = self.get_uncertainty(original_score, distribution_map, method='jsd')
+                        uncertainty_entropy = self.get_uncertainty(original_score, distribution_map, method='entropy')
+                        uncertainties = {
+                            "confidence": uncertainty_confidence,
+                            "kld": uncertainty_kl,
+                            "jsd": uncertainty_js,
+                            "entropy": uncertainty_entropy
+                        }
                         
+                        weights = [0.5, 0.8, 1.2, 1.5, 2.0]
+                        gen_map = {
+                            1.0: {
+                                "Generation": original_generation,
+                                "Distribution": distribution_map
+                            }
+                        }
+                        for w in weights:
+                            w_generation, w_score = self.get_answer(prompt, _, w)
+                            w_score = w_score[0]
+                            distribution_map = self.get_distribution(w_score, dataset=dataset)
+                            gen_map[w] = {
+                                "Generation": w_generation,
+                                "Distribution": distribution_map
+                            }
+                            
+                        # Select final answer based on standard weights & threshold
+                        gen1, gen2 = gen_map[weight1]['Generation'], gen_map[weight2]['Generation']
+                        gen = gen1 if uncertainty < threshold else gen2
+                        output_result_file_path = f'./output/results_{dataset}_{method}_{weight}_{weight1}_{weight2}_{threshold}_{TEST}.json'
+
+                        result = {
+                            "Prompt": prompt,
+                            "Generation": gen,
+                            "Generation_map": gen_map,
+                            "Golden": answer_list[index_of_total][0],
+                            "Uncertainty": uncertainty,
+                            "Uncertainties": uncertainties
+                        }
+
                     else:
                         gen, score = self.get_answer(prompt, _)
                         uncertainty = np.round(float(max(torch.nn.functional.softmax(score, dim=-1)[0])), 2)
