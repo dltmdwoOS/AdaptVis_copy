@@ -638,10 +638,11 @@ So, as the final answer to the question of where the stapler is in relation to t
                         new_prompt = f"<image>\nUSER: Where {be_verb} the {obj1} in relation to the {obj2}? Think step by step, then answer about the relation between the {obj1} and the {obj2} with left, right, on or under.\nASSISTANT:"
                         prompt = few_shot_prompt + new_prompt
                         
-                        generation, score = self.get_answer(prompt, _, max_length=1024, max_new_tokens=256)
+                        generation, score = self.get_answer(prompt, _, max_length=1024, max_new_tokens=512)
                         answer = generation.split('.')[-2].strip()
                         answer = answer.split(',')[-1].strip()
                         print(f"Prompt:\n{new_prompt}\nGeneration: {answer}\nGolden: {answer_list[index_of_total][0]}")
+                        gen = answer
 
                     elif method == 'adapt_vis':
                         change_greedy_to_add_weight()
@@ -664,7 +665,7 @@ So, as the final answer to the question of where the stapler is in relation to t
                         distribution_map = self.get_distribution(score, dataset=dataset) # 현재 데이터셋에 대한 확률분포 딕셔너리 얻기 Ex: {'Left': 0.1, 'Right': 0.2, ...}
                         uncertainty = self.get_uncertainty(score, distribution_map, 'entropy')
                         
-                        if uncertainty < threshold:
+                        if uncertainty > threshold:
                             gen, score = self.get_answer(prompt, _, weight1)
                         else:
                             gen, score = self.get_answer(prompt, _, weight2)
