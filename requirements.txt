@@ -74,3 +74,4 @@ wadllib==1.3.6
 xdg==5
 zipp==1.0.0
 matplotlib
+jupyterlab>=4.2.4
